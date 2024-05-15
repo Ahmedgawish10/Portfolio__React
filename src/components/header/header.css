@@ -1,0 +1,142 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--container-color);
+    transition: .4s;
+}
+.header-background{
+box-shadow: 0 -1px 4px rgba(0,0, 0, 0.3);
+}
+.nav{
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+
+}
+.nav .nav__logo,
+.nav .nav__toggle{
+color: var(--title-color);
+font-weight: var(--font-medium);
+}
+/* .nav .nav__menu{
+    display: flex;
+    justify-content: space-between;
+
+} */
+.nav .nav__menu .nav__list{
+    display: flex;
+
+}
+.nav .nav__menu .nav__list li{
+display: flex;
+justify-content: center;
+
+}
+.nav .nav__item .nav__link{
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size: var(--small-font-size);
+color: var(--title-color);
+font-weight: var(--font-medium);
+transition: 1s;
+cursor: pointer;
+width: max-content;
+}
+
+.nav__menu .nav__icon,
+.nav__menu .nav__close,
+.nav .nav__toggle{
+    display: none;
+}
+
+/* active link */
+.active-link,
+.nav .nav__item .nav__link:hover{
+color:var(--title-color-dark) ;
+}
+@media screen and (min-width:768px){
+    .header .nav__menu .nav__link{
+        transition: .2s !important;
+
+    }
+.dark .header .nav__menu .nav__link:hover{
+    color: orange!important ;
+    transition: .2s !important;
+}
+}
+/* =========================medium========================= */
+@media screen and (max-width:768px){
+.header{
+    top: initial;
+    bottom: 0;
+}
+.nav{
+    height: var(--header-height);
+}
+.nav__menu{
+padding: 2rem 0.25rem 4rem;
+
+position: fixed;
+bottom: -100%;
+left: 0;
+width: 100%;
+box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+border-radius: 1.5rem 1.5rem 0 0 ;
+transition: 1s;
+background-color: white;
+}
+.dark .nav__menu{
+    background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);padding: 2rem 1.5rem 4rem;
+    z-index: 1000;
+}
+.header .nav__menu .nav__link:hover{
+    color: black !important;
+}
+.show-menu{
+    bottom: 0;
+}
+.nav__list{
+    display: grid !important;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+}
+.nav__icon{
+    font-size: 1.2rem;
+}
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom:.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(41, 34, 34);
+}
+.nav__close:hover{
+    color: var(--title-color-dark);
+
+}
+.nav__toggle{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.nav__icon,
+.nav__close,
+.nav__toggle{
+    display: block !important;
+}
+}
+/*======================== small devices================== */
+@media screen and (max-width:350px){
+.nav__menu{
+    padding: 2rem 0.25rem 4rem;
+}
+.nav__list{
+    column-gap: 0;
+}
+}
