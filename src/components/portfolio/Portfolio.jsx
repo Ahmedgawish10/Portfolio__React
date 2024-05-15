@@ -59,7 +59,7 @@ boxImgWeb.forEach(element => {
   const [port, setport] = useState(1);
   const [imgGrad, setimgGrad] = useState(false);
   return (
-    <div className="portfolio section" id="portfolio">
+    <div className="portfolio section" id="portfolio o">
       <h2 className="section__title">Portfolio</h2>
       <span className="section__subtitle">Most projects</span>
 
@@ -112,7 +112,7 @@ boxImgWeb.forEach(element => {
             </div>
             <div className="title__project">
              <h3>Job Portal</h3> 
-          Graduation Project at - I T I{" "}
+          Graduation Project at - I T I
         </div>
         <div>Languages: (HTML - Sass- JS - BootStrap - PHP - MY SQL) </div>
         <h5 className="pt-1">
