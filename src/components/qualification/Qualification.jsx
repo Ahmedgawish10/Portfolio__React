@@ -20,7 +20,7 @@ const Qualification = () => {
               NumberTab(1);
           }}
           >
-            <i  className={hide==1?"uil uil-graduation-cap qualification__icon bg-danger":""}></i>
+            <i  className="uil uil-briefcase-alt qualification__icon"></i>
             Education
           </div>
 
