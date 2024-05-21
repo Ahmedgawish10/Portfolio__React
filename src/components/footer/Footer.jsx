@@ -17,7 +17,7 @@ const Footer = () => {
             <Link
               to={about}
               smooth={true}
-              duration={1500}
+              duration={0}
               className="footer__link"
             >
               About
@@ -27,7 +27,7 @@ const Footer = () => {
             <Link
               to={portfolio}
               smooth={true}
-              duration={1500}
+              duration={0}
               className="footer__link"
             >
               Projects
@@ -37,7 +37,7 @@ const Footer = () => {
             <Link
               to={services}
               smooth={true}
-              duration={1500}
+              duration={0}
               className="footer__link"
             >
               Services

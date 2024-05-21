@@ -31,13 +31,13 @@ const toggletheme=()=>{
   if(localStorage.getItem("mode") ){
     document.body.className=localStorage.getItem("mode")  
   }},[theme])
-// useEffect(()=>{
-//       setloading(true);
-//       setTimeout(()=>{
-//       setloading(false)
-//       },1000)
+useEffect(()=>{
+      setloading(true);
+      setTimeout(()=>{
+      setloading(false)
+      },5000)
       
-//           },[])
+          },[])
   return (
     <>
     {loading ?
