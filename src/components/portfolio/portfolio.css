@@ -118,9 +118,25 @@ overflow: hidden;
  /* animation: top_img-all-1 8s ease-in-out 1;  */
 }
 .portfolio__web-show .box .animate__img{ 
-  animation: top_img-all-1 8s ease-in-out 1; 
+  animation: top_img-web-1 8s ease-in-out 1; 
   animation-delay: .2s;
 
+}
+.animate__img-web {
+  animation:top_img-web-1 5s ease-in-out 1; 
+  animation-delay: 1s;
+}
+@keyframes top_img-web-1 {
+  0%{
+     top: 0;
+  }
+  50%{
+    top:-355%
+  }
+  100%{
+    top: 0;
+
+  }
 }
 /*==================== end animation style for portfolio web section====================== */
 .portfolio__all-data .box:nth-child(1) img:hover,
@@ -171,6 +187,17 @@ cursor:pointer;
  {
   padding: 1rem 0rem 0.5rem;
 }
+/*==================== start animation style for portfolio__angular section====================== */
+.box__img-angular{
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.box__img-angular img  {
+  border-radius: 10px;
+  position: absolute;
+}
+/*==================== end animation style for portfolio__angular section====================== */
 
 /* =================media for section portfolio============================================= */
 @media screen and (max-width: 992px) {
@@ -186,7 +213,6 @@ cursor:pointer;
   }
   .portfolio__web-show {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1rem;
 
   }

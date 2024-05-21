@@ -28,14 +28,14 @@ const Services = () => {
                             openModel(!closeModel);
                         }}></i></div>
                         <h3 className="services__model-title">Web Designer</h3>
-                        <p className="services__model-description">Services with less than 1 year of exprinces.</p>
+                        <p className="services__model-description">Services with more than 1 year of exprinces.</p>
                         <ul className="services__model-task">
                         <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                                Design and convert templates figma ui to real websites
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                            Design and convert templates canva ui to real websites
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
@@ -75,20 +75,20 @@ const Services = () => {
                         <p className="services__model-description">Services with more than 1 year of exprinces.</p>
                         <ul className="services__model-task">
                         <li><i className='bx bx-badge-check'></i><span className="services__model-text">
+                            Design websites with high performane and seo optimization
+                               </span>
+                            </li>
+                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
+                               Create job portal app for announce new jobs for seekers.
+                               </span>
+                            </li>
+                        <li><i className='bx bx-badge-check'></i><span className="services__model-text">
                             Design and mockups of product for companies
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
                                 Convert  ui templates to real websites 
 
-                               </span>
-                            </li>
-                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                            Design websites with high performane and seo optimization
-                               </span>
-                            </li>
-                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                            Design and mockups of product for companies
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
@@ -117,7 +117,7 @@ const Services = () => {
                             openModel(!closeModel);
                         }}></i></div>
                         <h3 className="services__model-title">UI/UX Designer</h3>
-                        <p className="services__model-description">Services with less than 1 years of exprinces.</p>
+                        <p className="services__model-description">Services with l year of exprinces.</p>
                         <ul className="services__model-task">
                         <li><i className='bx bx-badge-check'></i><span className="services__model-text">
                                 Design and mockups of product for companies

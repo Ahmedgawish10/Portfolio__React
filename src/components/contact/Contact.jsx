@@ -1,6 +1,35 @@
 import React from 'react'
+import emailjs from 'emailjs-com';
+import { useRef  } from 'react';
 import "./contact.css"
 const Contact = () => {
+    const form = useRef();
+
+    function sendEmail(e) {
+        e.preventDefault();
+        const { name, email,project} = e.target;
+        // const formData = {
+        //     name: name.value,
+        //     email: email.value,
+        //     project:project.value
+        //   };
+        //   const templateParams = {
+        //     to_name: "Recipient's Name",
+        //     from_name: "Your Name",
+        //     message: "This is the message content."
+        // };
+console.log(form.current);
+
+      console.log(e.target);
+        emailjs.sendForm('service_2nyjtqx', 'template_3vyedct',  e.target, 'BCHWeb1hlnZu1FDFl')
+          .then((result) => {
+            console.log(result.text);
+          }, (error) => {
+            console.log(error.text);
+          });
+      
+       // e.target.reset();
+      }
     return (
     <section className="contact section "id="contact">
         <h2 className="section__title">Get in touch</h2>
@@ -16,7 +45,7 @@ const Contact = () => {
                         <i className="bx bx-mail-send contact__card-icon"></i>
                         <h3 className="contact__card-title">Email</h3>
                         <p className="contact__card-data">ahmedgawish22@gmail.com</p>
-                        <a href="mailto:ahmdgawish22@gmail.com" className="contact__card-button">
+                        <a href="mailto:ahmdgawish22@gmail.com" className="contact__card-button" target='_blank'>
                             Write me <i className=" uil uil-arrow-right icon "></i>
                         </a>
                     </div>
@@ -25,7 +54,7 @@ const Contact = () => {
                         <i className="bx bxl-whatsapp contact__card-icon"></i>
                         <h3 className="contact__card-title">Whatsapp</h3>
                         <p className="contact__card-data">010-648-805-94</p>
-                        <a href="https://wa.me/+0201064880594" className="contact__card-button">
+                        <a href="https://wa.me/+0201064880594" className="contact__card-button" target='_blank'>
                             Write me <i className=" uil uil-arrow-right icon "></i>
                         </a>
                     </div>
@@ -34,7 +63,7 @@ const Contact = () => {
                         <i className="bx bxl-messenger contact__card-icon"></i>
                         <h3 className="contact__card-title">Messenger</h3>
                         <p className="contact__card-data">Ahmed Gawish</p>
-                        <a href="" className="contact__card-button">
+                        <a href="https://m.facebook.com/profile.php/?id=100022787090778" target='_blank' className="contact__card-button">
                             Write me <i className=" uil uil-arrow-right icon "></i>
                         </a>
                     </div>
@@ -43,7 +72,7 @@ const Contact = () => {
             </div>
             <div className="contact__content-form">
                 <h3 className="contact__title">Write me your project</h3>
-                <form action="" className="contact__form">
+                <form action="" className="contact__form" onSubmit={sendEmail} ref={form}>
                     <div className="contact__form-layout">
                         <label className="contact__form-label">Name</label>
                         <input type="text" name="name" className="contact__input-name" placeholder="Type your name !"/>
@@ -57,7 +86,7 @@ const Contact = () => {
                     <div className="contact__form-layout contact__textarea">
                         <label className="contact__form-label">Project</label>
                         <textarea name="project"  cols="10" rows="1" className="contact__textarea"
-                         placeholder="Type your project !"></textarea>                        
+                         placeholder="Type the idea of your project !"></textarea>                        
                     </div>
                     <div>
                     <button className="send__msg button button--flex">

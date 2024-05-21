@@ -1,8 +1,7 @@
 import React from "react";
 import iti from "../../assets/iti-ecommerce.png";
 import compny from "../../assets/portfolio-compny.png";
-import Image3 from "../../assets/work3.jpg";
-import Image4 from "../../assets/work4.jpg";
+import Portfolio from "../../assets/portfolio-angular.png";
 
 import finalproject from "../../assets/final-project.png";
 import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
@@ -21,8 +20,9 @@ const Alldata = () => {
         <h5 className="pt-1">
  
           <a
-            href="https://ahmedgawish10.github.io/iti-ecommerce/"
+            href="https://ecommerce-iti.vercel.app/"
             target="_blank"
+            rel="noreferrer"
           >
             Demo
           </a>
@@ -43,7 +43,7 @@ const Alldata = () => {
 
           <a
             href="https://ahmedgawish10.github.io/portfolio-company/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
 
             Demo
@@ -63,7 +63,7 @@ const Alldata = () => {
         <h5>
           <a
             href="https://ahmedgawish10.github.io/graduateproject/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             Demo
           </a>
@@ -74,37 +74,37 @@ const Alldata = () => {
               <img src={ecompharmacy} alt="" />
             </div>
             <h3 className="title__project">E-commerce Pharmacy</h3>
-            <div>
-              Languages: (HTML - CSS - BootStrap - React - ReaduxToolkit
+            <div className="technologies">
+              Languages: (HTML - CSS - BootStrap - React - ReduxToolkit
               -(react-router-dom) - (slick-carousel))
             </div>
             <h5>
-        
               <a
                 href="https://ahmedgawish10.github.io/ecommerce-pharmacy4/"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
-        
                 Demo
               </a>
             </h5>
           </div>
       <div className="box">
-        <div>
-          <img src={Image4} alt="" />
+        <div className="box__img-angular">
+          <img src={Portfolio} alt="" />
         </div>
-        <h4 className="title__project">Portfolio (Angular )</h4>
+        <h3 className="title__project">Portfolio (Angular )</h3>
+        <div className="technologies">
+              Languages: (HTML - CSS - JS -BootStrap - Angular )
+            </div>
         <h5>
-          {" "}
-          <a href=""> Demo</a>
+          <a href="https://lab-angular-two.vercel.app/" target="_blank" rel="noreferrer"> Demo</a>
           <i className="uil uil-arrow-right services__button-icon"></i>{" "}
         </h5>
       </div>
       <div className="box">
-        <div>
-          <img src={Image4} alt="" />
+        <div className="box__img-angular">
+          <img src={Portfolio} alt="" className="" />
         </div>
-        <h4 className="title__project">Portfolio (JS Vanilia)</h4>
+        <h4 className="title__project">Furniro App (loading)</h4>
         <h5>
           {" "}
           <a href=""> Demo</a>

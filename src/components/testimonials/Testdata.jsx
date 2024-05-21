@@ -11,8 +11,8 @@ export  const TestData=[
     {
         id:2,
         image:Img2,
-        title:"Ahmed Gawish",
-        description:"A really good jop, all aspects of the project were followed step by step and with good results",
+        title:"Ahmed Adel",
+        description:"Fantastic, every aspect of the project was carefully followed, resulting in excellent outcomes.",
     },
     {
         id:3,

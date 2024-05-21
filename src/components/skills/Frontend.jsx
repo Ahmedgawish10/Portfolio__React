@@ -6,13 +6,13 @@ const Frontend = () => {
             <div className='plus'>+</div>
         <div className='moore__skills'>
         <h3 className="skills__title">Frontend Developer</h3>
-
+           {/*a- second group */}
         <div className="skills__box">
               <div className="skills__group1">
-                  <div className="skills__data">
+                 <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
-                          <h3 className="skills__name">Redux</h3>
+                          <h3 className="skills__name"> Git & Github </h3>
                           <span className="skills__level">Intermediate</span>
                       </div>
                   </div>
@@ -20,6 +20,13 @@ const Frontend = () => {
                       <i className='bx bx-badge-check'></i>
                       <div>
                           <h3 className="skills__name">Sass</h3>
+                          <span className="skills__level">Intermediate</span>
+                      </div>
+                  </div>
+                     <div className="skills__data">
+                      <i className='bx bx-badge-check'></i>
+                      <div>
+                          <h3 className="skills__name">BootStrap</h3>
                           <span className="skills__level">Intermediate</span>
                       </div>
                   </div>
@@ -33,8 +40,16 @@ const Frontend = () => {
 
                   
               </div>
-              {/* second group */}
+              {/*b- second group */}
+
               <div className="skills__group2">
+                   <div className="skills__data">
+                      <i className='bx bx-badge-check'></i>
+                      <div>
+                          <h3 className="skills__name">redux Toolkit</h3>
+                          <span className="skills__level">Intermediate</span>
+                      </div>
+                  </div>
                   <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
@@ -45,22 +60,22 @@ const Frontend = () => {
                   <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
-                          <h3 className="skills__name">Angular</h3>
-                          <span className="skills__level">Intermediate</span>
+                          <h3 className="skills__name">UI/UX</h3>
+                          <span className="skills__level">Basic</span>
                       </div>
                   </div>
                   <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
                           <h3 className="skills__name">Wordpress</h3>
-                          <span className="skills__level">Intermediate</span>
+                          <span className="skills__level">Basic</span>
                       </div>
                   </div>
               </div>
           </div>
         </div>
+         {/* a- first group */}
           <h3 className="skills__title">Frontend Developer</h3>
-
           <div className="skills__box one">
               <div className="skills__group1">
                   <div className="skills__data">
@@ -85,26 +100,26 @@ const Frontend = () => {
                       </div>
                   </div>
               </div>
-              {/* second group */}
+              {/* b- first group */}
               <div className="skills__group2">
+              <div className="skills__data">
+                      <i className='bx bx-badge-check'></i>
+                      <div>
+                          <h3 className="skills__name">React Js</h3>
+                          <span className="skills__level">Advanced</span>
+                      </div>
+                  </div>
                   <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
-                          <h3 className="skills__name">BootStrap</h3>
+                          <h3 className="skills__name">Next Js</h3>
                           <span className="skills__level">Intermediate</span>
                       </div>
                   </div>
                   <div className="skills__data">
                       <i className='bx bx-badge-check'></i>
                       <div>
-                          <h3 className="skills__name">React</h3>
-                          <span className="skills__level">Intermediate</span>
-                      </div>
-                  </div>
-                  <div className="skills__data">
-                      <i className='bx bx-badge-check'></i>
-                      <div>
-                          <h3 className="skills__name"> Git & Github </h3>
+                          <h3 className="skills__name">Angular</h3>
                           <span className="skills__level">Intermediate</span>
                       </div>
                   </div>

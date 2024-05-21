@@ -203,6 +203,11 @@ img{
   color: #fff !important;
   stroke:#fff !important;
 }
+.dark .qualification___button {
+   
+  color: #fff
+
+}
 .dark .header{
   background-color: black !important;
 }
@@ -292,7 +297,7 @@ color: white;
 }
 .dark .contact__form-label{
 background-color: black !important;
-top: -28px !important;
+top: -30px !important;
 }
 .dark .send__msg{
   background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);

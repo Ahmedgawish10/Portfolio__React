@@ -1,6 +1,3 @@
-/* .services {
-    position: relative;
-} */
 .services__container{
     grid-template-columns: repeat(3,300px);
     width: 90% !important;
@@ -20,7 +17,7 @@
     padding-left: .5rem;
     animation: view-more ease-in-out 1s infinite;
     }
-    @keyframes view-more{
+@keyframes view-more{
 0%{
     padding-left: 0rem;
 
@@ -45,7 +42,6 @@ margin-bottom:var(--mb-1) ;
 }
 
 /*==============================================services-model================*/
-
 .services__model{
     display: flex;
     justify-content: center;
@@ -53,7 +49,7 @@ margin-bottom:var(--mb-1) ;
     width:100%;
     height: 100%;
     z-index: var(--z-modalr);
-    background-color: #9181811c;
+    background-color: #000000e0;
     position: fixed;
     left: 0;
     top: 0;

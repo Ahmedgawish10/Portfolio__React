@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Alldata from "./Alldata";
 import "./portfolio.css";
-import Image3 from "../../assets/iti-ecommerce.png";
-import Image4 from "../../assets/work4.jpg";
-import Image5 from "../../assets/work5.jpg";
 import Image6 from "../../assets/iti-traning.jpg";
 import jopPortal from "../../assets/jop-portal.png";
 
@@ -43,10 +40,10 @@ boxImgReact.forEach(element => {
 const boxImgWeb = document.querySelectorAll(".box__img-web img");
 boxImgWeb.forEach(element => {
   if (window.scrollY >= 1800) {
-  element.classList.add("animate__img2");
+  element.classList.add("animate__img-web");
   }else {
     if (boxImg) {
-     element.classList.remove("animate__img2");
+     element.classList.remove("animate__img-web");
     } else {
       return;
     }
@@ -116,10 +113,9 @@ boxImgWeb.forEach(element => {
         </div>
         <div>Languages: (HTML - Sass- JS - BootStrap - PHP - MY SQL) </div>
         <h5 className="pt-1">
- 
           <a
             href="https://github.com/Ahmedgawish10/JobPortal-app"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             Code
           </a>
@@ -167,7 +163,7 @@ boxImgWeb.forEach(element => {
             </div>
             <h4 className="title__project">E-commerce Pharmacy</h4>
             <div>
-              Languages: (HTML - CSS - BootStrap - React - ReaduxToolkit
+              Languages: (HTML - CSS - BootStrap - React - ReduxToolkit
               -(react-router-dom) - (slick-carousel)){" "}
             </div>
             <h5>

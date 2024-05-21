@@ -24,13 +24,16 @@ color:var(--title-color-dark);
 margin-right: var(--mb-0-25);
 }
 .qualification__container .qualification__tabs  .qualified-active{
-    color:var(--title-color-dark);
-
+   color:var(--title-color-dark);
+   /* color: rgb(255, 255, 255) !important; */
     }
+    .dark  .overlay-color{
+    color: rgb(142, 137, 137) !important;
+  }
 /* ====================.qualification__section===================== */
 .qualification__sections{
     display: grid;
-    grid-template-columns: .5fr;
+    /* grid-template-columns: .5fr; */
     justify-content: center;
     
 }
@@ -53,7 +56,7 @@ font-weight: var(--font-medium);
 .qualification__content .qualification__data .qualification__subtitle{
 display:inline-block;
 font-size:var(--small-font-size);
-margin-bottom: var(--mb-1);
+margin-bottom: 10px;
 
 }
 .qualification__content .qualification__data .qualification__calendar{
