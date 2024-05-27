@@ -3,6 +3,7 @@ import Alldata from "./Alldata";
 import "./portfolio.css";
 import Image6 from "../../assets/iti-traning.jpg";
 import jopPortal from "../../assets/jop-portal.png";
+import Furniro from "../../assets/Furniro.png";
 
 import finalproject from "../../assets/final-project.png";
 import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
@@ -109,9 +110,9 @@ boxImgWeb.forEach(element => {
             </div>
             <div className="title__project">
              <h3>Job Portal</h3> 
-          Graduation Project at - I T I
+         <span>Graduation Project at - I T I</span> 
         </div>
-        <div>Languages: (HTML - Sass- JS - BootStrap - PHP - MY SQL) </div>
+        <div>Technologies: (HTML - Sass- JS - BootStrap - PHP - MY SQL) </div>
         <h5 className="pt-1">
           <a
             href="https://github.com/Ahmedgawish10/JobPortal-app"
@@ -126,13 +127,32 @@ boxImgWeb.forEach(element => {
           </div>
           <div className="box">
             <div className="box__img-web">
-              <img src={jopPortal} alt="" />
+              <img src={Furniro} alt="" />
             </div>
-            <h4 className="title__project">Weather app</h4>
-            <h5>
-              
-              <a href=""> Demo</a>
-            </h5>
+            <div className="title__project">
+            <h3 >Furniro App</h3>
+            <span>Graduation Project at - I T I</span> 
+            <div>Technologies: (HTML - CSS- JS - BootStrap -Angular - PHP - Laravel - API ) </div>
+
+            </div>
+            <h5 className="pt-1 d-flex ">
+          <a 
+            href="https://github.com/Ahmedgawish10/JobPortal-app"
+            target="_blank" rel="noreferrer"
+          >
+            Frontend code 
+          </a>
+          <i className="uil uil-arrow-right services__button-icon me-3"></i>
+   
+          <a
+            href="https://github.com/Ahmedgawish10/JobPortal-app"
+            target="_blank" rel="noreferrer"
+          >
+            Backend Code 
+          </a>
+          <i className="uil uil-arrow-right services__button-icon"></i>
+        </h5>
+
           </div>
         </div>
         {/* React */}
@@ -143,7 +163,7 @@ boxImgWeb.forEach(element => {
             </div>
             <h4 className="title__project">Graduation Project</h4>
             <div>
-              Languages: (HTML - CSS - BootStrap - React - Context api
+              Technologies: (HTML - CSS - BootStrap - React - Context api
               -(react-router-dom)){" "}
             </div>
             <h5>
@@ -163,7 +183,7 @@ boxImgWeb.forEach(element => {
             </div>
             <h4 className="title__project">E-commerce Pharmacy</h4>
             <div>
-              Languages: (HTML - CSS - BootStrap - React - ReduxToolkit
+              Technologies: (HTML - CSS - BootStrap - React - ReduxToolkit
               -(react-router-dom) - (slick-carousel)){" "}
             </div>
             <h5>

@@ -2,6 +2,7 @@ import React from "react";
 import iti from "../../assets/iti-ecommerce.png";
 import compny from "../../assets/portfolio-compny.png";
 import Portfolio from "../../assets/portfolio-angular.png";
+import EcomAngular from "../../assets/ecommerce-angular.png";
 
 import finalproject from "../../assets/final-project.png";
 import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
@@ -16,7 +17,7 @@ const Alldata = () => {
           <h3>    E-commerce Pizza</h3>
           Graduation Project at - I T I
         </div>
-        <div>Languages: (HTML - Sass - JS - BootStrap - Swiper.js) </div>
+        <div>Technologies: (HTML - Sass - JS - BootStrap - Swiper.js) </div>
         <h5 className="pt-1">
  
           <a
@@ -37,7 +38,7 @@ const Alldata = () => {
          <h3>Gawish Company</h3> 
            company for Designs
         </div>
-        <div>Languages: (HTML - CSS - JS - BootStrap - Isotope.js) </div>
+        <div>Technologies: (HTML - CSS - JS - BootStrap - Isotope.js) </div>
 
         <h5 className="pt-1">
 
@@ -57,7 +58,7 @@ const Alldata = () => {
         </div>
         <h3 className="title__project">Graduation Project</h3>
         <div>
-          Languages: (HTML - CSS - BootStrap - React - Context api
+        Technologies: (HTML - CSS - BootStrap - React - Context api
           -(react-router-dom))
         </div>
         <h5>
@@ -65,7 +66,8 @@ const Alldata = () => {
             href="https://ahmedgawish10.github.io/graduateproject/"
             target="_blank" rel="noreferrer"
           >
-            Demo
+            Demo  <i className="uil uil-arrow-right services__button-icon"></i>
+
           </a>
         </h5>
       </div>
@@ -75,7 +77,7 @@ const Alldata = () => {
             </div>
             <h3 className="title__project">E-commerce Pharmacy</h3>
             <div className="technologies">
-              Languages: (HTML - CSS - BootStrap - React - ReduxToolkit
+            Technologies: (HTML - CSS - BootStrap - React - ReduxToolkit
               -(react-router-dom) - (slick-carousel))
             </div>
             <h5>
@@ -83,7 +85,9 @@ const Alldata = () => {
                 href="https://ahmedgawish10.github.io/ecommerce-pharmacy4/"
                 target="_blank" rel="noreferrer"
               >
-                Demo
+
+                Demo <i className="uil uil-arrow-right services__button-icon"></i>
+
               </a>
             </h5>
           </div>
@@ -93,21 +97,24 @@ const Alldata = () => {
         </div>
         <h3 className="title__project">Portfolio (Angular )</h3>
         <div className="technologies">
-              Languages: (HTML - CSS - JS -BootStrap - Angular )
+        Technologies: (HTML - CSS - JS -BootStrap - Angular )
             </div>
         <h5>
           <a href="https://lab-angular-two.vercel.app/" target="_blank" rel="noreferrer"> Demo</a>
-          <i className="uil uil-arrow-right services__button-icon"></i>{" "}
+          <i className="uil uil-arrow-right services__button-icon"></i>
         </h5>
       </div>
       <div className="box">
         <div className="box__img-angular">
-          <img src={Portfolio} alt="" className="" />
+          <img src={EcomAngular} alt="" className="" />
         </div>
-        <h4 className="title__project">Furniro App (loading)</h4>
+        <h3 className="title__project">MediCare App (Angular)</h3>
+        <div className="technologies">
+        Technologies: (HTML - CSS - JS -BootStrap - Angular - REST API )
+            </div>
         <h5>
-          {" "}
-          <a href=""> Demo</a>
+
+          <a href="https://ecommerce-angular-beta-lime.vercel.app/" target="_blank" rel="noreferrer"> Demo</a>
           <i className="uil uil-arrow-right services__button-icon"></i>{" "}
         </h5>
       </div>

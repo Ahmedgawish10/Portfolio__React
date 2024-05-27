@@ -19,7 +19,7 @@ const About = () => {
                 Front-End Developer, I create web pages with UI/UX. With over 1 year of experience, 
                 I have delivered multiple successful projects that  have received positive feedback.
                 </p>
-                <a download="" href={Cv} className="download__cv  button button--flex">Downlad CV
+                <a download="" href={Cv} className="download__cv  button button--flex">Download CV
                 <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
