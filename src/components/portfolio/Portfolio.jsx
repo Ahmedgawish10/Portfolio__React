@@ -172,7 +172,7 @@ boxImgWeb.forEach(element => {
                 href="https://ahmedgawish10.github.io/graduateproject/"
                 target="_blank"
               >
-                {" "}
+
                 Demo
               </a>{" "}
             </h5>
