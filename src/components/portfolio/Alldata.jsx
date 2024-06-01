@@ -85,7 +85,6 @@ const Alldata = () => {
                 href="https://ecommerce-pharmacy4.vercel.app/"
                 target="_blank" rel="noreferrer"
               >
-
                 Demo <i className="uil uil-arrow-right services__button-icon"></i>
 
               </a>
@@ -115,7 +114,7 @@ const Alldata = () => {
         <h5>
 
           <a href="https://ecommerce-angular-beta-lime.vercel.app/" target="_blank" rel="noreferrer"> Demo</a>
-          <i className="uil uil-arrow-right services__button-icon"></i>{" "}
+          <i className="uil uil-arrow-right services__button-icon"></i>
         </h5>
       </div>
     </div>

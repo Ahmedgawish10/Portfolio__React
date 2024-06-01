@@ -35,15 +35,15 @@ const Services = () => {
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                            Design and convert templates canva ui to real websites
+                            Design and convert templates canva ui to responsive web experiences 
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
-                               </span>
+                            transforming Figma and Canva UI templates into fully functional websites
+                                                 </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                            Experienced in converting Canva UI designs into dynamic websites
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
@@ -119,26 +119,33 @@ const Services = () => {
                         <h3 className="services__model-title">UI/UX Designer</h3>
                         <p className="services__model-description">Services with l year of exprinces.</p>
                         <ul className="services__model-task">
-                        <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                        <li> <i className='bx bx-badge-check'></i>
+                               <span className="services__model-text">
+                               UI Design and Mockup Creation Using Canva                             
+                                 </span>
+                            </li>
+                          
+                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
+                            Proficient in exporting designs in multiple formats                           
+                                </span>
+                            </li>
+                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
+                            Expertise in customizing templates, including modifying text, colors, images
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                            Experience in previewing and testing designs to ensure optimal presentation 
                                </span>
                             </li>
                             <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
+                            Utilizing Figma's comprehensive design features to craft pixel-perfect UI designs
                                </span>
                             </li>
-                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
-                               </span>
-                            </li>
-                            <li><i className='bx bx-badge-check'></i><span className="services__model-text">
-                                Design and mockups of product for companies
-                               </span>
-                            </li>
+
+
+
+
+
                         </ul>
                         </div>
                         </div>
