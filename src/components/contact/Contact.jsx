@@ -1,35 +1,70 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import emailjs from 'emailjs-com';
-import { useRef  } from 'react';
+import { toast } from 'react-hot-toast';
 import "./contact.css"
 const Contact = () => {
-    const form = useRef();
+    const [formData, setFormData] = useState({ name: '', email: '' ,msg:''});
+  const [errors, setErrors] = useState({});
 
-    function sendEmail(e) {
-        e.preventDefault();
-        const { name, email,project} = e.target;
-        // const formData = {
-        //     name: name.value,
-        //     email: email.value,
-        //     project:project.value
-        //   };
-        //   const templateParams = {
-        //     to_name: "Recipient's Name",
-        //     from_name: "Your Name",
-        //     message: "This is the message content."
-        // };
-console.log(form.current);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-      console.log(e.target);
-        emailjs.sendForm('service_2nyjtqx', 'template_3vyedct',  e.target, 'BCHWeb1hlnZu1FDFl')
-          .then((result) => {
-            console.log(result.text);
-          }, (error) => {
-            console.log(error.text);
-          });
-      
-       // e.target.reset();
+  const validate = () => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.msg)   newErrors.msg = 'Message is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+     else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Email is invalid';
+    }else if (formData.msg.length < 10) {
+        newErrors.msg = 'Message must be at least 20 characters';
       }
+
+    return newErrors;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newErrors = validate();
+    if (Object.keys(newErrors).length === 0) {
+      // Send form data via EmailJS
+      toast.loading('Please wait, we are sending your message',{
+        duration: 2000, 
+      });
+
+      try {
+        await emailjs.send('service_2nyjtqx', 'template_3vyedct', {
+            to_name: "Ahmed Gawish",
+            from_name: formData.name, 
+            from_email: formData.email, 
+            message:formData.msg
+          }, 'BCHWeb1hlnZu1FDFl');
+
+          toast.success('Your message was sent successfully, we will contact you soon!',{
+            className:"custom-class-toast",
+            duration: 5000, 
+          });
+        } catch (error) {
+        toast.error('Error sending email');
+
+      }
+    } else {
+      setErrors(newErrors);
+      console.log(newErrors);
+      if (newErrors?.msg=="Message must be at least 20 characters"&& !newErrors.name) {
+        toast.error('the details message not enough about your project  ');
+              return false;
+      }
+      toast.error('All Fields Required');
+    }
+  };
     return (
     <section className="contact section "id="contact">
         <h2 className="section__title">Get in touch</h2>
@@ -72,21 +107,28 @@ console.log(form.current);
             </div>
             <div className="contact__content-form">
                 <h3 className="contact__title">Write me your project</h3>
-                <form action="" className="contact__form" onSubmit={sendEmail} ref={form}>
+                <form action="" className="contact__form" onSubmit={handleSubmit} >
+                    {/* name */}
                     <div className="contact__form-layout">
                         <label className="contact__form-label">Name</label>
-                        <input type="text" name="name" className="contact__input-name" placeholder="Type your name !"/>
+                        <input type="text" name="name" className="contact__input-name" placeholder="Type your name !" 
+          value={formData.name}
+          onChange={handleChange}/>
 
                     </div>
+                    {/* email */}
                     <div className="contact__form-layout">
                         <label className="contact__form-label">Mail</label>
-                        <input type="email" name="email" className="contact__input-name" placeholder="Type your email !"/>
+                        <input type="email" name="email" className="contact__input-name" placeholder="Type your email !" value={formData.email}
+                           onChange={handleChange}/>
                         
                     </div>
+                    {/* messgae */}
                     <div className="contact__form-layout contact__textarea">
                         <label className="contact__form-label">Project</label>
-                        <textarea name="project"  cols="10" rows="1" className="contact__textarea"
-                         placeholder="Type the idea of your project !"></textarea>                        
+                        <textarea name="msg"  cols="10" rows="1" className="contact__textarea"
+                         placeholder="Type the idea of your project !"value={formData.msg}
+                         onChange={handleChange}></textarea>                        
                     </div>
                     <div>
                     <button className="send__msg button button--flex">

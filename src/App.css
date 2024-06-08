@@ -351,7 +351,15 @@ transition: .2s;
   background: linear-gradient(92.84deg, #aa780cec -47.72%, #f38304 136.81%);
   box-shadow: 0px 5px 8px rgba(252, 172, 1, 0.24), 0px 14px 32px rgba(255, 178, 14, 0.29);
 }
+/* toaster */
+.custom-class-toast{
 
+  color: white; /* Adjust text color to ensure readability */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ width: 400px;
+}
 
 
 
