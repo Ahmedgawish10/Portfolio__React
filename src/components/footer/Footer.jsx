@@ -70,7 +70,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer__copy">
-          &#169; Crypticalcoder. All rights reserved
+          &#169; Developed By Ahmed Gawish
         </div>
       </div>
     </footer>

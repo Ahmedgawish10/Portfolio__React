@@ -118,7 +118,7 @@ const Qualification = () => {
                 <div></div>
                 <div>
                 <span className="quaification-roundder"></span>
-                  <span className="qualification__line last"></span>
+                  <span className="qualification__line "></span>
                 
               </div>
               <div>
@@ -135,7 +135,22 @@ const Qualification = () => {
              
             </div>
              {/* ========qualification three====================== */}
-             
+             <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title mb-2">Front-end Developer</h3>
+                <span className="qualification__subtitle last">
+                  Rukn <br/> 
+                </span>
+                <div className="qualification__calendar">
+                  <i className="uil uil-calendar-alt"></i> 6/2024 - Present
+                </div>
+              </div>
+              <div>
+                <span className="quaification-roundder"></span>
+                  <span className="qualification__line last"></span>
+                
+              </div>
+            </div>
           
           </div>
         </div>

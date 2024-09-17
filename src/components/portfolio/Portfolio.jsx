@@ -97,7 +97,9 @@ const Portfolio = () => {
 
           <div className="box">
             <div className="box__img-web">
-              <img src={Eljewar} alt="Eljewar Travels App" />
+            <a href="https://aljewartours.vercel.app/" target="_blank">
+                <img src={Eljewar} alt="Courses Tech App" className="animate__img-web3" />
+              </a>
             </div>
             <div className="title__project">
               <h3 className="pb-2">Eljewar Travels App</h3>
@@ -125,7 +127,7 @@ const Portfolio = () => {
                 Technologies: (HTML - CSS - JS - Tailwind - Next.js - Strapi - Stripe - ClerkAuth - Cloudinary)
               </div>
               <h5 className="pt-1 d-flex">
-                <a href="https://aljewartours.vercel.app/" target="_blank" rel="noreferrer">
+                <a href="https://fullstack-courses-app-3vdz.vercel.app/" target="_blank" rel="noreferrer">
                   Demo
                 </a>
                 <i className="uil uil-arrow-right services__button-icon me-3"></i>
