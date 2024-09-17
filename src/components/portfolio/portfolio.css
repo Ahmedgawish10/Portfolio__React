@@ -126,6 +126,9 @@ overflow: hidden;
   animation:top_img-web-1 5s ease-in-out 1; 
   animation-delay: 1s;
 }
+.animate__img-web3{
+   animation: none !important;
+}
 @keyframes top_img-web-1 {
   0%{
      top: 0;
@@ -185,7 +188,7 @@ cursor:pointer;
 .portfolio__all-data .box .title__project,
 .portfolio__web-show  .title__project
  {
-  padding: 1rem 0rem 0.5rem;
+  padding: 1rem 0rem 0.2rem;
 }
 /*==================== start animation style for portfolio__angular section====================== */
 .box__img-angular{
