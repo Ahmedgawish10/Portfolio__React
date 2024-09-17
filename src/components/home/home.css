@@ -68,14 +68,15 @@ top:1rem;
     margin-bottom: var(--mb-3);
 }
 .home__img{
-    background-image: url('../../assets/gawish.jpg');
+    transform: rotate(30deg);
+    background-image: url('../../assets/p1.jpeg');
     background-repeat: no-repeat;
     background-position: left ;
     background-size: cover;
     box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
     order: 5;
     justify-self: center;
-    width: 300px;
+    width: 290px;
     height: 300px;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40% ;
 
