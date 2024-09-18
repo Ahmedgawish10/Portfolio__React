@@ -102,7 +102,7 @@ const Portfolio = () => {
               </a>
             </div>
             <div className="title__project">
-              <h3 className="pb-2">Eljewar Travels App</h3>
+              <h3 className="pb-2">Travel Agency App</h3>
               <span>Freelance Project</span>
               <div>Technologies: (HTML - CSS - JS - Tailwind - Next.js - i18next)</div>
               <h5 className="pt-1 d-flex">

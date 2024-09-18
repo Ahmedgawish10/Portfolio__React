@@ -41,7 +41,7 @@ const Alldata = () => {
           </a>
         </div>
         <div className="title__project">
-          <h3 className="pb-2">Eljewar travels App</h3>
+          <h3 className="pb-2"> Travel Agency App</h3>
           <span>Freelance Project</span>
           <div>Technologies: (HTML - CSS- JS - Tailwind -Nextjs - i18next ) </div>
 
@@ -67,7 +67,7 @@ const Alldata = () => {
           </a>
         </div>
         <div className="title__project">
-          <h3 className="pb-2">Courses Tehc App</h3>
+          <h3 className="pb-2">Courses Tech App</h3>
           <span>Training Project</span>
           <div>Technologies: (HTML - CSS- JS - Tailwind -Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary ) </div>
 
