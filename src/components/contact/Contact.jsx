@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import emailjs from 'emailjs-com';
 import { toast } from 'react-hot-toast';
+import { FaLinkedin } from "react-icons/fa";
+
 import "./contact.css"
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '' ,msg:''});
@@ -95,10 +97,10 @@ const Contact = () => {
                     </div>
                     {/*========================= contact 3======== */}
                     <div className="contact__card">
-                        <i className="bx bxl-messenger contact__card-icon"></i>
-                        <h3 className="contact__card-title">Messenger</h3>
+                      <div className='flex justify-center'>     < FaLinkedin className=' text-[36px] pb-2 text-white'/>          </div>
+                        <h3 className="contact__card-title">Linkedin</h3>
                         <p className="contact__card-data">Ahmed Gawish</p>
-                        <a href="https://m.facebook.com/profile.php/?id=100022787090778" target='_blank' className="contact__card-button">
+                        <a href="https://www.linkedin.com/in/ahmed-gawish-718b27213" target='_blank' className="contact__card-button">
                             Write me <i className=" uil uil-arrow-right icon "></i>
                         </a>
                     </div>
