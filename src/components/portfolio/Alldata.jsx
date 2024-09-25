@@ -74,7 +74,7 @@ const Alldata = () => {
         </div>
         <h5 className="pt-1 d-flex ">
           <a
-            href="https://aljewartours.vercel.app/"
+            href="https://fullstack-courses-app-3vdz.vercel.app/"
             target="_blank" rel="noreferrer"
           >
             Demo
@@ -88,7 +88,7 @@ const Alldata = () => {
      {/* project four */}
       <div className="box">
         <div className="box__img-react">
-          <a href="https://ecommerce-pharmacy4.vercel.app/" target="_blank" alt="">
+          <a href="https://ecommerce-pharmacy4.vercel.app/" target="_blank" alt="pharmacy">
             <img src={ecompharmacy} alt="E-commerce Pizza" />
           </a>
         </div>
