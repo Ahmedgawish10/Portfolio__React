@@ -226,6 +226,13 @@ cursor:pointer;
   }
 }
 @media screen and (max-width: 576px) {
+  .iti3 {
+    display: flex;
+    align-items: center;
+  }
+  .iti3 img{
+    height: 60vh !important;
+  }
   .box__img-grad{
     display: flex;
     justify-content: center;
@@ -277,10 +284,8 @@ cursor:pointer;
 width: 60%;
 height: 90%;
 }
-.box__img-grad img{
-  width: 60% ;
-  height: 90vh !important;
-}
+
+
 .close__img-grad{
 position: fixed;
 right:20px;

@@ -185,11 +185,11 @@ const Portfolio = () => {
               <i className="uil uil-arrow-right services__button-icon"></i>
             </h5>
             <div className={imgGrad1 ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad" onClick={() => setImgGrad1(!imgGrad1)}>
-                x
+              <div className="close__img-grad cursor-pointer" onClick={() => setImgGrad1(!imgGrad1)}>
+                <i  className="uil uil-times"></i>
               </div>
               <div className="box__img-grad">
-                <img src={Image6} alt="ITI Summer Training Certificate" />
+                <img src={Image6} className=" h-[90vh] md:h-[90vh] w-[60%] " alt="ITI Summer Training Certificate" />
               </div>
             </div>
           </div>
@@ -207,11 +207,11 @@ const Portfolio = () => {
               <i className="uil uil-arrow-right services__button-icon"></i>
             </h5>
             <div className={imgGrad2 ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad" onClick={() => setImgGrad2(!imgGrad2)}>
-                x
+              <div className="close__img-grad cursor-pointer" onClick={() => setImgGrad2(!imgGrad2)}>
+              <i  className="uil uil-times"></i>
               </div>
-              <div className="box__img-grad">
-                <img src={Image7} alt="ITI Web Developer Certificate" />
+              <div className="box__img-grad iti3">
+                <img src={Image7} className="md:h-[90vh] w-[60%] " alt="ITI Web Developer Certificate" />
               </div>
             </div>
           </div>
