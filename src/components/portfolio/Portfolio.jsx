@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Alldata from "./Alldata";
 import "./portfolio.css";
 import Image6 from "../../assets/iti-traning.jpg";
+import Image7 from "../../assets/iti3.png";
+
 import jopPortal from "../../assets/jop-portal.png";
 import Eljewar from "../../assets/eljwewar-travels.png";
 import Courses from "../../assets/courses-app.png";
@@ -10,7 +12,8 @@ import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
 
 const Portfolio = () => {
   const [port, setPort] = useState(1);
-  const [imgGrad, setImgGrad] = useState(false);
+  const [imgGrad1, setImgGrad1] = useState(false);
+  const [imgGrad2, setImgGrad2] = useState(false);
 
   window.addEventListener("scroll", () => {
     const boxImg = document.querySelectorAll(".box__img img");
@@ -171,18 +174,18 @@ const Portfolio = () => {
         <div className={port === 4 ? "portfolio__web-show certificate" : "portfolio__web-hide"}>
           <div className="box">
             <div className="box__img-cert">
-              <img src={Image6} alt="ITI Summer Training Certificate" onClick={() => setImgGrad(!imgGrad)} />
+              <img src={Image6} alt="ITI Summer Training Certificate" onClick={() => setImgGrad1(!imgGrad1)} />
             </div>
             <h4 className="title__certificate">Summer Training Certificate at I T I</h4>
             <h5 className="content__certificate">Fundamentals Web Development</h5>
             <h5 className="view__container">
-              <span className="view_certificate" onClick={() => setImgGrad(!imgGrad)}>
+              <span className="view_certificate" onClick={() => setImgGrad1(!imgGrad1)}>
                 View
               </span>
               <i className="uil uil-arrow-right services__button-icon"></i>
             </h5>
-            <div className={imgGrad ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad" onClick={() => setImgGrad(!imgGrad)}>
+            <div className={imgGrad1 ? "showgrad" : "hidegrad"}>
+              <div className="close__img-grad" onClick={() => setImgGrad1(!imgGrad1)}>
                 x
               </div>
               <div className="box__img-grad">
@@ -193,22 +196,22 @@ const Portfolio = () => {
 
           <div className="box">
             <div className="box__img-cert">
-              <img src={Image6} alt="ITI Web Developer Certificate" onClick={() => setImgGrad(!imgGrad)} />
+              <img src={Image7} alt="ITI Web Developer Certificate" onClick={() => setImgGrad2(!imgGrad2)} />
             </div>
             <h4 className="title__certificate">Web Developer Certificate at I T I</h4>
             <h5 className="content__certificate">Fullstack PHP Web Developer</h5>
             <h5 className="view__container">
-              <span className="view_certificate" onClick={() => setImgGrad(!imgGrad)}>
+              <span className="view_certificate" onClick={() => setImgGrad2(!imgGrad2)}>
                 View
               </span>
               <i className="uil uil-arrow-right services__button-icon"></i>
             </h5>
-            <div className={imgGrad ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad" onClick={() => setImgGrad(!imgGrad)}>
+            <div className={imgGrad2 ? "showgrad" : "hidegrad"}>
+              <div className="close__img-grad" onClick={() => setImgGrad2(!imgGrad2)}>
                 x
               </div>
               <div className="box__img-grad">
-                <img src={Image6} alt="ITI Web Developer Certificate" />
+                <img src={Image7} alt="ITI Web Developer Certificate" />
               </div>
             </div>
           </div>
