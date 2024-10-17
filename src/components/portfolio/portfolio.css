@@ -209,6 +209,9 @@ cursor:pointer;
   }
 }
 @media screen and (max-width: 768px) {
+  .iti3 img{
+    height: 80vh !important;
+  }
   .portfolio__all-data {
     grid-template-columns: repeat(2, 1fr);
 
@@ -226,13 +229,7 @@ cursor:pointer;
   }
 }
 @media screen and (max-width: 576px) {
-  .iti3 {
-    display: flex;
-    align-items: center;
-  }
-  .iti3 img{
-    height: 60vh !important;
-  }
+ 
   .box__img-grad{
     display: flex;
     justify-content: center;
@@ -265,6 +262,15 @@ cursor:pointer;
   }
 }
 /* ------------------------------handle  all veiw img certificate style  ------------------------------------ */
+@media screen  and (max-width:500px) {
+  .iti3 {
+    display: flex;
+    align-items: center;
+  }
+  .iti3 img{
+    height: 60vh !important;
+  }
+}
 .hidegrad{
   display: none;
 }
