@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const Backend = () => {
     return (
@@ -8,21 +9,21 @@ const Backend = () => {
         <div className="skills__box">
             <div className="skills__group1">
                 <div className="skills__data">
-                    <i className='bx bx-badge-check'></i>
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
                         <h3 className="skills__name">PHP</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 <div className="skills__data">
-                    <i className='bx bx-badge-check'></i>
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
                         <h3 className="skills__name">MySQL</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 <div className="skills__data">
-                    <i className='bx bx-badge-check'></i>
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
                         <h3 className="skills__name">Laravel</h3>
                         <span className="skills__level">Intermediate</span>
@@ -33,25 +34,25 @@ const Backend = () => {
             {/* second group */}
             <div className="skills__group2 fit-height">
                 <div className="skills__data ">
-                    <i className='bx bx-badge-check'></i>
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
                         <h3 className="skills__name">NodeJs</h3>
                         <span className="skills__level">Basic</span>
                     </div>
                 </div>
                 <div className="skills__data ">
-                    <i className='bx bx-badge-check'></i>
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
                         <h3 className="skills__name">Strapi</h3>
                         <span className="skills__level">Basic</span>
                     </div>
                 </div>
                 
-                <div className="skills__data2 hidden">
-                    <i className='bx bx-badge-check'></i>
+                <div className="skills__data ">
+                      <IoMdCheckmarkCircleOutline/>
                     <div>
-                        <h3 className="skills__name">Firebase</h3>
-                        <span className="skills__level">Basic</span>
+                        <h3 className="skills__name">Firbase</h3>
+                        <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 

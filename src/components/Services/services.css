@@ -19,11 +19,11 @@
     }
 @keyframes view-more{
 0%{
-    padding-left: 0rem;
+    margin-left: 0rem;
 
 }
 50%{
-    padding-left: .5rem;
+    margin-left: .5rem;
 }
 
     }

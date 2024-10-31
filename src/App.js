@@ -62,7 +62,8 @@ useEffect(()=>{
     <Contact/>
     </main>
     <Footer/>
-    <Scrollup/></>
+    <Scrollup/>
+    </>
     
     }
       

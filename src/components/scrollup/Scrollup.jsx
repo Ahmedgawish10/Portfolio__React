@@ -1,4 +1,6 @@
 import React from "react";
+import { IoArrowUpSharp } from "react-icons/io5";
+
 import "./scrollup.css";
 import { Link } from "react-scroll";
 const Scrollup = () => {
@@ -16,9 +18,10 @@ const Scrollup = () => {
   });
   const home = "home";
   return (
-    <div className="scrollup">
-      <Link to={home} smooth={true} duration={0}>
-        <i className="uil uil-arrow-up"></i>
+    <div className="scrollup ">
+      <Link to={home} smooth={true} duration={0} className="flex px-[10px] py-[10px]">
+        <IoArrowUpSharp className="text-white text-2xl"/>
+
       </Link>
     </div>
   );
