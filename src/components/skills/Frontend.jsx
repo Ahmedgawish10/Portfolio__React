@@ -14,7 +14,7 @@ const Frontend = () => {
                       <IoMdCheckmarkCircleOutline/>
                       <div>
                           <h3 className="skills__name"> Git & Github </h3>
-                          <span className="skills__level">Intermediate</span>
+                          <span className="skills__level">Advanced</span>
                       </div>
                   </div>
                   <div className="skills__data">
@@ -35,7 +35,7 @@ const Frontend = () => {
                       <IoMdCheckmarkCircleOutline/>
                       <div>
                           <h3 className="skills__name">Tailwind</h3>
-                          <span className="skills__level">basic</span>
+                          <span className="skills__level">Advanced</span>
                       </div>
                   </div>
 
@@ -48,21 +48,21 @@ const Frontend = () => {
                       <IoMdCheckmarkCircleOutline/>
                       <div>
                           <h3 className="skills__name">redux Toolkit</h3>
-                          <span className="skills__level">Intermediate</span>
+                          <span className="skills__level">Advanced</span>
                       </div>
                   </div>
                   <div className="skills__data">
                       <IoMdCheckmarkCircleOutline/>
                       <div>
                           <h3 className="skills__name">TypeScript</h3>
-                          <span className="skills__level">basic</span>
+                          <span className="skills__level">Intermediate</span>
                       </div>
                   </div>
                   <div className="skills__data">
                       <IoMdCheckmarkCircleOutline/>
                       <div>
-                          <h3 className="skills__name">UI/UX</h3>
-                          <span className="skills__level">Basic</span>
+                          <h3 className="skills__name">React MUI</h3>
+                          <span className="skills__level">Intermediate</span>
                       </div>
                   </div>
                   <div className="skills__data">
@@ -106,14 +106,14 @@ const Frontend = () => {
               <div className="skills__data">
                       <IoMdCheckmarkCircleOutline/>
                       <div>
-                          <h3 className="skills__name">React Js</h3>
+                          <h3 className="skills__name">ReactJs</h3>
                           <span className="skills__level">Advanced</span>
                       </div>
                   </div>
                   <div className="skills__data">
                       <IoMdCheckmarkCircleOutline/>
                       <div>
-                          <h3 className="skills__name">Next Js</h3>
+                          <h3 className="skills__name">NextJs</h3>
                           <span className="skills__level">Intermediate</span>
                       </div>
                   </div>

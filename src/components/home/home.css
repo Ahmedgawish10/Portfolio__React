@@ -69,7 +69,7 @@ top:1rem;
 }
 .home__img{
     transform: rotate(30deg);
-    background-image: url('../../assets/p1.jpeg');
+    background-image: url('../../assets/ahmd-img.jpeg');
     background-repeat: no-repeat;
     background-position: left ;
     background-size: cover;

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import emailjs from 'emailjs-com';
 import { toast } from 'react-hot-toast';
 import { FaLinkedin } from "react-icons/fa";
@@ -60,7 +60,7 @@ const Contact = () => {
     } else {
       setErrors(newErrors);
       console.log(newErrors);
-      if (newErrors?.msg=="Message must be at least 20 characters"&& !newErrors.name) {
+      if (newErrors?.msg==="Message must be at least 20 characters"&& !newErrors.name) {
         toast.error('the details message not enough about your project  ');
               return false;
       }
@@ -101,7 +101,7 @@ const Contact = () => {
                         <h3 className="contact__card-title">Linkedin</h3>
                         <p className="contact__card-data">Ahmed Gawish</p>
                         <a href="https://www.linkedin.com/in/ahmed-gawish-718b27213" target='_blank' className="contact__card-button">
-                            Write me <i className=" uil uil-arrow-right icon "></i>
+                            Contact me <i className=" uil uil-arrow-right icon "></i>
                         </a>
                     </div>
 

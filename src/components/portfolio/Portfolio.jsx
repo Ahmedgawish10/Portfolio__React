@@ -1,40 +1,16 @@
 import React, { useState } from "react";
-import Alldata from "./Alldata";
+import AllProjects from "./AllProjects";
 import "./portfolio.css";
-import Image6 from "../../assets/iti-traning.jpg";
-import Image7 from "../../assets/iti3.png";
 
-import jopPortal from "../../assets/jop-portal.png";
-import Eljewar from "../../assets/eljwewar-travels.png";
-import Courses from "../../assets/courses-app.png";
-import finalproject from "../../assets/final-project.png";
-import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
 
+import { webProjects,reactProjects ,myCertificates} from "./data";
 const Portfolio = () => {
-  const [port, setPort] = useState(1);
-  const [imgGrad1, setImgGrad1] = useState(false);
-  const [imgGrad2, setImgGrad2] = useState(false);
+  const [portTabs, setPortTabs] = useState(1);
+  const [imgCert, setImgCert] = useState(null);
 
-  window.addEventListener("scroll", () => {
-    const boxImg = document.querySelectorAll(".box__img img");
-    const boxImgReact = document.querySelectorAll(".box__img-react img");
-    const boxImgWeb = document.querySelectorAll(".box__img-web img");
-
-    // Animation for all sections
-    const animateImages = (elements, className) => {
-      elements.forEach((element) => {
-        if (window.scrollY >= 1800) {
-          element.classList.add(className);
-        } else {
-          element.classList.remove(className);
-        }
-      });
-    };
-
-    animateImages(boxImg, "animate__img");
-    animateImages(boxImgReact, "animate__img2");
-    animateImages(boxImgWeb, "animate__img-web");
-  });
+  const handleToggleCert = (index) => {
+    setImgCert((prev) => (prev == index ? null : index));
+  };
 
   return (
     <div className="portfolio section" id="portfolio">
@@ -44,178 +20,106 @@ const Portfolio = () => {
       <div className="portfolio__container container grid">
         {/* Portfolio Tabs */}
         <div className="portfolio__tabs">
-          <button
-            className={port === 1 ? "button-active" : "portolio__tabs-button"}
-            onClick={() => setPort(1)}
-          >
-            All
-          </button>
-          <button
-            className={port === 2 ? "button-active" : "portolio__tabs-button"}
-            onClick={() => setPort(2)}
-          >
-            Web
-          </button>
-          <button
-            className={port === 3 ? "button-active" : "portolio__tabs-button"}
-            onClick={() => setPort(3)}
-          >
-            React
-          </button>
-          <button
-            className={port === 4 ? "button-active" : "portolio__tabs-button"}
-            onClick={() => setPort(4)}
-          >
-            Certificates
-          </button>
+          {["All", "Web", "React", "Certificates"].map((tab, index) => (
+            <button
+              key={index}
+              className={portTabs === index + 1 ? "button-active" : "portolio__tabs-button"}
+              onClick={() => setPortTabs(index + 1)}
+            >
+              {tab}1
+            </button>
+          ))}
         </div>
-
         {/* All Projects */}
-        <div className={port === 1 ? "portfolio__all-show" : "portfolio__all-hide"}>
-          <Alldata />
-        </div>
-
+        {portTabs === 1 && (
+          <div className="portfolio__all-show">
+            <AllProjects />
+          </div>
+        )}
         {/* Web Projects */}
-        <div className={port === 2 ? "portfolio__web-show" : "portfolio__web-hide"}>
-          <div className="box">
-            <div className="box__img-web">
-              <img src={jopPortal} alt="Job Portal App" />
-            </div>
-            <div className="title__project">
-              <h3 className="pb-2">Job Portal App</h3>
-              <span>Graduation Project at - I T I</span>
-              <div>Technologies: (HTML - Sass - JS - BootStrap - PHP - MySQL)</div>
-              <h5 className="pt-1">
-                <a
-                  href="https://github.com/Ahmedgawish10/JobPortal-app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code
-                </a>
-                <i className="uil uil-arrow-right services__button-icon"></i>
-              </h5>
-            </div>
-          </div>
-
-          <div className="box">
-            <div className="box__img-web">
-            <a href="https://aljewartours.vercel.app/" target="_blank">
-                <img src={Eljewar} alt="Courses Tech App" className="animate__img-web3" />
-              </a>
-            </div>
-            <div className="title__project">
-              <h3 className="pb-2">Travel Agency App</h3>
-              <span>Freelance Project</span>
-              <div>Technologies: (HTML - CSS - JS - Tailwind - Next.js - i18next)</div>
-              <h5 className="pt-1 d-flex">
-                <a href="https://aljewartours.vercel.app/" target="_blank" rel="noreferrer">
-                  Demo
-                </a>
-                <i className="uil uil-arrow-right services__button-icon me-3"></i>
-              </h5>
-            </div>
-          </div>
-
-          <div className="box">
-            <div className="box__img-web">
-              <a href="https://fullstack-courses-app-3vdz.vercel.app/" target="_blank">
-                <img src={Courses} alt="Courses Tech App" className="animate__img-web3" />
-              </a>
-            </div>
-            <div className="title__project">
-              <h3 className="pb-2">Courses Tech App</h3>
-              <span>Training Project</span>
-              <div>
-                Technologies: (HTML - CSS - JS - Tailwind - Next.js - Strapi - Stripe - ClerkAuth - Cloudinary)
+        {portTabs === 2 && (
+          <div className="portfolio__web-show">
+            {webProjects.map((project, index) => (
+              <div className="box" key={index}>
+                <div className="box__img-web">
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    <img src={project.img} alt={project.title} />
+                  </a>
+                </div>
+                <div className="title__project">
+                  <h3 className="pb-2">{project.title}</h3>
+                  <span>{project.description}</span>
+                  <div>Technologies: ({project.technologies})</div>
+                  <h5 className="pt-1 d-flex">
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      {project.linkText}
+                    </a>
+                    <i className="uil uil-arrow-right services__button-icon me-3"></i>
+                  </h5>
+                </div>
               </div>
-              <h5 className="pt-1 d-flex">
-                <a href="https://fullstack-courses-app-3vdz.vercel.app/" target="_blank" rel="noreferrer">
-                  Demo
-                </a>
-                <i className="uil uil-arrow-right services__button-icon me-3"></i>
-              </h5>
-            </div>
+            ))}
           </div>
-        </div>
-
+        )}
         {/* React Projects */}
-        <div className={port === 3 ? "portfolio__web-show" : "portfolio__web-hide"}>
-          <div className="box">
-            <div className="box__img-react">
-              <img src={finalproject} alt="Graduation Project" />
-            </div>
-            <h4 className="title__project">Graduation Project</h4>
-            <div>Technologies: (HTML - CSS - BootStrap - React - Context API - React Router)</div>
-            <h5>
-              <a href="https://ahmedgawish10.github.io/graduateproject/" target="_blank" rel="noreferrer">
-                Demo
-              </a>
-            </h5>
+        {portTabs === 3 && (
+          <div className="portfolio__web-show">
+            {reactProjects.map((project, index) => (
+              <div className="box" key={index}>
+                <div className="box__img-react">
+                  <img src={project.img} alt={project.title} />
+                </div>
+                <h4 className="title__project">{project.title}</h4>
+                <div>Technologies: ({project.technologies})</div>
+                <h5>
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    Demo
+                  </a>
+                </h5>
+              </div>
+            ))}
           </div>
-
-          <div className="box">
-            <div className="box__img-react">
-              <img src={ecompharmacy} alt="E-commerce Pharmacy" />
-            </div>
-            <h4 className="title__project">E-commerce Pharmacy</h4>
-            <div>
-              Technologies: (HTML - CSS - BootStrap - React - Redux Toolkit - React Router - Slick Carousel)
-            </div>
-            <h5>
-              <a href="https://ecommerce-pharmacy4.vercel.app/" target="_blank" rel="noreferrer">
-                Demo
-              </a>
-            </h5>
-          </div>
-        </div>
+        )}
 
         {/* Certificates */}
-        <div className={port === 4 ? "portfolio__web-show certificate" : "portfolio__web-hide"}>
-          <div className="box">
-            <div className="box__img-cert">
-              <img src={Image6} alt="ITI Summer Training Certificate" onClick={() => setImgGrad1(!imgGrad1)} />
-            </div>
-            <h4 className="title__certificate">Summer Training Certificate at I T I</h4>
-            <h5 className="content__certificate">Fundamentals Web Development</h5>
-            <h5 className="view__container">
-              <span className="view_certificate" onClick={() => setImgGrad1(!imgGrad1)}>
-                View
-              </span>
-              <i className="uil uil-arrow-right services__button-icon"></i>
-            </h5>
-            <div className={imgGrad1 ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad cursor-pointer" onClick={() => setImgGrad1(!imgGrad1)}>
-                <i  className="uil uil-times"></i>
+        {portTabs === 4 && (
+          <div className="portfolio__web-show certificate">
+            {myCertificates.map((certificate, index) => (
+              <div className="box" key={index}>
+                <div className="box__img-cert">
+                  <img
+                    src={certificate.img}
+                    alt={certificate.title}
+                    className="cursor-pointer"
+                    onClick={() => handleToggleCert(index)}//0-1
+                  />
+                </div>
+                <h4 className="title__certificate">{certificate.title}</h4>
+                <h5 className="content__certificate">{certificate.description}</h5>
+                <h5 className="view__container">
+                  <span
+                  onClick={() => handleToggleCert(index)}//0-1
+                    className="view_certificate"
+                  >
+                    View
+                  </span>
+                  <i className="uil uil-arrow-right services__button-icon"></i>
+                </h5>
+                <div className={imgCert==index ? "showgrad" : "hidegrad"}>
+                  <div  onClick={() => handleToggleCert(index)}//0-1
+                    className="close__img-grad cursor-pointer"
+                  >
+                    <i className="uil uil-times"></i>
+                  </div>
+                  <div className="box__img-grad">
+                    <img src={certificate.img} className="md:h-[90vh] w-[60%]" alt={certificate.title} />
+                    
+                  </div>
+                </div>
               </div>
-              <div className="box__img-grad">
-                <img src={Image6} className=" h-[90vh] md:h-[90vh] w-[60%] " alt="ITI Summer Training Certificate" />
-              </div>
-            </div>
+            ))}
           </div>
-
-          <div className="box">
-            <div className="box__img-cert">
-              <img src={Image7} alt="ITI Web Developer Certificate" onClick={() => setImgGrad2(!imgGrad2)} />
-            </div>
-            <h4 className="title__certificate">Web Developer Certificate at I T I</h4>
-            <h5 className="content__certificate">Fullstack PHP Web Developer</h5>
-            <h5 className="view__container">
-              <span className="view_certificate" onClick={() => setImgGrad2(!imgGrad2)}>
-                View
-              </span>
-              <i className="uil uil-arrow-right services__button-icon"></i>
-            </h5>
-            <div className={imgGrad2 ? "showgrad" : "hidegrad"}>
-              <div className="close__img-grad cursor-pointer" onClick={() => setImgGrad2(!imgGrad2)}>
-              <i  className="uil uil-times"></i>
-              </div>
-              <div className="box__img-grad iti3">
-                <img src={Image7} className="md:h-[90vh] w-[60%] " alt="ITI Web Developer Certificate" />
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

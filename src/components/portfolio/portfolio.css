@@ -82,30 +82,43 @@ cursor: pointer;
 }
 .portfolio__all-data .box .box__img {
   position: relative;
-overflow: hidden;
+  overflow: hidden;
 }
-.portfolio__all-data .box:nth-child(1) img{
+.portfolio__all-data .box img{
   border-radius: 10px;
   position: absolute;
- /* animation: top_img-all-1 8s ease-in-out 1;  */
 }
-.portfolio__all-data .box .animate__img{ 
+.portfolio__all-data .box .animate__section1{ 
   animation: top_img-all-1 8s ease-in-out 1; 
   animation-delay: .2s;
-
 }
 @keyframes top_img-all-1 {
   0%{
      top: 0;
   }
   50%{
-    top:-350%
+    top:-250%
   }
   100%{
     top: 0;
 
   }
 }
+/* arrow animation  */
+.services__button-icon{
+
+  animation: demo ease-in-out 1s infinite;
+  }
+@keyframes demo{
+0%{
+  margin-left: 0rem;
+
+}
+50%{
+  margin-left: .5rem;
+}
+
+  }
 /*==================== start animation style for portfolio web section====================== */
 .portfolio__web-show .box .box__img-web {
   position: relative;
@@ -114,8 +127,6 @@ overflow: hidden;
 .portfolio__web-show .box:nth-child(1) img{
   border-radius: 10px;
   position: absolute;
-  background-color: red !important;
- /* animation: top_img-all-1 8s ease-in-out 1;  */
 }
 .portfolio__web-show .box .animate__img{ 
   animation: top_img-web-1 8s ease-in-out 1; 
@@ -146,8 +157,8 @@ overflow: hidden;
 .portfolio__all-data .box:nth-child(2) img:hover,
 .portfolio__all-data .box:nth-child(3) img:hover,
 .portfolio__all-data .box:nth-child(4) img:hover,
-.portfolio__web-show .box:nth-child(1) img:hover,
-.portfolio__web-show .box:nth-child(2) img:hover
+.portfolio__web-show .box:nth-child(5) img:hover,
+.portfolio__web-show .box:nth-child(6) img:hover
 
 {
 animation-play-state: paused;
@@ -319,3 +330,29 @@ align-items: center;
 
 }
 /* -----------------------------end handle  all veiw img certificate style  ------------------------------------ */
+/* pagniation */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffb800;
+}
+
+.pagination  a {
+  display: block;
+  padding:  8px 15px;
+}
+.pagination li.active {
+  background-color: #ff9800;
+  color: white;
+  border: 1px solid #677005;
+}
