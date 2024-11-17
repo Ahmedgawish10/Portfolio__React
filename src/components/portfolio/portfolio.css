@@ -268,6 +268,9 @@ cursor:pointer;
   .portfolio__all-data {
     grid-template-columns: repeat(1, 1fr);
   }
+  .pagination  a {
+    padding:  6px 8px !important;
+  }
   .portfolio__web-show {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -344,15 +347,27 @@ align-items: center;
 
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #ffb800;
+  background-color:#fff ;
 }
+.dark .pagination li {
+  background-color: #ffb800;
 
+}
 .pagination  a {
   display: block;
   padding:  8px 15px;
+  color: rgb(120, 116, 116);
+}
+.dark .pagination  a {
+
+  color: white;
 }
 .pagination li.active {
-  background-color: #ff9800;
-  color: white;
+  background-color: #000000;
+  color: white !important;
   border: 1px solid #677005;
+}
+.dark .pagination li.active {
+  background-color: #000000;
+
 }

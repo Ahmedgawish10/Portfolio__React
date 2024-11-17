@@ -13,11 +13,14 @@ const Alldata = () => {
 
   const handlePageClick = (event) => {
     setCurrentPage(event.selected);  
-    window.scrollTo(2500, 2500);
+    const container = document.querySelector('.portfolio');
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
-<div className="di">
+<div className="All-projects">
 <div className="portfolio__all-data">
       {currentProjects.map((project) => (
         <div className="box" key={project.id}>
@@ -45,12 +48,12 @@ const Alldata = () => {
     
 <ReactPaginate
         breakLabel="..."
-        nextLabel="next "
+        nextLabel="Next >>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel=" previous"
-        containerClassName="pagination  px-8 flex gap-6 justify-center mt-5"
+        previousLabel="<< Prev"
+        containerClassName="pagination sm:container  px-8 flex gap-0 md:gap-6 justify-center mt-5"
         activeClassName="active"
       />
 </div>
