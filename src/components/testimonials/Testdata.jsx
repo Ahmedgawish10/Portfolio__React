@@ -1,6 +1,6 @@
-import Img1 from '../../assets/testimonial1.png';
-import Img2 from '../../assets/images(1).jpg';
-import Img3 from '../../assets/images.jpg';
+import Img1 from '../../assets/client1.jpg';
+import Img2 from '../../assets/client2.jpg';
+import Img3 from '../../assets/client3.jpg';
 export  const TestData=[
     {
         id:1,
@@ -12,12 +12,12 @@ export  const TestData=[
         id:2,
         image:Img2,
         title:"Ahmed Adel",
-        description:"Fantastic, every aspect of the project was carefully followed, resulting in excellent outcomes.",
+        description:"Impressive front-end execution  coding and design delivered a visually stunning and function.",
     },
     {
         id:3,
         image:Img3,
         title:"Ali khalid",
-        description:"A really good jop, all aspects of the project were followed step by step and with good results",
+        description:"Excellent work every part of the project was carefully executed step by step, leading to great results.",
     },
 ];
