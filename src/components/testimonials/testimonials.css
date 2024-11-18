@@ -25,6 +25,13 @@ width: 750px;
    
 
 }
+.dark .contact__card-icon{
+    color: rgb(255, 255, 255) !important;
+}
+.contact__card-icon{
+    color: #333 !important;
+}
+
 /* swiper */
 .swiper-pagination-bullet{
     background-color: var(--text-color) !important;
