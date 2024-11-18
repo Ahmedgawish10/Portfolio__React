@@ -35,7 +35,7 @@ const Testimonials = () => {
         {TestData.map(({ id, image, title, description }) => {
           return (
             <SwiperSlide className="testimonial__card" key={id}>
-              <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image" />
+              <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image"  loading="lazy"/>
               <h3 className="testimonial__title-name">{title}</h3>
               <p className="testimonial__description line-clamp-3">{description}</p>
             </SwiperSlide>

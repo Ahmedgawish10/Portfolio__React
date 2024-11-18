@@ -43,7 +43,7 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-web">
                   <a href={project.link} target="_blank" rel="noreferrer">
-                    <img src={project.img} alt={project.title} />
+                    <img src={project.img} alt={project.title} loading="lazy"/>
                   </a>
                 </div>
                 <div className="title__project">
@@ -67,7 +67,7 @@ const Portfolio = () => {
             {reactProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-react">
-                  <img src={project.img} alt={project.title} />
+                  <img src={project.img} alt={project.title} loading="lazy" />
                 </div>
                 <h4 className="title__project">{project.title}</h4>
                 <div>Technologies: ({project.technologies})</div>
@@ -88,6 +88,7 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-cert">
                   <img
+                  loading="lazy"
                     src={certificate.img}
                     alt={certificate.title}
                     className="cursor-pointer"
@@ -112,7 +113,7 @@ const Portfolio = () => {
                     <i className="uil uil-times"></i>
                   </div>
                   <div className="box__img-grad">
-                    <img src={certificate.img} className="md:h-[90vh] w-[60%]" alt={certificate.title} />
+                    <img src={certificate.img} className="md:h-[90vh] w-[60%]" alt={certificate.title}  loading="lazy"/>
                     
                   </div>
                 </div>

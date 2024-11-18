@@ -26,7 +26,7 @@ const Alldata = () => {
           <div className="box" key={project.id}>
             <div className="box__img">
               <a href={project.url} target="_blank" rel="noreferrer">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title} loading="lazy"/>
               </a>
             </div>
             <div className="title__project">
