@@ -245,7 +245,7 @@ color: white !important;
   color: white;
 }
 /* services section */
-.dark  .serivces__content,.dark  .services__model-content{
+.dark  .services__content,.dark  .services__model-content{
   background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
 
 }

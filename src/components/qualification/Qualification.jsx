@@ -50,8 +50,8 @@ const Qualification = () => {
               <div>
                 <span className="quaification-roundder"></span>
                   <span className="qualification__line"></span>
-                
               </div>
+              <div></div>
             </div>
             {/* ========qualification two====================== */}
             <div className="qualification__data">
@@ -59,7 +59,6 @@ const Qualification = () => {
                 <div>
                 <span className="quaification-roundder"></span>
                   <span className="qualification__line"></span>
-                
               </div>
               <div>
                 <h3 className="qualification__title mb-2">Web Development</h3>

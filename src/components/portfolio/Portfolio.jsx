@@ -26,7 +26,7 @@ const Portfolio = () => {
               className={portTabs === index + 1 ? "button-active" : "portolio__tabs-button"}
               onClick={() => setPortTabs(index + 1)}
             >
-              {tab}1
+              {tab}
             </button>
           ))}
         </div>

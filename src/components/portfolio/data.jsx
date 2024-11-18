@@ -5,7 +5,6 @@
  import ecompharmacy from "../../assets/ecommerce-pharmacy-min.png";
  import Image6 from "../../assets/iti-traning.jpg";
  import Image7 from "../../assets/iti3.png";
-// 
 import Iti from "../../assets/iti-ecommerce.png";
 import EcomAngular from "../../assets/ecommerce-angular.png";
 
