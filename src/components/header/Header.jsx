@@ -1,44 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./header.css";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineSend } from "react-icons/ai";
 import { GiNotebook } from "react-icons/gi";
-import { BsBagCheck  } from "react-icons/bs";
-import { HiOutlinePhoto  } from "react-icons/hi2";
-import { AiOutlineSend  } from "react-icons/ai";
-import {BsSun} from "react-icons/bs"
-import {BsMoon} from "react-icons/bs"
+import { BsBagCheck, BsSun, BsMoon } from "react-icons/bs";
+import { HiOutlinePhoto } from "react-icons/hi2";
 
-const Header = ({theme,toggletheme}) => {
-  /*===========change backgrond header==============*/
-  window.addEventListener("scroll",()=>{
-    const header=document.querySelector(".header");
-    if (window.scrollY>=560) {
-      header.classList.add("header-background");
-    }
-    else{
-      if(header){
+const Header = ({ theme, toggletheme }) => {
+  const [hidemenu, showmenu] = useState(false);
+  const [activnav, setactivnav] = useState("#home");
 
-        header.classList.remove("header-background")
-      }else{
-        return ;
-      }
-
-    }
-
-})
-  /*==============toggle menu============*/
-  const [hidemenu, showmenu] = useState(0);
-  const [activnav,setactivnav]=useState("#home");
   const headerLinks = {
-home:"home",
-  about:"about",
-  skills:"skills",
-  services:"services",
-  portfolip:"portfolio",
-  contact:"contact",
+    home: "home",
+    about: "about",
+    skills: "skills",
+    services: "services",
+    portfolio: "portfolio",
+    contact: "contact",
+  };
 
-};
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (header) {
+        if (window.scrollY >= 80) {
+          header.classList.add("header-background");
+        } else {
+          header.classList.remove("header-background");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -46,88 +43,59 @@ home:"home",
         <a href="index.html" className="nav__logo">
           Gawish
         </a>
-<div className="site__mode " style={{cursor:"pointer"}}onClick={toggletheme}>
-  {theme=="light"? <BsMoon style={{fontSize:"18px"}}/>:<BsSun  style={{color:"FFE87C",fontSize:"18px"}}/>}
-  </div>
+        <div
+          className="site__mode"
+          style={{ cursor: "pointer" }}
+          onClick={toggletheme}
+        >
+          {theme === "light" ? (
+            <BsMoon style={{ fontSize: "18px" }} />
+          ) : (
+            <BsSun style={{ color: "FFE87C", fontSize: "18px" }} />
+          )}
+        </div>
         <div className={hidemenu ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
-            <li className="nav__item">
-              <Link
-                to={headerLinks.home}
-                smooth={true}
-                duration={0}
-                onClick={()=>{setactivnav("#home")}}
-                className={activnav==="#home"?"nav__link active-link":"nav__link "}
-              >
-                <i className="uil uil-estate nav__icon"></i> Home
-              </Link>
-            </li>
-            <li className="nav__item">
-            <Link
-                to={headerLinks.about}
-                smooth={true}
-                duration={0}
-                className="nav__link "
-              >
-               <AiOutlineUser className=" nav__icon" style={{width:"19px",height:"19px",marginBottom:"8px"}}/>About
-              </Link>
-            </li>
-            <li className="nav__item">
-            <Link
-                to={headerLinks.skills}
-                smooth={true}
-                duration={0}
-                onClick={()=>{setactivnav("#skills")}}
-                className={activnav==="#skills"?"nav__link active-link":"nav__link "}
-              >
-                <GiNotebook className=" nav__icon" style={{width:"19px",height:"19px",marginBottom:"8px"}}/>Skills
-              </Link>
-            </li>
-            <li className="nav__item">
-            <Link
-                to={headerLinks.services}
-                smooth={true}
-                duration={0}
-                onClick={()=>{setactivnav("#services")}}
-                className={activnav==="#services"?"nav__link active-link":"nav__link "}
-              >                
-                <BsBagCheck className=" nav__icon"  style={{width:"19px",height:"19px",marginBottom:"8px"}}/>Services
-              </Link>
-            </li>
-            <li className="nav__item">
-            <Link
-                to={headerLinks.portfolip}
-                smooth={true}
-                duration={0}
-                onClick={()=>{setactivnav("#portfolio")}}
-                className={activnav==="#portfolio"?"nav__link active-link":"nav__link "}
-              >
-                < HiOutlinePhoto className=" nav__icon" style={{width:"19px",height:"19px",marginBottom:"8px"}}/>Portfolio
-              </Link>
-            </li>
-            <li className="nav__item">
-            <Link
-                to={headerLinks.contact}
-                smooth={true}
-                duration={0}
-                onClick={()=>{setactivnav("#contact")}}
-                className={activnav==="#contact"?"nav__link active-link":"nav__link "}              >
-          <  AiOutlineSend className=" nav__icon" style={{width:"19px",height:"19px",marginBottom:"8px"}}/>Contact
-              </Link>
-            </li>
+            {Object.keys(headerLinks).map((key) => (
+              <li className="nav__item" key={key}>
+                <Link
+                  to={headerLinks[key]}
+                  smooth={true}
+                  duration={0}
+                  onClick={() => setactivnav(`#${key}`)}
+                  className={activnav === `#${key}` ? "nav__link active-link" : "nav__link"}
+                >
+                  {key === "home" && (
+                    <i className="uil uil-estate nav__icon"></i>
+                  )}
+                  {key === "about" && (
+                    <AiOutlineUser className="nav__icon" />
+                  )}
+                  {key === "skills" && (
+                    <GiNotebook className="nav__icon" />
+                  )}
+                  {key === "services" && (
+                    <BsBagCheck className="nav__icon" />
+                  )}
+                  {key === "portfolio" && (
+                    <HiOutlinePhoto className="nav__icon" />
+                  )}
+                  {key === "contact" && (
+                    <AiOutlineSend className="nav__icon" />
+                  )}
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
           <i
             className="uil uil-times nav__close"
-            onClick={() => {
-              showmenu(!hidemenu);
-            }}
+            onClick={() => showmenu(!hidemenu)}
           ></i>
         </div>
         <div
           className="nav__toggle"
-          onClick={() => {
-            showmenu(!hidemenu);
-          }}
+          onClick={() => showmenu(!hidemenu)}
         >
           <i className="uil uil-apps"></i>
         </div>
@@ -135,4 +103,5 @@ home:"home",
     </header>
   );
 };
+
 export default Header;
