@@ -67,12 +67,13 @@ const Portfolio = () => {
             {reactProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-react">
-                  <img src={project.img} alt={project.title} loading="lazy" />
+                  <img src={project.image} alt={project.title} loading="lazy" />
                 </div>
                 <h4 className="title__project">{project.title}</h4>
+                <h5 className="content__certificate">{project.description}</h5>
                 <div>Technologies: ({project.technologies})</div>
                 <h5>
-                  <a href={project.link} target="_blank" rel="noreferrer">
+                  <a href={project.url} target="_blank" rel="noreferrer">
                     Demo
                   </a>
                 </h5>

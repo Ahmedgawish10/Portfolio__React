@@ -9,6 +9,7 @@ import Iti from "../../assets/iti-ecommerce.png";
 import EcomAngular from "../../assets/ecommerce-angular.png";
 import dashboard from "../../assets/dasboard-abrand.png"
 import upworkJob1 from "../../assets/upwork-job1.png"
+import Abrand from "../../assets/Abrand-ecommerce.png"
 
 
  export const webProjects=[
@@ -38,15 +39,38 @@ import upworkJob1 from "../../assets/upwork-job1.png"
 
   export const reactProjects=[
     {
-    img: finalproject,
+      id: 1,
+      title: "Dashboard Abrand",
+      description: "Freelance Project ",
+      technologies: "(HTML - Css - Tailwind - Js - Reactjs- Firebase)",
+      image: dashboard,
+      url: "https://dashboard-ahmedgawish.vercel.app/",
+      linkText: "Demo"
+    },
+    {
+      id: 2,
+      title: "E-commerce ABrand ",
+      description: "Freelance Project",
+      technologies: "(HTML - CSS- JS - Tailwind - React - React Mui - Firebase ",
+      image: Abrand,
+      url: "https://ecommerce-react-firebase-five.vercel.app/",
+      linkText: "Demo"
+
+    },
+    {
+      id: 3,
+      image: finalproject,
     title: "Graduation Project",
+    description: "Freelance Project",
     technologies: "HTML - CSS - BootStrap - Reactjs - Context API ",
-    link: "https://ahmedgawish10.github.io/graduateproject/"
+    url: "https://ahmedgawish10.github.io/graduateproject/"
   }, {
-    img: ecompharmacy,
+    id: 4,
+    image: ecompharmacy,
     title: "E-commerce Pharmacy",
+    description: "Freelance Project",
     technologies: "HTML - CSS - Js - BootStrap  - React - ReduxToolkit",
-    link: "https://ecommerce-pharmacy4.vercel.app/"
+    url: "https://ecommerce-pharmacy4.vercel.app/"
   }
 ]
 
@@ -88,27 +112,35 @@ import upworkJob1 from "../../assets/upwork-job1.png"
     },
     {
       id: 3,
+      title: "E-commerce ABrand ",
+      description: "Freelance Project",
+      technologies: "(HTML - CSS- JS - Tailwind - React - React Mui - Firebase ",
+      image: Abrand,
+      url: "https://ecommerce-react-firebase-five.vercel.app/",
+      linkText: "Demo"
+
+    },
+    {
+      id: 4,
       title: "Courses Tech App",
       description: "Training Project",
-      technologies:
-        "(HTML - CSS- JS - Tailwind - Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary)",
+      technologies:"(HTML - CSS- JS - Tailwind - Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary)",
       image: Courses,
       url: "https://fullstack-courses-app-3vdz.vercel.app/",
       linkText: "Demo"
 
     },
     {
-      id: 4,
+      id: 5,
       title: "E-commerce Pharmacy",
-      description: "",
-      technologies:
-        "(HTML - CSS - BootStrap- Js - React - ReduxToolkit)",
+      description: "Training Project",
+      technologies:"(HTML - CSS - BootStrap- Js - React - ReduxToolkit)",
       image: ecompharmacy,
        url: "https://ecommerce-pharmacy4.vercel.app/",
        linkText: "Demo"
     },
     {
-      id: 5,
+      id: 6,
       title: "Graduation Project",
       description: "",
       technologies: "(HTML - CSS - Js - BootStrap - React - ReduxToolkit)",
@@ -118,25 +150,25 @@ import upworkJob1 from "../../assets/upwork-job1.png"
 
     },
     {
-      id: 6,
+      id: 7,
       title: "MediCare App (Angular)",
-      description: "",
+      description: "Training Project at I T I",
       technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
       image: EcomAngular,
       url: "https://ecommerce-angular-beta-lime.vercel.app/",
       linkText: "Demo"
     },  
     {
-        id: 7,
+        id: 8,
         image: jopPortal,
         title: "Job Portal App",
-        description: "Graduation Project at - I T I",
+        description: "Graduation Project at I T I",
         technologies: "HTML - Sass - JS - BootStrap - PHP - MySQL",
         url: "https://github.com/Ahmedgawish10/JobPortal-app",
         linkText: "Code"
     }, 
     {
-        id: 8,
+        id: 9,
         image: upworkJob1,
         title: "Chess Game ",
         description: "Freelance Project",
@@ -145,9 +177,9 @@ import upworkJob1 from "../../assets/upwork-job1.png"
         linkText: "Demo"
     },
     {
-      id: 9,
+      id: 10,
       title: "E-commerce Pizza",
-      description: "Graduation Project at - I T I",
+      description: "Graduation Project at I T I",
       technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
       image: Iti,
       url: "https://ecommerce-iti.vercel.app/",
