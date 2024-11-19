@@ -139,7 +139,7 @@ import upworkJob1 from "../../assets/upwork-job1.png"
         id: 8,
         image: upworkJob1,
         title: "Chess Game ",
-        description: "Freelance Project",
+        description: "Freelance Project Upowrk",
         technologies: "HTML - CSS - JS -jQuery",
         url: "https://www.upwork.com/freelancers/~01d2fb08754ad6fb6d",
         linkText: "Demo"
