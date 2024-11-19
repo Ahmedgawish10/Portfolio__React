@@ -7,6 +7,8 @@
  import Image7 from "../../assets/iti3.png";
 import Iti from "../../assets/iti-ecommerce.png";
 import EcomAngular from "../../assets/ecommerce-angular.png";
+import dashboard from "../../assets/dasboard-abrand.png"
+import upworkJob1 from "../../assets/upwork-job1.png"
 
 
  export const webProjects=[
@@ -38,12 +40,12 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
     {
     img: finalproject,
     title: "Graduation Project",
-    technologies: "HTML - CSS - BootStrap - React - Context API - React Router",
+    technologies: "HTML - CSS - BootStrap - Reactjs - Context API ",
     link: "https://ahmedgawish10.github.io/graduateproject/"
   }, {
     img: ecompharmacy,
     title: "E-commerce Pharmacy",
-    technologies: "HTML - CSS - BootStrap - React - Redux Toolkit - React Router - Slick Carousel",
+    technologies: "HTML - CSS - Js - BootStrap  - React - ReduxToolkit",
     link: "https://ecommerce-pharmacy4.vercel.app/"
   }
 ]
@@ -65,14 +67,15 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
 
  export const allProjects = [
     {
-      id: 1,
-      title: "E-commerce Pizza",
-      description: "Graduation Project at - I T I",
-      technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
-      image: Iti,
-      url: "https://ecommerce-iti.vercel.app/",
-      linkText: "Demo"
-    },
+    id: 1,
+    title: "Dashboard Abrand",
+    description: "Freelance Project ",
+    technologies: "(HTML - Css - Tailwind - Js - Reactjs- Firebase)",
+    image: dashboard,
+    url: "https://dashboard-ahmedgawish.vercel.app/",
+    linkText: "Demo"
+  },
+   
     {
       id: 2,
       title: "Travel Agency App",
@@ -99,7 +102,7 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
       title: "E-commerce Pharmacy",
       description: "",
       technologies:
-        "(HTML - CSS - BootStrap - React - ReduxToolkit - (react-router-dom) - (slick-carousel))",
+        "(HTML - CSS - BootStrap- Js - React - ReduxToolkit)",
       image: ecompharmacy,
        url: "https://ecommerce-pharmacy4.vercel.app/",
        linkText: "Demo"
@@ -108,7 +111,7 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
       id: 5,
       title: "Graduation Project",
       description: "",
-      technologies: "(HTML - CSS - BootStrap - React - Context API - (react-router-dom))",
+      technologies: "(HTML - CSS - Js - BootStrap - React - ReduxToolkit)",
       image: finalproject,
       url: "https://ahmedgawish10.github.io/graduateproject/",
       linkText: "Demo"
@@ -134,12 +137,21 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
     }, 
     {
         id: 8,
-        image: Eljewar,
-        title: "Travel Agency App",
+        image: upworkJob1,
+        title: "Chess Game ",
         description: "Freelance Project",
-        technologies: "HTML - CSS - JS - Tailwind - Next.js - i18next",
-        link: "https://aljewartours.vercel.app/",
+        technologies: "HTML - CSS - JS -jQuery",
+        url: "https://www.upwork.com/freelancers/~01d2fb08754ad6fb6d",
         linkText: "Demo"
+    },
+    {
+      id: 9,
+      title: "E-commerce Pizza",
+      description: "Graduation Project at - I T I",
+      technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
+      image: Iti,
+      url: "https://ecommerce-iti.vercel.app/",
+      linkText: "Demo"
     },
   ];
 

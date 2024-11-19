@@ -37,7 +37,7 @@ const Alldata = () => {
               <span className="font-bold">Technologies</span>: {project.technologies}
             </div>
             <h5 className="pt-1">
-              <a href={project.demoLink} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
+              <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
                 {project.linkText}
                 <FaArrowRightLong className="services__button-icon" />
               </a>

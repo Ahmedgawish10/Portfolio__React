@@ -1,72 +1,78 @@
-import { useEffect, useState } from 'react'
-import './App.css';
-import Header from './components/header/Header';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Skills from './components/skills/Skills';
-import Services from './components/Services/Services';
-import Portfolio from './components/portfolio/Portfolio';
-import Qualification from './components/qualification/Qualification';
-import Testimonials from './components/testimonials/Testimonials';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import Scrollup from './components/scrollup/Scrollup';
+import React, { useEffect, useState, Suspense } from "react";
+import "./App.css";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Scrollup from "./components/scrollup/Scrollup";
 
+// Lazy-loady components
+const Home = React.lazy(() => import("./components/home/Home"));
+const About = React.lazy(() => import("./components/about/About"));
+const Skills = React.lazy(() => import("./components/skills/Skills"));
+const Services = React.lazy(() => import("./components/Services/Services"));
+const Portfolio = React.lazy(() => import("./components/portfolio/Portfolio"));
+const Qualification = React.lazy(() => import("./components/qualification/Qualification"));
+const Testimonials = React.lazy(() =>import("./components/testimonials/Testimonials"));
+const Contact = React.lazy(() => import("./components/contact/Contact"));
 
 function App() {
-  const [loading,setloading]=useState(false);
-  //if there is no value in local storage return "light" in use state!
-  const gettheme=()=> localStorage.getItem("mode") || "light";
-  // git value from gettheme() and put it in usestate!
-  const [theme, settheme] = useState(gettheme())
-//give light theme for localstorage for first time onlay!
-  localStorage.setItem("mode",theme)
-//change value of usestate and set to local storage
-const toggletheme=()=>{
-  theme=="light"?settheme("dark"):settheme("light")
-  localStorage.setItem("mode",theme)
-}
- useEffect(()=>{
-  if(localStorage.getItem("mode") ){
-    document.body.className=localStorage.getItem("mode")  
-  }},[theme])
-useEffect(()=>{
-      setloading(true);
-      setTimeout(()=>{
-      setloading(false)
-      },5000)
-      
-          },[])
+  const [loading, setLoading] = useState(false);
+
+  //  theme mode
+  const getInitialTheme = () => localStorage.getItem("mode") || "light";
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    localStorage.setItem("mode", theme);
+    document.body.className = theme;
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 2000); 
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-    {loading ?
-    <ScaleLoader 
-       className='icon-loading'
-        color={"#FFB800"}
-        loading={loading}
-        size={30}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />:
-    <>
-    <Header theme={theme} toggletheme={toggletheme}/>
-    <main className="main ">      
-    <Home/>
-    <About/>
-    <Skills/>
-    <Services/>
-    <Portfolio/>
-    <Qualification/>
-    <Testimonials/>
-    <Contact/>
-    </main>
-    <Footer/>
-    <Scrollup/>
-    </>
-    
-    }
-      
+      {loading ? (
+        <ScaleLoader
+          className="icon-loading"
+          color={"#FFB800"}
+          loading={loading}
+          size={30}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      ) : (
+        <>
+          <Header theme={theme} toggletheme={toggleTheme} />
+          <main className="main">
+            <Suspense
+              fallback={
+                <div className="loading-fallback">
+                  <ScaleLoader color={"#FFB800"} />
+                </div>
+              }
+            >
+              <Home />
+              <About />
+              <Skills />
+              <Services />
+              <Portfolio />
+              <Qualification />
+              <Testimonials />
+              <Contact />
+            </Suspense>
+          </main>
+          <Footer />
+          <Scrollup />
+        </>
+      )}
     </>
   );
 }
