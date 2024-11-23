@@ -80,30 +80,6 @@ cursor: pointer;
   border-radius: 1rem;
   padding: 10px;
 }
-.portfolio__all-data .box .box__img {
-  position: relative;
-  overflow: hidden;
-}
-.portfolio__all-data .box img{
-  border-radius: 10px;
-  position: absolute;
-}
-.portfolio__all-data .box .animate__section1{ 
-  animation: top_img-all-1 8s ease-in-out 1; 
-  animation-delay: .2s;
-}
-@keyframes top_img-all-1 {
-  0%{
-     top: 0;
-  }
-  50%{
-    top:-250%
-  }
-  100%{
-    top: 0;
-
-  }
-}
 /* arrow animation  */
 .services__button-icon{
 
@@ -117,101 +93,12 @@ cursor: pointer;
 50%{
   margin-left: .5rem;
 }
-
   }
-/*==================== start animation style for portfolio web section====================== */
-.portfolio__web-show .box .box__img-web {
-  position: relative;
-overflow: hidden;
-}
-.portfolio__web-show .box:nth-child(1) img{
-  border-radius: 10px;
-  position: absolute;
-}
-.portfolio__web-show .box .animate__img{ 
-  animation: top_img-web-1 8s ease-in-out 1; 
-  animation-delay: .2s;
-
-}
-.animate__img-web {
-  animation:top_img-web-1 5s ease-in-out 1; 
-  animation-delay: 1s;
-}
-.animate__img-web3{
-   animation: none !important;
-}
-@keyframes top_img-web-1 {
-  0%{
-     top: 0;
-  }
-  50%{
-    top:-220%
-  }
-  100%{
-    top: 0;
-
-  }
-}
-/*==================== end animation style for portfolio web section====================== */
-.portfolio__all-data .box:nth-child(1) img:hover,
-.portfolio__all-data .box:nth-child(2) img:hover,
-.portfolio__all-data .box:nth-child(3) img:hover,
-.portfolio__all-data .box:nth-child(4) img:hover,
-.portfolio__web-show .box:nth-child(5) img:hover,
-.portfolio__web-show .box:nth-child(6) img:hover
-
-{
-animation-play-state: paused;
-cursor:pointer;
-}
-/*==================== start animation style for portfolio__all-data section====================== */
-.portfolio__all-data .box:nth-child(2) img{
-  border-radius: 10px;
-  position: absolute;
-
-}
-.portfolio__all-data .box .animate__img{ 
-  animation: top_img-all-1 8s ease-in-out 1; 
-  animation-delay: .6s;
-}
-/*==================== start animation style for portfolio__react section====================== */
-.box__img-react img  {
-  border-radius: 10px;
-  position: absolute;
-}
-.animate__img2 {
-  animation: top_img-react 5s ease-in-out 1; 
-  animation-delay: 1s;
-}
-@keyframes top_img-react {
-  0%{
-     top: 0;
-  }
-  50%{
-    top:-170%
-  }
-  100%{
-    top: 0;
-
-  }
-}
-
 .portfolio__all-data .box .title__project,
 .portfolio__web-show  .title__project
  {
   padding: 1rem 0rem 0.2rem;
 }
-/*==================== start animation style for portfolio__angular section====================== */
-.box__img-angular{
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-}
-.box__img-angular img  {
-  border-radius: 10px;
-  position: absolute;
-}
-/*==================== end animation style for portfolio__angular section====================== */
 
 /* =================media for section portfolio============================================= */
 @media screen and (max-width: 992px) {
@@ -371,3 +258,5 @@ align-items: center;
   background-color: #000000;
 
 }
+
+

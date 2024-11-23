@@ -26,7 +26,7 @@ const Alldata = () => {
           <div className="box" key={project.id}>
             <div className="box__img">
               <a href={project.url} target="_blank" rel="noreferrer">
-                <img src={project.image} alt={project.title} loading="lazy"/>
+                <img src={project.image} alt={project.title} loading="lazy" className="rounded-t-xl absolute"/>
               </a>
             </div>
             <div className="title__project">
