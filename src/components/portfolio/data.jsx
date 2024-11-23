@@ -18,21 +18,21 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
     title: "Job Portal App",
     description: "Graduation Project at - I T I",
     technologies: "HTML - Sass - JS - BootStrap - PHP - MySQL",
-    link: "https://github.com/Ahmedgawish10/JobPortal-app",
+    url: "https://github.com/Ahmedgawish10/JobPortal-app",
     linkText: "Code"
   }, {
     img: Eljewar,
     title: "Travel Agency App",
     description: "Freelance Project",
     technologies: "HTML - CSS - JS - Tailwind - Next.js - i18next",
-    link: "https://aljewartours.vercel.app/",
+    url: "https://aljewartours.vercel.app/",
     linkText: "Demo"
   }, {
     img: Courses,
     title: "Courses Tech App",
     description: "Training Project",
     technologies: "HTML - CSS - JS - Tailwind - Next.js - Strapi - Stripe - ClerkAuth - Cloudinary",
-    link: "https://fullstack-courses-app-3vdz.vercel.app/",
+    url: "https://fullstack-courses-app-3vdz.vercel.app/",
     linkText: "Demo"
   }
 ]
