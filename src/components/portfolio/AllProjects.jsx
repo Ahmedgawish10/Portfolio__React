@@ -33,8 +33,8 @@ const Alldata = () => {
               <h3 className="pb-2">{project.title}</h3>
               <span>{project.description}</span>
             </div>
-            <div>
-              <span className="font-bold">Technologies</span>: {project.technologies}
+            <div className="">
+              <span className="font-bold  ">Technologies</span>: {project.technologies}
             </div>
             <h5 className="pt-1">
               <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">

@@ -42,7 +42,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 1,
       title: "Dashboard Abrand",
       description: "Freelance Project ",
-      technologies: "(HTML - Css - Tailwind - Js - Reactjs- Firebase)",
+      technologies: "(HTML - Css - Tailwind - Js - MUI- Reactjs- Firebase)",
       image: dashboard,
       url: "https://dashboard-ahmedgawish.vercel.app/",
       linkText: "Demo"
@@ -51,7 +51,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 2,
       title: "E-commerce ABrand ",
       description: "Freelance Project",
-      technologies: "(HTML - CSS- JS - Tailwind - React - React Mui - Firebase ",
+      technologies: "(HTML - CSS- TypeScript - Tailwind - MUI -React - Firebase ",
       image: Abrand,
       url: "https://ecommerce-react-firebase-five.vercel.app/",
       linkText: "Demo"
@@ -94,7 +94,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
     id: 1,
     title: "Dashboard Abrand",
     description: "Freelance Project ",
-    technologies: "(HTML - Css - Tailwind - Js - Reactjs- Firebase)",
+    technologies: "(HTML - Css - Tailwind - Js - MUI - Reactjs- Firebase)",
     image: dashboard,
     url: "https://dashboard-ahmedgawish.vercel.app/",
     linkText: "Demo"
@@ -104,7 +104,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 2,
       title: "Travel Agency App",
       description: "Freelance Project",
-      technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next)",
+      technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next- EmailJs)",
       image: Eljewar,
       url: "https://aljewartours.vercel.app/",
       linkText: "Demo"
@@ -114,7 +114,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 3,
       title: "E-commerce ABrand ",
       description: "Freelance Project",
-      technologies: "(HTML - CSS- JS - Tailwind - React - React Mui - Firebase ",
+      technologies: "(HTML - CSS- TypeScript - Tailwind - React - React Mui - Firebase ",
       image: Abrand,
       url: "https://ecommerce-react-firebase-five.vercel.app/",
       linkText: "Demo"

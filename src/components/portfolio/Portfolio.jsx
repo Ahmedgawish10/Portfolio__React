@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import AllProjects from "./AllProjects";
 import "./portfolio.css";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
-import { webProjects,reactProjects ,myCertificates} from "./data";
+import { webProjects, reactProjects, myCertificates } from "./data";
 const Portfolio = () => {
   const [portTabs, setPortTabs] = useState(1);
   const [imgCert, setImgCert] = useState(null);
@@ -43,18 +44,18 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-web">
                   <a href={project.link} target="_blank" rel="noreferrer">
-                    <img src={project.img} alt={project.title} loading="lazy" className="rounded-t-xl absolute"/>
+                    <img src={project.img} alt={project.title} loading="lazy" className="rounded-t-xl absolute" />
                   </a>
                 </div>
                 <div className="title__project">
                   <h3 className="pb-2">{project.title}</h3>
                   <span>{project.description}</span>
                   <div>Technologies: ({project.technologies})</div>
-                  <h5 className="pt-1 d-flex">
-                    <a href={project.link} target="_blank" rel="noreferrer">
+                  <h5 className="pt-1">
+                    <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
                       {project.linkText}
+                      <FaArrowRightLong className="services__button-icon" />
                     </a>
-                    <i className="uil uil-arrow-right services__button-icon me-3"></i>
                   </h5>
                 </div>
               </div>
@@ -67,14 +68,15 @@ const Portfolio = () => {
             {reactProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-react">
-                  <img src={project.image} alt={project.title} loading="lazy"  className="rounded-t-xl absolute"/>
+                  <img src={project.image} alt={project.title} loading="lazy" className="rounded-t-xl absolute" />
                 </div>
                 <h4 className="title__project">{project.title}</h4>
                 <h5 className="content__certificate">{project.description}</h5>
                 <div>Technologies: ({project.technologies})</div>
-                <h5>
-                  <a href={project.url} target="_blank" rel="noreferrer">
-                    Demo
+                <h5 className="pt-1">
+                  <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
+                    {project.linkText}
+                    <FaArrowRightLong className="services__button-icon" />
                   </a>
                 </h5>
               </div>
@@ -89,10 +91,10 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-cert ">
                   <img
-                  loading="lazy"
+                    loading="lazy"
                     src={certificate.img}
                     alt={certificate.title}
-                    className={`cursor-pointer rounded-t-xl absolute ${index==1?"h-full w-full":""} `}
+                    className={`cursor-pointer rounded-t-xl absolute ${index == 1 ? "h-full w-full" : ""} `}
 
                     onClick={() => handleToggleCert(index)}//0-1
                   />
@@ -101,22 +103,22 @@ const Portfolio = () => {
                 <h5 className="content__certificate">{certificate.description}</h5>
                 <h5 className="view__container">
                   <span
-                  onClick={() => handleToggleCert(index)}//0-1
+                    onClick={() => handleToggleCert(index)}//0-1
                     className="view_certificate"
                   >
                     View
                   </span>
                   <i className="uil uil-arrow-right services__button-icon"></i>
                 </h5>
-                <div className={imgCert==index ? "showgrad" : "hidegrad"}>
-                  <div  onClick={() => handleToggleCert(index)}//0-1
+                <div className={imgCert == index ? "showgrad" : "hidegrad"}>
+                  <div onClick={() => handleToggleCert(index)}//0-1
                     className="close__img-grad cursor-pointer"
                   >
                     <i className="uil uil-times"></i>
                   </div>
                   <div className="box__img-grad flex justify-center z-[-10px] items-center">
-                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title}  loading="lazy"/>
-                    
+                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title} loading="lazy" />
+
                   </div>
                 </div>
               </div>
