@@ -117,7 +117,7 @@ const Portfolio = () => {
                     <i className="uil uil-times"></i>
                   </div>
                   <div className="box__img-grad flex justify-center z-[-10px] items-center">
-                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title} loading="lazy" />
+                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title}  />
 
                   </div>
                 </div>
