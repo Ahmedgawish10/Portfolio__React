@@ -120,7 +120,6 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
               />
-              {errors.name && <span className="error">{errors.name}</span>}
             </div>
             <div className="contact__form-layout">
               <label className="contact__form-label">Mail</label>
@@ -132,7 +131,6 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
               />
-              {errors.email && <span className="error">{errors.email}</span>}
             </div>
             <div className="contact__form-layout contact__textarea">
               <label className="contact__form-label">Project</label>
@@ -145,7 +143,6 @@ const Contact = () => {
                 value={formData.msg}
                 onChange={handleChange}
               ></textarea>
-              {errors.msg && <span className="error">{errors.msg}</span>}
             </div>
             <button className="send__msg button button--flex">
               Send Message
