@@ -43,7 +43,7 @@ const Portfolio = () => {
             {webProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-web">
-                  <a href={project.link} target="_blank" rel="noreferrer">
+                  <a href={project.url} target="_blank" rel="noreferrer">
                     <img src={project.img} alt={project.title}  className="rounded-t-xl absolute" />
                   </a>
                 </div>
@@ -68,7 +68,9 @@ const Portfolio = () => {
             {reactProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-react">
+                <a href={project.url} target="_blank" rel="noreferrer">
                   <img src={project.image} alt={project.title}  className="rounded-t-xl absolute" />
+                  </a>
                 </div>
                 <h4 className="title__project">{project.title}</h4>
                 <h5 className="content__certificate">{project.description}</h5>
@@ -94,7 +96,6 @@ const Portfolio = () => {
                     src={certificate.img}
                     alt={certificate.title}
                     className={`cursor-pointer rounded-t-xl absolute ${index == 1 ? "h-full w-full" : ""} `}
-
                     onClick={() => handleToggleCert(index)}//0-1
                   />
                 </div>
