@@ -61,8 +61,8 @@ const Data = () => {
             </h1>
                 <h3 className="home__subtitle">Front-end Developer</h3>
                 <p className="home__description">
-                    I'm creative Front-end based in Egypt,
-                    And I'm very passionate and dedicated to my work
+                    I’m a creative Front-End Developer based in Egypt, 
+                    passionate and dedicated to delivering high-quality work
                 </p>
                 <a href="#contact"  className="say__hello button button--flex">
                     Say Hello
