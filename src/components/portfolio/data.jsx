@@ -51,7 +51,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 2,
       title: "E-commerce ABrand ",
       description: "Freelance Project",
-      technologies: "(HTML - CSS- TypeScript - Tailwind - MUI -React - Firebase ",
+      technologies: "(HTML - CSS- TypeScript - Tailwind - MUI -React - Firebase - Stripe) ",
       image: Abrand,
       url: "https://ecommerce-react-firebase-five.vercel.app/",
       linkText: "Demo"
@@ -114,7 +114,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
       id: 3,
       title: "E-commerce ABrand ",
       description: "Freelance Project",
-      technologies: "(HTML - CSS- TypeScript - Tailwind - React - React Mui - Firebase ",
+      technologies: "(HTML - CSS- TypeScript - Tailwind - React - React Mui - Firebase - Stripe)",
       image: Abrand,
       url: "https://ecommerce-react-firebase-five.vercel.app/",
       linkText: "Demo"
