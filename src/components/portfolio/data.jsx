@@ -142,7 +142,8 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       image: ProjectFreelance1,
       url: "#",
       linkText: "Demo",
-      private:<RiGitRepositoryPrivateLine/>
+      private:<RiGitRepositoryPrivateLine/>,
+      style:"h-[100%]"
     },
     {
       id: 6,
@@ -171,7 +172,8 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       image: ProjectFreelance2,
       url: "#",
       linkText: "Demo",
-      private:<RiGitRepositoryPrivateLine/>
+      private:<RiGitRepositoryPrivateLine/>,
+      style:"h-[100%]"
     }, 
     {
         id: 9,
