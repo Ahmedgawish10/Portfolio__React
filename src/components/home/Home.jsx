@@ -12,9 +12,6 @@ const Home = () => {
             <div className="home__content grid">
                 <Social/>
                 <div className="home__img"></div>
-                {/* <div className="home__box-img md:order-4" >
-                <img src={Ahmed} className="home__img "  priority />
-                </div> */}
                 <Data/>
             </div>
             <ScrollDown/>

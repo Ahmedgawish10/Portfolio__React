@@ -40,38 +40,36 @@
   border-radius: 1rem;
   padding: 10px;
 }
-.portfolio  .box  .box__img,
-.portfolio  .box  .box__img-web,
-.portfolio  .box  .box__img-react,
-.portfolio  .box  .box__img-cert{
-height: 200px;
-position: relative;
-overflow: hidden;
-transition: 1s;
+.portfolio .box .box__img,
+.portfolio .box .box__img-web,
+.portfolio .box .box__img-react,
+.portfolio .box .box__img-cert {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
 }
 .portfolio__web-show .box img {
   border-radius: 10px;
   position: absolute;
-
 }
 .portfolio__web-hide {
   display: none;
 }
 
 .portfolio__web-show.certificate .title__certificate {
-padding: 1rem 0rem 0.5rem;
-
+  padding: 1rem 0rem 0.5rem;
 }
 /*  */
-.portfolio__web-show.certificate .content__certificate{
+.portfolio__web-show.certificate .content__certificate {
   font-size: 13px;
   margin-top: -8px;
   margin-left: 8px;
 }
-.portfolio__web-show.certificate .view_certificate{
-margin-left: 18px;
-font-size: 12px;
-cursor: pointer;
+.portfolio__web-show.certificate .view_certificate {
+  margin-left: 18px;
+  font-size: 12px;
+  cursor: pointer;
 }
 /*==================== start style for portfolio alldata====================== */
 .portfolio__all-data .box {
@@ -81,22 +79,19 @@ cursor: pointer;
   padding: 10px;
 }
 /* arrow animation  */
-.services__button-icon{
-
+.services__button-icon {
   animation: demo ease-in-out 1s infinite;
-  }
-@keyframes demo{
-0%{
-  margin-left: 0rem;
-
 }
-50%{
-  margin-left: .5rem;
-}
+@keyframes demo {
+  0% {
+    margin-left: 0rem;
   }
+  50% {
+    margin-left: 0.5rem;
+  }
+}
 .portfolio__all-data .box .title__project,
-.portfolio__web-show  .title__project
- {
+.portfolio__web-show .title__project {
   padding: 1rem 0rem 0.2rem;
 }
 
@@ -107,7 +102,7 @@ cursor: pointer;
   }
 }
 @media screen and (max-width: 768px) {
-  .iti3 img{
+  .iti3 img {
     height: 80vh !important;
   }
   .portfolio__all-data {
@@ -118,23 +113,20 @@ cursor: pointer;
   .portfolio__web-show {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-
   }
   .portfolio__all-data .box img,
   .portfolio__web-show .box img {
-    /* width: 100%; */
-    background-color: green !important;
+    background-color: rgba(238, 198, 0, 0.472) !important;
   }
 }
 @media screen and (max-width: 576px) {
- 
-  .box__img-grad{
+  .box__img-grad {
     display: flex;
     justify-content: center;
     z-index: -1;
     width: 100% !important;
   }
-  .box__img-grad img{
+  .box__img-grad img {
     width: 90% !important;
   }
   .portfolio__all-data {
@@ -147,7 +139,6 @@ cursor: pointer;
 @media screen and (max-width: 350px) {
   .portfolio__tabs button {
     padding: 0.4rem 0.4rem;
-   
   }
   .portfolio__tabs {
     gap: initial;
@@ -155,28 +146,28 @@ cursor: pointer;
   .portfolio__all-data {
     grid-template-columns: repeat(1, 1fr);
   }
-  .pagination  a {
-    padding:  6px 8px !important;
+  .pagination a {
+    padding: 6px 8px !important;
   }
   .portfolio__web-show {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 /* ------------------------------handle  all veiw img certificate style  ------------------------------------ */
-@media screen  and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .iti3 {
     display: flex;
     align-items: center;
   }
-  .iti3 img{
+  .iti3 img {
     height: 60vh !important;
   }
 }
-.hidegrad{
+.hidegrad {
   display: none;
 }
-.showgrad{
-  display: flex; 
+.showgrad {
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -185,39 +176,35 @@ cursor: pointer;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
-.box__img-grad{
-width: 60%;
-height: 90%;
+.box__img-grad {
+  width: 60%;
+  height: 90%;
 }
 
-
-.close__img-grad{
-position: fixed;
-right:20px;
-top: 20px;
-background: rgb(204, 161, 5);
-color: white;
-font-size: 20px;
-width: 30px;
-height: 30px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+.close__img-grad {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background: rgb(204, 161, 5);
+  color: white;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.close__img-grad > div{
-width: 100%;
-text-align: center;
-cursor: pointer;
+.close__img-grad > div {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
-.view__container{
-display: flex;
-align-items: center;
-
-
-
+.view__container {
+  display: flex;
+  align-items: center;
 }
 /* -----------------------------end handle  all veiw img certificate style  ------------------------------------ */
 /* pagniation */
@@ -234,19 +221,17 @@ align-items: center;
 
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color:#fff ;
+  background-color: #fff;
 }
 .dark .pagination li {
   background-color: #ffb800;
-
 }
-.pagination  a {
+.pagination a {
   display: block;
-  padding:  8px 15px;
+  padding: 8px 15px;
   color: rgb(120, 116, 116);
 }
-.dark .pagination  a {
-
+.dark .pagination a {
   color: white;
 }
 .pagination li.active {
@@ -256,7 +241,8 @@ align-items: center;
 }
 .dark .pagination li.active {
   background-color: #000000;
-
 }
 
-
+.page-item {
+  display: none !important;
+}

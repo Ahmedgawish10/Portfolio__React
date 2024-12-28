@@ -2,10 +2,8 @@ import React from 'react'
 import { TestData } from "./Testdata";
 import "./testimonials.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper";
 
 const Testimonials = () => {
@@ -13,7 +11,6 @@ const Testimonials = () => {
     <section className="testmonials container section">
       <h2 className="section__title">My Clients Say</h2>
       <span className="section__subtitle">Testimonials</span>
-
       <Swiper className="testmonials__container"
          loop={true}
         grabCursor={true}
@@ -45,7 +42,6 @@ const Testimonials = () => {
         )}
 
       </Swiper>
-
     </section>
 
   )

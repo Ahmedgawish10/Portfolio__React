@@ -3,6 +3,10 @@ import './services.css';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { FiFigma } from "react-icons/fi";
+import { TfiPencilAlt } from "react-icons/tfi";
+import { BiCreditCardFront } from "react-icons/bi";
+import { BsCreditCard2Front } from "react-icons/bs";
 
 const Services = () => {
   const [closeModel, openModel] = useState(0);
@@ -14,41 +18,41 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      icon: "uil-web-grid",
+      icon: <BsCreditCard2Front className='text-2xl mb-[-3px]'/>,
       title: "Frontend Developer",
       description: "Services with more than 2 years of experience.",
       tasks: [
-        "Design and convert templates figma UI to real websites",
-        "Design and convert templates Canva UI to responsive web experiences",
-        "Transform Figma and Canva UI templates into fully functional websites",
-        "Experienced in converting Canva UI designs into dynamic websites",
-        "Create interactive front-end mockups tailored to company branding",
-      ]
+        "Convert Figma UI templates to websites using React and Next.js",
+        "Transform Canva UI designs into responsive websites with React and Tailwind",
+        "Build functional websites from Figma and Canva templates with React and Next.js",
+        "Convert Canva UI designs into dynamic websites with React and Tailwind",
+        "Create interactive mockups with React and Tailwind, tailored to branding"
+    ]
     },
     {
       id: 2,
-      icon: "uil-edit",
+      icon: <TfiPencilAlt className='text-2xl'/>,
       title: "Web Developer",
       description: "Services with more than 1 year of experience.",
       tasks: [
+        "Develop dynamic and scalable websites using PHP and MySQL",
         "Design websites with high performance and SEO optimization",
         "Create job portal app for announcing new jobs for seekers",
         "Design and mockups of products for companies",
-        "Convert UI templates to real websites",
-        "Design and mockups of products for companies",
+        "Edit and maintain Laravel projects"
       ]
     },
     {
       id: 3,
-      icon: "uil-arrow",
+      icon: <FiFigma className='text-2xl'/>,
       title: "UI/UX Designer",
       description: "Services with 1 year of experience.",
       tasks: [
-        "UI Design and Mockup Creation Using Canva",
-        "Proficient in exporting designs in multiple formats",
-        "Expertise in customizing templates, including modifying text, colors, images",
-        "Experience in previewing and testing designs to ensure optimal presentation",
         "Utilizing Figma's comprehensive design features to craft pixel-perfect UI designs",
+        "Experience in previewing and testing designs to ensure optimal presentation",
+        "Expertise in customizing templates, including modifying text, colors, images",
+        "UI Design and Mockup Creation Using Canva and Figma",
+        "Proficient in exporting designs in multiple formats",
       ]
     }
   ];
@@ -62,8 +66,9 @@ const Services = () => {
         {services.map((service) => (
           <div key={service.id} className="services__content">
             <div>
-              <i className={`uil ${service.icon} services__icon`}></i>
-              <h3 className="services__title">{service.title}</h3>
+              {/* <i className={`uil ${service.icon} services__icon`}></i> */}
+              {service.icon}
+              <h3 className="services__title">{service.title}</h3>{/*services__title */}
             </div>
             <span
               className="services__button flex items-center"

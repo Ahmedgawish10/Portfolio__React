@@ -10,6 +10,10 @@ import EcomAngular from "../../assets/ecommerce-angular.png";
 import dashboard from "../../assets/dasboard-abrand.png"
 import upworkJob1 from "../../assets/upwork-job1.png"
 import Abrand from "../../assets/Abrand-ecommerce.png"
+import ProjectFreelance1 from "../../assets/ProjectFreelance1.png"
+import ProjectFreelance2 from "../../assets/ProjectFreelance2.png"
+
+import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
 
  export const webProjects=[
@@ -132,6 +136,16 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
     },
     {
       id: 5,
+      title: "HBM High School", 
+      description: "Freelance Project Dashboard ",
+      technologies:"(HTML - Sass - Js - React - ReduxToolkit - I18next - Firebase)",
+      image: ProjectFreelance1,
+      url: "#",
+      linkText: "Demo",
+      private:<RiGitRepositoryPrivateLine/>
+    },
+    {
+      id: 6,
       title: "E-commerce Pharmacy",
       description: "Training Project",
       technologies:"(HTML - CSS - BootStrap- Js - React - ReduxToolkit)",
@@ -140,7 +154,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
        linkText: "Demo"
     },
     {
-      id: 6,
+      id: 7,
       title: "Graduation Project",
       description: "",
       technologies: "(HTML - CSS - Js - BootStrap - React - ReduxToolkit)",
@@ -150,16 +164,17 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
 
     },
     {
-      id: 7,
-      title: "MediCare App (Angular)",
-      description: "Training Project at I T I",
-      technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
-      image: EcomAngular,
-      url: "https://ecommerce-angular-beta-lime.vercel.app/",
-      linkText: "Demo"
-    },  
+      id: 8,
+      title: "MD System", 
+      description: "Freelance Project AdminPanel ",
+      technologies:"(HTML - Sass - Js - React - ReduxToolkit - I18next - Firebase)",
+      image: ProjectFreelance2,
+      url: "#",
+      linkText: "Demo",
+      private:<RiGitRepositoryPrivateLine/>
+    }, 
     {
-        id: 8,
+        id: 9,
         image: jopPortal,
         title: "Job Portal App",
         description: "Graduation Project at I T I",
@@ -168,7 +183,16 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
         linkText: "Code"
     }, 
     {
-        id: 9,
+      id: 10,
+      title: "MediCare App (Angular)",
+      description: "Training Project at I T I",
+      technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
+      image: EcomAngular,
+      url: "https://ecommerce-angular-beta-lime.vercel.app/",
+      linkText: "Demo"
+    },
+    {
+        id: 11,
         image: upworkJob1,
         title: "Chess Game ",
         description: "Freelance Project Upowrk",
@@ -177,7 +201,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
         linkText: "Demo"
     },
     {
-      id: 10,
+      id: 12,
       title: "E-commerce Pizza",
       description: "Graduation Project at I T I",
       technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",

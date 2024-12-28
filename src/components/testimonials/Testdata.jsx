@@ -5,14 +5,14 @@ export  const TestData=[
     {
         id:1,
         image:Img1,
-        title:"Mohamed Saad",
+        title:"Pham Viet dang",
         description:"A really good jop, all aspects of the project were followed step by step and with good results",
     },
     {
         id:2,
         image:Img2,
         title:"Ahmed Adel",
-        description:"Impressive front-end execution  coding and design delivered a visually stunning and function.",
+        description:"Impressive front-end execution coding and design delivered a visually stunning and function.",
     },
     {
         id:3,

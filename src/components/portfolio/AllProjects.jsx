@@ -22,24 +22,26 @@ const Alldata = () => {
   return (
     <div className="All-projects">
       <div className="portfolio__all-data">
-        {currentProjects.map((project) => (
-          <div className="box" key={project.id}>
+        {currentProjects.map((project,index) => (
+          <div className="box" key={index}>
             <div className="box__img">
               <a href={project.url} target="_blank" rel="noreferrer">
-                <img src={project.image} alt={project.title}  className="rounded-t-xl absolute"/>
+                <img src={project.image} alt={project.title}  className={`rounded-t-xl absolute ${project.id==5 ||project.id==8 ?"h-[100%]":""}`}/>
               </a>
             </div>
             <div className="title__project">
-              <h3 className="pb-2">{project.title}</h3>
+              <h3 className="pb-2">{project.title}{project.private&&(<span> (Private)</span>)}</h3>
               <span>{project.description}</span>
             </div>
             <div className="">
               <span className="font-bold  ">Technologies</span>: {project.technologies}
             </div>
             <h5 className="pt-1">
-              <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
+              <a href={project.private? "#":project.url} target={project.private?"":"_blank"} rel="noreferrer" className="flex gap-2 items-center">
                 {project.linkText}
-                <FaArrowRightLong className="services__button-icon" />
+                {project.private}
+                {project.private?"": <FaArrowRightLong className="services__button-icon" />}
+               
               </a>
             </h5>
           </div>
@@ -48,6 +50,7 @@ const Alldata = () => {
 
       <ReactPaginate
         breakLabel="..."
+        pageClassName="page-number hidden"
         nextLabel="Next >>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}

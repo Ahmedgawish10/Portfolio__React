@@ -5,6 +5,8 @@ import { AiOutlineUser, AiOutlineSend } from "react-icons/ai";
 import { GiNotebook } from "react-icons/gi";
 import { BsBagCheck, BsSun, BsMoon } from "react-icons/bs";
 import { HiOutlinePhoto } from "react-icons/hi2";
+import { BiMenuAltRight } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = ({ theme, toggletheme }) => {
   const [hidemenu, showmenu] = useState(false);
@@ -88,16 +90,13 @@ const Header = ({ theme, toggletheme }) => {
               </li>
             ))}
           </ul>
-          <i
-            className="uil uil-times nav__close"
-            onClick={() => showmenu(!hidemenu)}
-          ></i>
+          <IoCloseSharp  className="nav__close"    onClick={() => showmenu(!hidemenu)}/>
         </div>
         <div
           className="nav__toggle"
           onClick={() => showmenu(!hidemenu)}
         >
-          <i className="uil uil-apps"></i>
+          <BiMenuAltRight  onClick={() => showmenu(!hidemenu)} className="text-2xl"/>
         </div>
       </nav>
     </header>

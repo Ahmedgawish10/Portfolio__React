@@ -35,7 +35,7 @@ const Qualification = () => {
         </div>
 
         <div className="qualification__sections">
-          {/*  =========qualification content one============================= */}
+          {/*  =========Education section one============================= */}
           <div className={hide===1?"qualification__content qualification__content-active w-70 ":"qualification__content  "}>
             <div className="qualification__data ">
               <div className="qualification1">
@@ -94,16 +94,16 @@ const Qualification = () => {
               </div>
             </div>
           </div>
-          {/*  =========qualification exp content two============================= */}
+          {/*  =========Experience exp content two============================= */}
           <div className={hide===2?"qualification__content qualification__content-active ":"qualification__content  "}>
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title mb-2">Front-end Developer</h3>
                 <span className="qualification__subtitle ">
-                  PortSaid -University<br/>  Faculty of Information<br/>  Technology
+                  Freelancer  (Upwork)<br/>  
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2019 - 2023
+                  <i className="uil uil-calendar-alt"></i> 2022 - Present
                 </div>
               </div>
               <div>
@@ -138,10 +138,10 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title mb-2">Front-end Developer</h3>
                 <span className="qualification__subtitle last">
-                  Rukn <br/> 
+                  Rukn It <br/> 
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 6/2024 - Present
+                  <i className="uil uil-calendar-alt"></i> 6/2024 - 12/2024
                 </div>
               </div>
               <div>
