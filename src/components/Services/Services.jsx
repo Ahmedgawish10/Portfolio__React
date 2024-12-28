@@ -18,7 +18,7 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      icon: <BsCreditCard2Front className='text-2xl mb-[-3px]'/>,
+      icon: <BsCreditCard2Front className='text-2xl mb-[-3px]' />,
       title: "Frontend Developer",
       description: "Services with more than 2 years of experience.",
       tasks: [
@@ -27,11 +27,11 @@ const Services = () => {
         "Build functional websites from Figma and Canva templates with React and Next.js",
         "Convert Canva UI designs into dynamic websites with React and Tailwind",
         "Create interactive mockups with React and Tailwind, tailored to branding"
-    ]
+      ]
     },
     {
       id: 2,
-      icon: <TfiPencilAlt className='text-2xl'/>,
+      icon: <TfiPencilAlt className='text-2xl' />,
       title: "Web Developer",
       description: "Services with more than 1 year of experience.",
       tasks: [
@@ -44,7 +44,7 @@ const Services = () => {
     },
     {
       id: 3,
-      icon: <FiFigma className='text-2xl'/>,
+      icon: <FiFigma className='text-2xl' />,
       title: "UI/UX Designer",
       description: "Services with 1 year of experience.",
       tasks: [
@@ -66,9 +66,8 @@ const Services = () => {
         {services.map((service) => (
           <div key={service.id} className="services__content">
             <div>
-              {/* <i className={`uil ${service.icon} services__icon`}></i> */}
               {service.icon}
-              <h3 className="services__title">{service.title}</h3>{/*services__title */}
+              <h3 className="services__title">{service.title}</h3>
             </div>
             <span
               className="services__button flex items-center"
@@ -84,7 +83,7 @@ const Services = () => {
                 <div className="close__model">
                   <IoMdClose
                     className="uil uil-times button__close-icon"
-                    onClick={() => openModel(0)} 
+                    onClick={() => openModel(0)}
                   />
                 </div>
                 <h3 className="services__model-title">{service.title}</h3>

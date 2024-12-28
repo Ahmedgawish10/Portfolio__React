@@ -15,7 +15,6 @@ import ProjectFreelance2 from "../../assets/ProjectFreelance2.png"
 
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
-
  export const webProjects=[
     {
     img: jopPortal,
