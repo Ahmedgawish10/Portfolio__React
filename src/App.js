@@ -11,18 +11,13 @@ const About = React.lazy(() => import("./components/about/About"));
 const Skills = React.lazy(() => import("./components/skills/Skills"));
 const Services = React.lazy(() => import("./components/Services/Services"));
 const Portfolio = React.lazy(() => import("./components/portfolio/Portfolio"));
-const Qualification = React.lazy(() =>
-  import("./components/qualification/Qualification")
-);
-const Testimonials = React.lazy(() =>
-  import("./components/testimonials/Testimonials")
-);
+const Qualification = React.lazy(() => import("./components/qualification/Qualification"));
+const Testimonials = React.lazy(() => import("./components/testimonials/Testimonials"));
 const Contact = React.lazy(() => import("./components/contact/Contact"));
 const Test = React.lazy(() => import("./components/animation/Test"));
 
 function App() {
   const [loading, setLoading] = useState(false);
-
   // Theme mode
   const getInitialTheme = () => localStorage.getItem("mode") || "light";
   const [theme, setTheme] = useState(getInitialTheme);

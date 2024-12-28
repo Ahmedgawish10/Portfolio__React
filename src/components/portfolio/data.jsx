@@ -157,7 +157,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       id: 7,
       title: "Graduation Project",
       description: "",
-      technologies: "(HTML - CSS - Js - BootStrap - React - ReduxToolkit)",
+      technologies: "(HTML - CSS - BootStrap - Js - BootStrap - React - ContextApi)",
       image: finalproject,
       url: "https://ahmedgawish10.github.io/graduateproject/",
       linkText: "Demo"
