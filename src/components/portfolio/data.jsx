@@ -63,17 +63,20 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     {
       id: 3,
       image: finalproject,
-    title: "Graduation Project",
-    description: "Freelance Project",
-    technologies: "HTML - CSS - BootStrap - Reactjs - Context API ",
-    url: "https://ahmedgawish10.github.io/graduateproject/"
+      title: "Arduino Sensor Product",
+      description: "Graduation Project ",
+      technologies: "HTML - CSS - BootStrap - Reactjs - Context API ",
+      url: "https://ahmedgawish10.github.io/graduateproject/",
+      linkText: "Demo"
   }, {
     id: 4,
     image: ecompharmacy,
     title: "E-commerce Pharmacy",
     description: "Freelance Project",
     technologies: "HTML - CSS - Js - BootStrap  - React - ReduxToolkit",
-    url: "https://ecommerce-pharmacy4.vercel.app/"
+    url: "https://ecommerce-pharmacy4.vercel.app/",
+    linkText: "Demo"
+
   }
 ]
 
@@ -155,8 +158,8 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     },
     {
       id: 7,
-      title: "Graduation Project",
-      description: "",
+      title: "Arduino Sensor Product",
+      description: "Graduation Project ",
       technologies: "(HTML - CSS - BootStrap - Js - BootStrap - React - ContextApi)",
       image: finalproject,
       url: "https://ahmedgawish10.github.io/graduateproject/",
