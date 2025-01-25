@@ -18,9 +18,9 @@ const Testimonials = () => {
         spaceBetween={24}
         pagination={{
           clickable: true,
-        }} 
+        }}
         autoplay={{
-          delay: 2500, 
+          delay: 2500,
           disableOnInteraction: true,
         }}
         breakpoints={{
@@ -32,7 +32,7 @@ const Testimonials = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Autoplay,Pagination]}
+        modules={[Autoplay, Pagination]}
       >
         {TestData.map(({ id, image, title, country, countryImg, description }) => {
           return (
@@ -47,6 +47,7 @@ const Testimonials = () => {
               </div>
               <h3 className="testimonial__title-name flex  gap-2 relative">{title}
               </h3>
+   
               <p className="testimonial__description line-clamp-3">{description}</p>
             </SwiperSlide>
 
