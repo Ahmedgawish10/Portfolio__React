@@ -22,7 +22,7 @@ const About = () => {
                     </p>
                     <div className="flex justify-center">
                     <a download="" href={Cv} className="">
-                        <button class="btn flex gap-2">
+                        <button className="btn flex gap-2">
                             Download CV
                             <PiFilePdfBold className='text-2xl ' />
                         </button>
