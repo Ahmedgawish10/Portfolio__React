@@ -4,7 +4,7 @@ import "./testimonials.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 
 const Testimonials = () => {
@@ -18,6 +18,10 @@ const Testimonials = () => {
         spaceBetween={24}
         pagination={{
           clickable: true,
+        }} 
+        autoplay={{
+          delay: 2500, 
+          disableOnInteraction: true,
         }}
         breakpoints={{
           576: {
@@ -28,7 +32,7 @@ const Testimonials = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Autoplay,Pagination]}
       >
         {TestData.map(({ id, image, title, country, countryImg, description }) => {
           return (
