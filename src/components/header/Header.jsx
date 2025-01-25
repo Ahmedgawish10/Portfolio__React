@@ -7,6 +7,7 @@ import { BsBagCheck, BsSun, BsMoon } from "react-icons/bs";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoCloseSharp } from "react-icons/io5";
+import { CiHome } from "react-icons/ci";
 
 const Header = ({ theme, toggletheme }) => {
   const [hidemenu, showmenu] = useState(false);
@@ -68,7 +69,7 @@ const Header = ({ theme, toggletheme }) => {
                   className={activnav === `#${key}` ? "nav__link active-link" : "nav__link"}
                 >
                   {key === "home" && (
-                    <i className="uil uil-estate nav__icon"></i>
+                    <CiHome className="uil uil-estate nav__icon"/>
                   )}
                   {key === "about" && (
                     <AiOutlineUser className="nav__icon" />

@@ -1,5 +1,7 @@
 import React , {useState} from "react";
 import "./qualification.css";
+import { FaGraduationCap } from "react-icons/fa6";
+import { RiMacbookLine } from "react-icons/ri";
 
 const Qualification = () => {
     const [hide,sethide]=useState(1);
@@ -14,22 +16,21 @@ const Qualification = () => {
 
       <div className="qualification__container container">
         <div className="qualification__tabs">
-          <div className={hide===1?"qualification___button qualified-active button--flex ":
-          "qualification___button  button--flex overlay-color"}
+          <div className={hide===1?"gap-2 qualification___button qualified-active button--flex ": "gap-2 qualification___button  button--flex overlay-color"}
           onClick={()=>{
               NumberTab(1);
           }}
           >
-            <i  className="uil uil-briefcase-alt qualification__icon"></i>
+            <FaGraduationCap className="qualification__icon"/>
+
             Education
           </div>
 
-          <div className={hide===2?"qualification___button qualified-active button--flex":
-          "qualification___button  button--flex overlay-color"}
+          <div className={hide===2?"qualification___button qualified-active button--flex gap-2": "qualification___button  button--flex overlay-color gap-2"}
           onClick={()=>{
             NumberTab(2);
         }}>
-            <i className="uil uil-briefcase-alt qualification__icon"></i>
+            <RiMacbookLine className="qualification__icon"/>
             Experience
           </div>
         </div>

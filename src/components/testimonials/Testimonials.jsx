@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import { FaGlobeAsia } from "react-icons/fa";
 
 const Testimonials = () => {
   return (
@@ -29,11 +30,18 @@ const Testimonials = () => {
         }}
         modules={[Pagination]}
       >
-        {TestData.map(({ id, image, title, description }) => {
+        {TestData.map(({ id, image, title,country,countryImg, description }) => {
           return (
             <SwiperSlide className="testimonial__card" key={id}>
               <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image"  loading="lazy"/>
               <h3 className="testimonial__title-name">{title}</h3>
+              <h5 className="testimonial__title-name flex gap-2 items-center">
+                <span>   <img src={countryImg} alt="Morocco Flag" width="30" height={20} style={{height:"20px"}}/></span>
+              <span className='text-sm'>  {country}</span> 
+                </h5>
+                
+    
+
               <p className="testimonial__description line-clamp-3">{description}</p>
             </SwiperSlide>
 
