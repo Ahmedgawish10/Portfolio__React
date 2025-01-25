@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import { FaGlobeAsia } from "react-icons/fa";
+
 
 const Testimonials = () => {
   return (
@@ -13,7 +13,7 @@ const Testimonials = () => {
       <h2 className="section__title">My Clients Say</h2>
       <span className="section__subtitle">Testimonials</span>
       <Swiper className="testmonials__container"
-         loop={true}
+        loop={true}
         grabCursor={true}
         spaceBetween={24}
         pagination={{
@@ -30,18 +30,19 @@ const Testimonials = () => {
         }}
         modules={[Pagination]}
       >
-        {TestData.map(({ id, image, title,country,countryImg, description }) => {
+        {TestData.map(({ id, image, title, country, countryImg, description }) => {
           return (
             <SwiperSlide className="testimonial__card" key={id}>
-              <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image"  loading="lazy"/>
-              <h3 className="testimonial__title-name">{title}</h3>
-              <h5 className="testimonial__title-name flex gap-2 items-center">
-                <span>   <img src={countryImg} alt="Morocco Flag" width="30" height={20} style={{height:"20px"}}/></span>
-              <span className='text-sm'>  {country}</span> 
-                </h5>
-                
-    
+              <div className='flex items-center gap-2'>
+                <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image" loading="lazy" />
+                <span className=' relative text-xs flex items-center  gap-1 self-start'>
 
+                  <div class="ping absolute left-[-10px] top-[-10px] z-10 text-red text-[#0ABB0A]"></div>
+                  {country}
+                </span>
+              </div>
+              <h3 className="testimonial__title-name flex  gap-2 relative">{title}
+              </h3>
               <p className="testimonial__description line-clamp-3">{description}</p>
             </SwiperSlide>
 

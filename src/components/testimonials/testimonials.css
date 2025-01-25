@@ -62,7 +62,42 @@ width: 750px;
 }
 
 
-
+/* ----------start CSS dot animation for section Features -------------- */
+/*dot*/
+@keyframes ping {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  .ping {
+    width: 6px;
+    height: 6px;
+    padding-left: 1em;
+  }
+  
+  .ping::before,
+  .ping::after {
+    content: "";
+    position: absolute;
+    top: 0.25em;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+  
+  .ping::before {
+    animation: ping 1.7s ease infinite;
+    opacity: 0.8;
+  }
+  /* ----------end CSS dot animation for section Features -------------- */
 
 
 

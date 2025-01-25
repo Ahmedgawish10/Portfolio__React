@@ -32,7 +32,7 @@ export const TestData = [
         id: 4,
         image: Img4,
         title: "Youssef Mohamed",
-        description: "Outstanding dedication and skill led to an amazing outcome on this project.",
+        description: "Outstanding dedication, passion, and exceptional skill led to an amazing and inspiring outcome on this project.",
         country: "Egypt",
         countryImg: "https://flagcdn.com/w320/eg.png"
     },
