@@ -48,7 +48,7 @@ const Portfolio = () => {
                   </a>
                 </div>
                 <div className="title__project">
-                  <h3 className="pb-2">{project.title}</h3>
+                  <h3 className="pb-2">{project.title} {project.contributor&&(<span className="text-[12px] lg:text-[14px] ">(Contributor)</span>)}   </h3>
                   <span>{project.description}</span>
                   <div>Technologies: ({project.technologies})</div>
                   <h5 className="pt-1">

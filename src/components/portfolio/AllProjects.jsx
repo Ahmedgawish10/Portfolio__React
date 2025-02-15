@@ -30,7 +30,10 @@ const Alldata = () => {
               </a>
             </div>
             <div className="title__project">
-              <h3 className="pb-2">{project.title}{project.private&&(<span> (Private)</span>)}</h3>
+              <h3 className="pb-2">{project.title}
+                {project.private&&(<span> (Private)</span>)}
+                {project.contributor&&(<span className="text-[12px] lg:text-[14px] ">(Contributor)</span>)}  
+              </h3>
               <span>{project.description}</span>
             </div>
             <div className="">
