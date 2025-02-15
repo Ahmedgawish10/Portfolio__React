@@ -53,14 +53,14 @@ const Alldata = () => {
 
       <ReactPaginate
         breakLabel="..."
-        pageclassName="page-number hidden"
+        pageClassName="page-number hidden"
         nextLabel="Next >>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
         previousLabel="<< Prev"
-        containerclassName="pagination sm:container  px-8 flex gap-0 md:gap-6 justify-center mt-5"
-        activeclassName="active"
+        containerClassName="pagination sm:container  px-8 flex gap-0 md:gap-6 justify-center mt-5"
+        activeClassName="active"
       />
     </div>
 
