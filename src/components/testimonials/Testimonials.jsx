@@ -41,7 +41,7 @@ const Testimonials = () => {
                 <img src={image} style={{ height: "60px" }} alt="" className="testimonial__image" loading="lazy" />
                 <span className=' relative text-xs flex items-center  gap-1 self-start'>
 
-                  <div class="ping absolute left-[-10px] top-[-10px] z-10 text-red text-[#0ABB0A]"></div>
+                  <div className="ping absolute left-[-10px] top-[-10px] z-10 text-red text-[#0ABB0A]"></div>
                   {country}
                 </span>
               </div>
