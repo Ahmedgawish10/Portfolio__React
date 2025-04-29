@@ -13,6 +13,7 @@ import Abrand from "../../assets/Abrand-ecommerce.png"
 import ProjectFreelance1 from "../../assets/ProjectFreelance1.png"
 import ProjectFreelance2 from "../../assets/ProjectFreelance2.png"
 import ProjectFreelance3 from "../../assets/project-laravel-freelance.png"
+import ProjectFreelance4 from "../../assets/dubizzle-freelance.png"
 
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
@@ -176,8 +177,18 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
        url: "https://ecommerce-pharmacy4.vercel.app/",
        linkText: "Demo"
     },
+
     {
       id: 8,
+      title: "Dubbizle Mulitvendor",
+      description: "Freelance Project",
+      technologies:"(HTML - CSS - Tailwind- Js - Firebase- Nextjs - Localization)",
+      image: ProjectFreelance4,
+       url: "https://ecommerce-pharmacy4.vercel.app/",
+       linkText: "Demo"
+    },
+    {
+      id: 9,
       title: "Arduino Sensor Product",
       description: "Graduation Project ",
       technologies: "(HTML - CSS - BootStrap - Js - BootStrap - React - ContextApi)",
@@ -187,7 +198,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
     },
     {
-      id: 9,
+      id: 10,
       title: "MD System", 
       description: "Freelance Project AdminPanel ",
       technologies:"(HTML - Sass - Js - React - ReduxToolkit - I18next - Firebase)",
@@ -198,7 +209,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       style:"h-[100%]"
     }, 
     {
-        id: 10,
+        id: 11,
         image: jopPortal,
         title: "Job Portal App",
         description: "Graduation Project at I T I",
@@ -207,16 +218,16 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
         linkText: "Code"
     }, 
     {
-      id: 11,
-      title: "MediCare App (Angular)",
-      description: "Training Project at I T I",
-      technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
-      image: EcomAngular,
-      url: "https://ecommerce-angular-beta-lime.vercel.app/",
+      id: 12,
+      title: "E-commerce Pizza",
+      description: "Graduation Project at I T I",
+      technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
+      image: Iti,
+      url: "https://ecommerce-iti.vercel.app/",
       linkText: "Demo"
     },
     {
-        id: 12,
+        id: 13,
         image: upworkJob1,
         title: "Chess Game ",
         description: "Freelance Project Upowrk",
@@ -224,13 +235,14 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
         url: "https://www.upwork.com/freelancers/~01d2fb08754ad6fb6d",
         linkText: "Demo"
     },
+
     {
       id: 13,
-      title: "E-commerce Pizza",
-      description: "Graduation Project at I T I",
-      technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
-      image: Iti,
-      url: "https://ecommerce-iti.vercel.app/",
+      title: "MediCare App (Angular)",
+      description: "Training Project at I T I",
+      technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
+      image: EcomAngular,
+      url: "https://ecommerce-angular-beta-lime.vercel.app/",
       linkText: "Demo"
     },
   ];

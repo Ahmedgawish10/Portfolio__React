@@ -4,7 +4,7 @@ import { allProjects } from "./data";
 import ReactPaginate from 'react-paginate';
 
 const Alldata = () => {
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(0);
 
   const offset = currentPage * itemsPerPage;
