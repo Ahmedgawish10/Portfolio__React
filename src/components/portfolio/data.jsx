@@ -184,7 +184,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       description: "Freelance Project",
       technologies:"(HTML - CSS - Tailwind- Js - Firebase- Nextjs - Localization)",
       image: ProjectFreelance4,
-       url: "https://ecommerce-pharmacy4.vercel.app/",
+       url: "https://dubizzle-freelance-project.vercel.app/",
        linkText: "Demo"
     },
     {
