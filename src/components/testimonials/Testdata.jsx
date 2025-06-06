@@ -2,6 +2,7 @@ import Img1 from '../../assets/client1.jpg';
 import Img2 from '../../assets/client2.jpg';
 import Img3 from '../../assets/client3.jpg';
 import Img4 from '../../assets/client4.jpg';
+import Img5 from '../../assets/client5.jpg';
 
 export const TestData = [
     {
@@ -35,5 +36,13 @@ export const TestData = [
         description: "Outstanding dedication, passion, and exceptional skill led to an amazing and inspiring outcome on this project.",
         country: "Egypt",
         countryImg: "https://flagcdn.com/w320/eg.png"
+    },
+    {
+        id: 5,
+        image: Img5,
+        title: "Moath Hasan",
+        description: "Professional, timely, and with great attention to detail — the final product exceeded expectations.",
+        country: "Qatar",
+        countryImg: "https://flagcdn.com/w320/qa.png" 
     },
 ];

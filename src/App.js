@@ -14,7 +14,6 @@ const Portfolio = React.lazy(() => import("./components/portfolio/Portfolio"));
 const Qualification = React.lazy(() => import("./components/qualification/Qualification"));
 const Testimonials = React.lazy(() => import("./components/testimonials/Testimonials"));
 const Contact = React.lazy(() => import("./components/contact/Contact"));
-const Test = React.lazy(() => import("./components/animation/Test"));
 
 function App() {
   const [loading, setLoading] = useState(false);
