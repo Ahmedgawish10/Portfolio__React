@@ -1,0 +1,304 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Skewed Button from Right</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Cabin:400,500,600,bold);
+    @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold);
+
+    body {
+      background: #A7A9AC;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(.34, rgba(230,237,241,.05)),
+        color-stop(.67, rgba(230,237,241,0))
+      );
+      -webkit-background-size: 5px 5px;
+    }
+
+.btn-2{
+  top: 89px !important;
+  left: 209px !important;
+}
+.btn-3{
+  top: 80px !important;
+  left: 220px !important;
+}
+.btn-4{
+  top: 70px !important;
+  left: 230px !important;
+}
+
+    .button {
+      background-color: rgb(0, 0, 0);
+       transform: skew(9deg);
+      position: absolute;
+      top: 100px;
+      left: 200px;
+      display: flex;
+      margin: 0 auto;
+      -webkit-border-radius: 10px;
+      -webkit-box-shadow: -5px 3px orange, -5px -1px orange, 0px 4px orange, 0px 5px orange, 0px 5px orange, 0px 6px orange, -0px 1px 5px 0px rgb(212, 169, 13);
+      -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    }
+
+    .button span {
+      /* -webkit-box-shadow: 0px -1px #262F33, 0px 1px 1px #262F33; */
+      -webkit-border-radius: 10px;
+      -webkit-transition: -webkit-transform .1s ease-in-out;
+      transition: transform 0.3s ease;
+
+      /* 3D skew effect from right */
+      transform: perspective(500px) rotateX(5deg) rotateY(5deg);
+
+      display: inline-block;
+      padding: 7px 10px;
+      color: #3A474D;
+      text-transform: uppercase;
+      font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+      font-weight: 700;
+      font-size: 32px;
+      text-shadow: 0px 1px #fff, 0px -1px #262F33;
+    }
+
+    .button:hover {
+      color: #AEBF3B;
+      text-shadow: 0px -1px #97A63A;
+      cursor: pointer;
+      transition: 1s;
+
+
+      /* reduce skew on hover for a subtle effect */
+      /* transform: perspective(500px) rotateX(2deg) rotateY(2deg); */
+    }
+
+    .button:active {
+      -webkit-box-shadow: 
+        -12px 11px rgb(0 0 0), -11px 3px rgb(0 0 0), 0px 5px rgb(0 0 0), 
+        0px 11px rgb(0 0 0), 0px 7px rgb(0 0 0), 0px 8px rgb(0 0 0), 
+        -21px -3px 55px 25px rgb(149 94 94);
+    }
+
+    .button:active span {
+      transform: translate(0, 5px);
+    }
+
+    .button span:after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 14px;
+      top: 12px;    
+      font-family: 'Cabin';
+      font-weight: 700;
+      color: #AEBF3B;
+      text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+      font-size: 26px;
+    }
+
+
+
+
+   .right-box{
+    display: flex;
+    color: orange;
+
+    }
+  </style>
+</head>
+<body>
+
+
+  <a class="button track-progress-button">
+    <span class="left-box">
+        JALUPRO
+    </span>
+    <div class="right-box">
+      <div class="right-box-top">
+        74%
+      </div>
+      <div class="right-box-bottom">
+        <h2 class="h2">hi</h2>
+        <div class="date">05mar</div>
+
+      </div>
+
+    </div>
+
+  </a>
+  <a class="button btn-2">
+    <span>Test</span>
+  </a>
+  <a class="button btn-3">
+    <span>Test</span>
+  </a>
+  <a class="button btn-4">
+    <span>Test</span>
+  </a>
+
+</body>
+</html>
+ -->
+
+
+<!-- 
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Skewed Button from Right</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Cabin:400,500,600,bold);
+    @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold);
+
+   
+
+    .button {
+      background-color: rgb(0, 0, 0);
+      transform: skew(9deg); /* Skew only the button shape */
+      position: absolute;
+      top: 100px;
+      left: 200px;
+      display: flex;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: -5px 3px orange, -5px -1px orange, 0px 4px orange, 0px 5px orange, 0px 6px orange, 0px 1px 5px 0px rgb(212, 169, 13);
+      transition: box-shadow .1s ease-in-out;
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .btn2{
+  top: 81px !important;
+  left: 215px !important;
+}
+.btn3{
+  top: 67px !important;
+  left: 225px !important;
+}
+.btn4{
+  top: 50px !important;
+  left: 235px !important;
+}
+
+   
+    .left-box {
+      display: inline-block;
+      padding: 7px 10px;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+      font-weight: 700;
+      font-size: 32px;
+      border-right: 1.5px solid #655a5a;
+    }
+
+    .button:hover {
+      color: #AEBF3B;
+      text-shadow: 0px -1px #97A63A;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .button:active {
+      box-shadow: 
+        -12px 11px rgb(0 0 0), -11px 3px rgb(0 0 0), 0px 5px rgb(0 0 0), 
+        0px 11px rgb(0 0 0), 0px 7px rgb(0 0 0), 0px 8px rgb(0 0 0), 
+        -21px -3px 55px 25px rgb(149 94 94);
+    }
+
+    .right-box {
+      display: flex;
+      flex-direction: column;
+      color: orange;
+      margin-left: 10px;
+      font-family: 'PT Sans Narrow';
+    }
+
+    .right-box-top {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .right-box-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .right-box-bottom h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+<div class="parent-btns-progress">
+  <a class="button track-progress-button" href="#">
+    <span class="left-box">JALUPRO</span>
+    <div class="right-box">
+      <div class="right-box-top">74%</div>
+
+      <div class="right-box-bottom">
+        <h2>hi1111111</h2>
+        <div class="date">05mar</div>
+      </div>
+    </div>
+  </a>
+
+  <a class="button track-progress-button btn2" href="#">
+    <span class="left-box">JALUPRO</span>
+    <div class="right-box">
+      <div class="right-box-top">74%</div>
+
+      <div class="right-box-bottom">
+        <h2>hi1111111</h2>
+        <div class="date">05mar</div>
+      </div>
+    </div>
+  </a>
+  <a class="button track-progress-button btn3" href="#">
+    <span class="left-box">JALUPRO</span>
+    <div class="right-box">
+      <div class="right-box-top">74%</div>
+
+      <div class="right-box-bottom">
+        <h2>hi1111111</h2>
+        <div class="date">05mar</div>
+      </div>
+    </div>
+  </a>
+  <a class="button track-progress-button btn4" href="#">
+    <span class="left-box">JALUPRO</span>
+    <div class="right-box">
+      <div class="right-box-top">74%</div>
+
+      <div class="right-box-bottom">
+        <h2>hi1111111</h2>
+        <div class="date">05mar</div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+</body>
+</html> -->
