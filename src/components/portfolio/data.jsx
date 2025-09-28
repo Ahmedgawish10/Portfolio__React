@@ -140,22 +140,24 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
   },
     {
     id: 4,
-    title: "Dashboard Abrand",
-    description: "Freelance Project ",
-    technologies: "(HTML - Css - Tailwind - Js - MUI - Reactjs- Firebase)",
-    image: dashboard,
-    url: "https://dashboard-ahmedgawish.vercel.app/",
-    linkText: "Demo"
-  },
    
-    {
-      id: 5,
-      title: "Travel Agency App",
+    title: "Travel Agency App",
       description: "Freelance Project",
       technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next- EmailJs)",
       image: Eljewar,
       url: "https://aljewartours.vercel.app/",
       linkText: "Demo"
+    
+  },
+   
+    {
+      id: 5,
+     title: "Dashboard Abrand",
+    description: "Freelance Project ",
+    technologies: "(HTML - Css - Tailwind - Js - MUI - Reactjs- Firebase)",
+    image: dashboard,
+    url: "https://dashboard-ahmedgawish.vercel.app/",
+    linkText: "Demo"
 
     },
     {
