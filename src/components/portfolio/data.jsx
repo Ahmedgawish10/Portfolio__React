@@ -123,7 +123,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     id: 2,
     title: "Dr Samkari",
     description: "Project Freelance",
-      technologies: "(HTML - CSS- JS - Tailwind - Nextjs - payment Meps )",
+      technologies: "(HTML - CSS- JS - Tailwind - Nextjs - payment Meps)",
     image: ProjectFreelance5,
     url: "https://www.drsamkari.com/",
     linkText: "Demo"
