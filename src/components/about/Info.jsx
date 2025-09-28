@@ -9,12 +9,12 @@ const Info = () => {
             <div className="about__box">
                 <span className='flex justify-center'>  <RiBookmark3Line className="about__icon  "/> </span>
                 <h3 className="about__title">Experience</h3>
-                <span className="about__subtitle">+2 Years </span>
+                <span className="about__subtitle">+3 Years </span>
             </div>
             <div className="about__box">
             <span className='flex justify-center'>  <SiBookstack className="about__icon  "/> </span>
             <h3 className="about__title">completed</h3>
-                <span className="about__subtitle">+12  Projects</span>
+                <span className="about__subtitle">+14  Projects</span>
             </div>
             <div className="about__box">
             <span className='flex justify-center'>  <MdOutlineSupportAgent className="about__icon  "/> </span>

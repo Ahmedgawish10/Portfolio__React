@@ -14,6 +14,8 @@ import ProjectFreelance1 from "../../assets/ProjectFreelance1.png"
 import ProjectFreelance2 from "../../assets/ProjectFreelance2.png"
 import ProjectFreelance3 from "../../assets/project-laravel-freelance.png"
 import ProjectFreelance4 from "../../assets/dubizzle-freelance.png"
+import ProjectFreelance5 from "../../assets/dr-samkari.png"
+import ProjectFreelance6 from "../../assets/dr-samkari-dashboard.png"
 
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
@@ -117,8 +119,27 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     contributor:"true",
     linkText: "Demo"
   },
-    {
+  {
     id: 2,
+    title: "Dr Samkari",
+    description: "Project Freelance",
+      technologies: "(HTML - CSS- JS - Tailwind - Nextjs - payment Meps )",
+    image: ProjectFreelance5,
+    url: "https://www.drsamkari.com/",
+    linkText: "Demo"
+  },
+  {
+    id: 3,
+    title: "Dr Samkari - Dashboard",
+    description: "Project Freelance ",
+      technologies: "(HTML - CSS- JS - tailwind - shadcn ui - Nextjs )",
+    image: ProjectFreelance6,
+    url: "#",
+    private:<RiGitRepositoryPrivateLine/>,
+    linkText: "Demo"
+  },
+    {
+    id: 4,
     title: "Dashboard Abrand",
     description: "Freelance Project ",
     technologies: "(HTML - Css - Tailwind - Js - MUI - Reactjs- Firebase)",
@@ -128,7 +149,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
   },
    
     {
-      id: 3,
+      id: 5,
       title: "Travel Agency App",
       description: "Freelance Project",
       technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next- EmailJs)",
@@ -138,7 +159,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
     },
     {
-      id: 4,
+      id: 6,
       title: "E-commerce ABrand ",
       description: "Freelance Project",
       technologies: "(HTML - CSS- TypeScript - Tailwind - React - React Mui - Firebase - Stripe)",
@@ -148,7 +169,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
     },
     {
-      id: 5,
+      id: 7,
       title: "Courses Tech App",
       description: "Training Project",
       technologies:"(HTML - CSS- JS - Tailwind - Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary)",
@@ -158,7 +179,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
     },
     {
-      id: 6,
+      id: 8,
       title: "HBM High School", 
       description: "Freelance Project Dashboard ",
       technologies:"(HTML - Sass - Js - React - ReduxToolkit - I18next - Firebase)",
@@ -169,7 +190,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       style:"h-[100%]"
     },
     {
-      id: 7,
+      id: 9,
       title: "E-commerce Pharmacy",
       description: "Training Project",
       technologies:"(HTML - CSS - BootStrap- Js - React - ReduxToolkit)",
@@ -179,7 +200,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     },
 
     {
-      id: 8,
+      id: 10,
       title: "Dubbizle Mulitvendor",
       description: "Freelance Project",
       technologies:"(HTML - CSS - Tailwind- Js - Firebase- Nextjs - Localization)",
@@ -188,7 +209,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
        linkText: "Demo"
     },
     {
-      id: 9,
+      id: 11,
       title: "Arduino Sensor Product",
       description: "Graduation Project ",
       technologies: "(HTML - CSS - BootStrap - Js - BootStrap - React - ContextApi)",
@@ -198,7 +219,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
     },
     {
-      id: 10,
+      id: 12,
       title: "MD System", 
       description: "Freelance Project AdminPanel ",
       technologies:"(HTML - Sass - Js - React - ReduxToolkit - I18next - Firebase)",
@@ -209,7 +230,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       style:"h-[100%]"
     }, 
     {
-        id: 11,
+        id: 13,
         image: jopPortal,
         title: "Job Portal App",
         description: "Graduation Project at I T I",
@@ -218,7 +239,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
         linkText: "Code"
     }, 
     {
-      id: 12,
+      id: 14,
       title: "E-commerce Pizza",
       description: "Graduation Project at I T I",
       technologies: "(HTML - Sass - JS - BootStrap - Swiper.js)",
@@ -227,7 +248,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
       linkText: "Demo"
     },
     {
-        id: 13,
+        id: 15,
         image: upworkJob1,
         title: "Chess Game ",
         description: "Freelance Project Upowrk",
@@ -237,7 +258,7 @@ import { RiGitRepositoryPrivateLine } from "react-icons/ri";
     },
 
     {
-      id: 13,
+      id: 16,
       title: "MediCare App (Angular)",
       description: "Training Project at I T I",
       technologies: "(HTML - CSS - JS - BootStrap - Angular - REST API)",
