@@ -30,13 +30,20 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validate();
+    const mode = localStorage.getItem("mode") || "light";
 
     if (Object.keys(newErrors).length === 0) {
-      toast.loading("Sending your message...", { duration: 2000 });
+      toast.loading("Sending your message...", {
+        duration: 2000, style: {
+          borderRadius: '10px',
+          background: mode == "dark" ? "#ffb800" : "",
+          color: mode == "dark" ? "#fff" : "",
+        }
+      });
 
       try {
         await emailjs.send(
-          "service_2nyjtqx",
+          "service_gva37tr",
           "template_3vyedct",
           {
             to_name: "Ahmed Gawish",
@@ -47,18 +54,43 @@ const Contact = () => {
           "BCHWeb1hlnZu1FDFl"
         );
 
-        toast.success("Message sent successfully! We'll contact you soon.", { duration: 5000 });
+        toast.success("Message sent successfully! We'll contact you soon.", {
+          duration: 5000,
+          style: {
+            borderRadius: '10px',
+            background: mode == "dark" ? "#0a1c41" : "",
+            color: mode == "dark" ? "#fff" : "#000",
+          }
+        });
         setFormData({ name: "", email: "", msg: "" });
       } catch (error) {
-        toast.error("Error sending email. Please try again.");
+        toast.error("Error sending email. Please try again.", {
+          style: {
+            borderRadius: '10px',
+            background: mode == "dark" ? "#ffb800" : "",
+            color: mode == "dark" ? "#fff" : "",
+          }
+        });
       }
     } else {
       setErrors(newErrors);
       if (newErrors.msg === "Message must be at least 20 characters" && !newErrors.name) {
-        toast.error("Please provide more details about your project.");
+        toast.error("Please provide more details about your project.", {
+          style: {
+            borderRadius: '10px',
+            background: mode == "dark" ? "#ffb800" : "",
+            color: mode == "dark" ? "#fff" : "",
+          }
+        });
         return;
       }
-      toast.error("Please fill in all required fields.");
+      toast.error("Please fill in all required fields.", {
+        style: {
+          borderRadius: '10px',
+          background: mode == "dark" ? "#ffb800" : "",
+          color: mode == "dark" ? "#fff" : "",
+        }
+      });
     }
   };
 
@@ -74,17 +106,21 @@ const Contact = () => {
           <div className="contact__info">
             {/* Email Card */}
             <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact__card-title">Email</h3>
-              <p className="contact__card-data">ahmedgawish22@gmail.com</p>
+              <a href="mailto:ahmdgawish22@gmail.com" className=" block" target="_blank">
+                <i className="bx bx-mail-send contact__card-icon"></i>
+                <h3 className="contact__card-title">Email</h3>
+              </a>
+              <p className="contact__card-data">ahmdgawish22@gmail.com</p>
               <a href="mailto:ahmdgawish22@gmail.com" className="contact__card-button" target="_blank">
                 Write me <i className="uil uil-arrow-right icon"></i>
               </a>
             </div>
             {/* WhatsApp Card */}
             <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
+              <a href="https://wa.me/+0201064880594" className=" block" target="_blank">
+                <i className="bx bxl-whatsapp contact__card-icon"></i>
+                <h3 className="contact__card-title">Whatsapp</h3>
+              </a>
               <p className="contact__card-data">010-648-805-94</p>
               <a href="https://wa.me/+0201064880594" className="contact__card-button" target="_blank">
                 Write me <i className="uil uil-arrow-right icon"></i>
@@ -92,8 +128,10 @@ const Contact = () => {
             </div>
             {/* LinkedIn Card */}
             <div className="contact__card flex flex-col items-center">
-              <SlSocialLinkedin className="text-[36px] pb-2  contact__card-icon" />
-              <h3 className="contact__card-title">LinkedIn</h3>
+               <a href="https://www.linkedin.com/in/ahmed-gawish-718b27213" className=" flex flex-col items-center " target="_blank">
+                  <SlSocialLinkedin className="text-[36px] pb-2  contact__card-icon" />
+                  <h3 className="contact__card-title">LinkedIn</h3>
+              </a>
               <p className="contact__card-data">Ahmed Gawish</p>
               <a
                 href="https://www.linkedin.com/in/ahmed-gawish-718b27213"
