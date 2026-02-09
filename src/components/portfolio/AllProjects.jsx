@@ -38,9 +38,15 @@ const Alldata = () => {
         {currentProjects.map((project,index) => (
           <div className="box" key={index}>
             <div className="box__img relative">
-              <a href={project.private ? "#" : project.url} target={project.private ? "" : "_blank"} rel="noreferrer">
-                <img src={project.image} alt={project.title}  className={`rounded-t-xl absolute ${project.style || ""}`}/>
-              </a>
+              {project.private ? (
+                <span className="block cursor-default">
+                  <img src={project.image} alt={project.title}  className={`rounded-t-xl absolute ${project.style || ""}`}/>
+                </span>
+              ) : (
+                <a href={project.url} target="_blank" rel="noreferrer">
+                  <img src={project.image} alt={project.title}  className={`rounded-t-xl absolute ${project.style || ""}`}/>
+                </a>
+              )}
               <div className="absolute top-2 right-2 z-10 group">
                 <button
                   type="button"
@@ -67,13 +73,17 @@ const Alldata = () => {
               <span className="font-bold  ">Technologies</span>: {project.technologies}
             </div>
             <h5 className="pt-1 flex gap-2 items-center">
-              <a href={project.private? "#":project.url} target={project.private?"":"_blank"} rel="noreferrer" className="flex gap-2 items-center">
-             {project.private? "":  <HiOutlineExternalLink/>}
-                {project.linkText}
-                {project.private}
-                {project.private?"": <FaArrowRightLong className="services__button-icon" />}
-               
-              </a>
+              {project.private ? (
+                <span className="flex gap-2 items-center cursor-default opacity-75">
+                  {project.linkText}
+                </span>
+              ) : (
+                <a href={project.url} target="_blank" rel="noreferrer" className="flex gap-2 items-center">
+                  <HiOutlineExternalLink/>
+                  {project.linkText}
+                  <FaArrowRightLong className="services__button-icon" />
+                </a>
+              )}
             </h5>
           </div>
         ))}
@@ -142,9 +152,15 @@ const Alldata = () => {
               </div>
 
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href={modalProject.private ? "#" : modalProject.url} target={modalProject.private ? "" : "_blank"} rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
-                  <HiOutlineExternalLink /> {modalProject.linkText}
-                </a>
+                {modalProject.private ? (
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 rounded-md px-3 py-1.5 cursor-default opacity-75">
+                    <HiOutlineExternalLink /> {modalProject.linkText}
+                  </span>
+                ) : (
+                  <a href={modalProject.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
+                    <HiOutlineExternalLink /> {modalProject.linkText}
+                  </a>
+                )}
                
               </div>
             </div>

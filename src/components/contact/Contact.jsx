@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-hot-toast";
-import { FaLinkedin } from "react-icons/fa";
 import "./contact.css";
 import { SlSocialLinkedin } from "react-icons/sl";
 
@@ -106,29 +105,29 @@ const Contact = () => {
           <div className="contact__info">
             {/* Email Card */}
             <div className="contact__card">
-              <a href="mailto:ahmdgawish22@gmail.com" className=" block" target="_blank">
+              <a href="mailto:ahmdgawish22@gmail.com" className=" block" target="_blank" rel="noreferrer">
                 <i className="bx bx-mail-send contact__card-icon"></i>
                 <h3 className="contact__card-title">Email</h3>
               </a>
               <p className="contact__card-data">ahmdgawish22@gmail.com</p>
-              <a href="mailto:ahmdgawish22@gmail.com" className="contact__card-button" target="_blank">
+              <a href="mailto:ahmdgawish22@gmail.com" className="contact__card-button" target="_blank" rel="noreferrer">
                 Write me <i className="uil uil-arrow-right icon"></i>
               </a>
             </div>
             {/* WhatsApp Card */}
             <div className="contact__card">
-              <a href="https://wa.me/+0201064880594" className=" block" target="_blank">
+              <a href="https://wa.me/+0201064880594" className=" block" target="_blank" rel="noreferrer">
                 <i className="bx bxl-whatsapp contact__card-icon"></i>
                 <h3 className="contact__card-title">Whatsapp</h3>
               </a>
               <p className="contact__card-data">010-648-805-94</p>
-              <a href="https://wa.me/+0201064880594" className="contact__card-button" target="_blank">
+              <a href="https://wa.me/+0201064880594" className="contact__card-button" target="_blank" rel="noreferrer">
                 Write me <i className="uil uil-arrow-right icon"></i>
               </a>
             </div>
             {/* LinkedIn Card */}
             <div className="contact__card flex flex-col items-center">
-               <a href="https://www.linkedin.com/in/ahmed-gawish-718b27213" className=" flex flex-col items-center " target="_blank">
+               <a href="https://www.linkedin.com/in/ahmed-gawish-718b27213" className=" flex flex-col items-center " target="_blank" rel="noreferrer">
                   <SlSocialLinkedin className="text-[36px] pb-2  contact__card-icon" />
                   <h3 className="contact__card-title">LinkedIn</h3>
               </a>
@@ -136,6 +135,7 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/ahmed-gawish-718b27213"
                 target="_blank"
+                rel="noreferrer"
                 className="contact__card-button"
               >
                 Contact me <i className="uil uil-arrow-right icon"></i>

@@ -12,7 +12,7 @@ const Portfolio = () => {
 
   
   const handleToggleCert = (index) => {
-    setImgCert((prev) => (prev == index ? null : index));
+    setImgCert((prev) => (prev === index ? null : index));
   };
 
   const openInfo = (e, project) => {
@@ -183,9 +183,15 @@ const Portfolio = () => {
               </div>
 
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href={modalProject.private ? "#" : modalProject.url} target={modalProject.private ? "" : "_blank"} rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
-                  <HiOutlineExternalLink /> {modalProject.linkText}
-                </a>
+                {modalProject.private ? (
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 rounded-md px-3 py-1.5 cursor-default opacity-75">
+                    <HiOutlineExternalLink /> {modalProject.linkText}
+                  </span>
+                ) : (
+                  <a href={modalProject.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
+                    <HiOutlineExternalLink /> {modalProject.linkText}
+                  </a>
+                )}
                 {modalProject.dashboardUrl && (
                   <a href={modalProject.dashboardUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
                     <HiOutlineExternalLink /> Dashboard
@@ -206,7 +212,7 @@ const Portfolio = () => {
                   <img
                     src={certificate.img}
                     alt={certificate.title}
-                    className={`cursor-pointer rounded-t-xl absolute ${index == 1 ? "h-full w-full" : ""} `}
+                    className={`cursor-pointer rounded-t-xl absolute ${index === 1 ? "h-full w-full" : ""} `}
                     onClick={() => handleToggleCert(index)}
                   />
                 </div>
@@ -221,7 +227,7 @@ const Portfolio = () => {
                   </span>
                   <i className="uil uil-arrow-right services__button-icon"></i>
                 </h5>
-                <div className={imgCert == index ? "showgrad" : "hidegrad"}>
+                <div className={imgCert === index ? "showgrad" : "hidegrad"}>
                   <div onClick={() => handleToggleCert(index)}
                     className="close__img-grad cursor-pointer"
                   >
