@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { TbSend } from "react-icons/tb";
+import React from 'react'
 
 const Data = () => {
 

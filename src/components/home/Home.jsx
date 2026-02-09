@@ -3,7 +3,6 @@ import"./home.css";
 import Social from './Social';
 import Data from './Data';
 import ScrollDown from './ScrollDown';
-import Ahmed from "../../assets/ahmd-img.jpeg"
 const Home = () => {
 
     return (
