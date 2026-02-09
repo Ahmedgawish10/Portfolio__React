@@ -5,7 +5,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { FiFigma } from "react-icons/fi";
 import { TfiPencilAlt } from "react-icons/tfi";
-import { BiCreditCardFront } from "react-icons/bi";
 import { BsCreditCard2Front } from "react-icons/bs";
 
 const Services = () => {
