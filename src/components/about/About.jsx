@@ -18,7 +18,7 @@ const About = () => {
                     <Info />
                     <p className="about__description">
                         Experienced Front-End Developer skilled in building responsive, high-performance web pages.
-                        With over 2 years of experience, I have delivered multiple successful projects that received positive feedback.
+                        With over 3 years of experience, I have delivered multiple successful projects that received positive feedback.
                     </p>
                     <div className="flex justify-center">
                     <a download="" href={Cv} className="">
