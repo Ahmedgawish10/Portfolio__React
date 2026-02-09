@@ -10,6 +10,7 @@ const Portfolio = () => {
   const [imgCert, setImgCert] = useState(null);
   const [modalProject, setModalProject] = useState(null);
 
+  
   const handleToggleCert = (index) => {
     setImgCert((prev) => (prev == index ? null : index));
   };
