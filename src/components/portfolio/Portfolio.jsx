@@ -10,16 +10,21 @@ const Portfolio = () => {
   const [imgCert, setImgCert] = useState(null);
   const [modalProject, setModalProject] = useState(null);
 
-  
-  const handleToggleCert = (index) => {
+
+  const openCertificateModal = (index) => {
+    document.body.style.overflow = "hidden";
     setImgCert((prev) => (prev === index ? null : index));
+  };
+  const closeCertificateModal = () => {
+    document.body.style.overflow = "auto";
+    setImgCert(false);
   };
 
   const openInfo = (e, project) => {
     setModalProject(project);
     document.body.style.overflow = "hidden";
   };
-  const closeModal = () => {
+  const closeProjectModal = () => {
     setModalProject(null);
     document.body.style.overflow = "auto";
   };
@@ -55,7 +60,7 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-web relative">
                   <a href={project.url} target="_blank" rel="noreferrer">
-                    <img src={project.img} alt={project.title}  className="rounded-t-xl absolute" />
+                    <img src={project.img} alt={project.title} className="rounded-t-xl absolute" />
                   </a>
                   <div className="absolute top-2 right-2 z-10 group">
                     <button
@@ -72,7 +77,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="title__project">
-                  <h3 className="pb-2">{project.title} {project.contributor&&(<span className="text-[12px] lg:text-[14px] ">(Contributor)</span>)}   </h3>
+                  <h3 className="pb-2">{project.title} {project.contributor && (<span className="text-[12px] lg:text-[14px] ">(Contributor)</span>)}   </h3>
                   <span>{project.description}</span>
                   <div>Technologies: ({project.technologies})</div>
                   <h5 className="pt-1">
@@ -92,8 +97,8 @@ const Portfolio = () => {
             {reactProjects.map((project, index) => (
               <div className="box" key={index}>
                 <div className="box__img-react relative">
-                <a href={project.url} target="_blank" rel="noreferrer">
-                  <img src={project.image} alt={project.title}  className="rounded-t-xl absolute" />
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    <img src={project.image} alt={project.title} className="rounded-t-xl absolute" />
                   </a>
                   <div className="absolute top-2 right-2 z-10 group">
                     <button
@@ -124,84 +129,84 @@ const Portfolio = () => {
         )}
 
         {/* Project detail modal (Web & React) */}
-      {modalProject && (
-        <div
-          className="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/60"
-          onClick={closeModal}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="portfolio-modal-title"
-        >
+        {modalProject && (
           <div
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-lg w-full max-h-[85vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/60"
+            onClick={closeProjectModal}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="portfolio-modal-title"
           >
-            <div className="p-5">
-              <div className="flex justify-between items-start gap-4">
-                <h2 id="portfolio-modal-title" className="text-xl font-bold text-gray-900 dark:text-white">
-                  {modalProject.title} {modalProject.country && <span className="text-sm text-gray-500 dark:text-gray-400"> - {modalProject.country}</span>}
-                </h2>
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="shrink-0 p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300"
-                  aria-label="Close"
-                >
-                  <IoClose className="w-6 h-6" />
-                </button>
-              </div>
-
-              {modalProject.idea && (
-                <div className="mt-4">
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Project idea</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    {modalProject.idea}
-                  </p>
+            <div
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-lg w-full max-h-[85vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-5">
+                <div className="flex justify-between items-start gap-4">
+                  <h2 id="portfolio-modal-title" className="text-xl font-bold text-gray-900 dark:text-white">
+                    {modalProject.title} {modalProject.country && <span className="text-sm text-gray-500 dark:text-gray-400"> - {modalProject.country}</span>}
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={closeProjectModal}
+                    className="shrink-0 p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300"
+                    aria-label="Close"
+                  >
+                    <IoClose className="w-6 h-6" />
+                  </button>
                 </div>
-              )}
 
-              {!modalProject.idea && modalProject.description && (
-                <div className="mt-4">
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    {modalProject.description}
-                  </p>
-                </div>
-              )}
-
-              {modalProject.role && (
-                <div className="mt-4">
-                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">My role</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    {modalProject.role}
-                  </p>
-                </div>
-              )}
-
-              <div className="mt-4">
-                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Technologies</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{modalProject.technologies}</p>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-3">
-                {modalProject.private ? (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 rounded-md px-3 py-1.5 cursor-default opacity-75">
-                    <HiOutlineExternalLink /> {modalProject.linkText}
-                  </span>
-                ) : (
-                  <a href={modalProject.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
-                    <HiOutlineExternalLink /> {modalProject.linkText}
-                  </a>
+                {modalProject.idea && (
+                  <div className="mt-4">
+                    <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Project idea</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                      {modalProject.idea}
+                    </p>
+                  </div>
                 )}
-                {modalProject.dashboardUrl && (
-                  <a href={modalProject.dashboardUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
-                    <HiOutlineExternalLink /> Dashboard
-                  </a>
+
+                {!modalProject.idea && modalProject.description && (
+                  <div className="mt-4">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                      {modalProject.description}
+                    </p>
+                  </div>
                 )}
+
+                {modalProject.role && (
+                  <div className="mt-4">
+                    <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">My role</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                      {modalProject.role}
+                    </p>
+                  </div>
+                )}
+
+                <div className="mt-4">
+                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Technologies</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{modalProject.technologies}</p>
+                </div>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {modalProject.private ? (
+                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 rounded-md px-3 py-1.5 cursor-default opacity-75">
+                      <HiOutlineExternalLink /> {modalProject.linkText}
+                    </span>
+                  ) : (
+                    <a href={modalProject.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
+                      <HiOutlineExternalLink /> {modalProject.linkText}
+                    </a>
+                  )}
+                  {modalProject.dashboardUrl && (
+                    <a href={modalProject.dashboardUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-black/30 hover:bg-black/60 rounded-md px-3 py-1.5 transition-colors duration-150 hover:underline">
+                      <HiOutlineExternalLink /> Dashboard
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
         {/* Certificates */}
         {portTabs === 4 && (
@@ -213,14 +218,14 @@ const Portfolio = () => {
                     src={certificate.img}
                     alt={certificate.title}
                     className={`cursor-pointer rounded-t-xl absolute ${index === 1 ? "h-full w-full" : ""} `}
-                    onClick={() => handleToggleCert(index)}
+                    onClick={() => openCertificateModal(index)}
                   />
                 </div>
                 <h4 className="title__certificate">{certificate.title}</h4>
                 <h5 className="content__certificate">{certificate.description}</h5>
                 <h5 className="view__container">
                   <span
-                    onClick={() => handleToggleCert(index)}
+                    onClick={() => openCertificateModal(index)}
                     className="view_certificate"
                   >
                     View
@@ -228,13 +233,13 @@ const Portfolio = () => {
                   <i className="uil uil-arrow-right services__button-icon"></i>
                 </h5>
                 <div className={imgCert === index ? "showgrad" : "hidegrad"}>
-                  <div onClick={() => handleToggleCert(index)}
+                  <div onClick={closeCertificateModal}
                     className="close__img-grad cursor-pointer"
                   >
-                     <IoClose className="w-6 h-6" />
+                    <IoClose className="w-6 h-6" />
                   </div>
                   <div className="box__img-grad flex justify-center z-[-10px] items-center">
-                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title}  />
+                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title} />
 
                   </div>
                 </div>

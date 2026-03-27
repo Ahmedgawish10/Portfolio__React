@@ -16,7 +16,7 @@ const Testimonials = React.lazy(() => import("./components/testimonials/Testimon
 const Contact = React.lazy(() => import("./components/contact/Contact"));
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(1);
   // Theme mode
   const getInitialTheme = () => localStorage.getItem("mode") || "light";
   const [theme, setTheme] = useState(getInitialTheme);
@@ -28,8 +28,10 @@ function App() {
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    localStorage.setItem("mode", theme);
   };
-
+  
+ // i made this loaidg as simulate some waiting time but Suspense responsible for the loading of the page
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
@@ -38,14 +40,9 @@ function App() {
   return (
     <>
       {loading ? (
-        <ScaleLoader
-          className="icon-loading"
-          color={"#FFB800"}
-          loading={loading}
-          size={30}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+         <div className="loading-fallback h-[100vh] w-full flex items-center justify-center">
+         <ScaleLoader color={"#FFB800"} />
+       </div>
       ) : (
         <>
           <Suspense

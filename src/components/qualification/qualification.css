@@ -49,6 +49,12 @@ grid-template-columns: 1fr max-content 1fr;
 column-gap:0.5rem;
 
 }
+.qualification__content .qualification__data .qualification__title a {
+  color: inherit;
+}
+.qualification__content .qualification__data .qualification__title a:hover {
+  text-decoration: underline;
+}
 .qualification__content .qualification__data .qualification__title{
 font-size:var(--normal-font-size);
 font-weight: var(--font-medium);

@@ -8,44 +8,50 @@ import { TfiPencilAlt } from "react-icons/tfi";
 import { BsCreditCard2Front } from "react-icons/bs";
 
 const Services = () => {
-  const [closeModel, openModel] = useState(0);
+  const [openModalId, openModel] = useState(0);
 
   const NumberTab = (index) => {
+     document.body.style.overflow = "hidden";
     openModel(index);
   };
-
+  const closeModel = () => {
+    document.body.style.overflow = "auto";
+    openModel(false);
+  };
   const services = [
     {
       id: 1,
       icon: <BsCreditCard2Front className='text-2xl mb-[-3px]' />,
       title: "Frontend Developer",
-      description: "Services with more than 2 years of experience.",
+      description: "Services with more than 3 years of experience.",
       tasks: [
-        "Convert Figma UI templates to websites using React and Next.js",
-        "Transform Canva UI designs into responsive websites with React and Tailwind",
-        "Build functional websites from Figma and Canva templates with React and Next.js",
-        "Convert Canva UI designs into dynamic websites with React and Tailwind",
-        "Create interactive mockups with React and Tailwind, tailored to branding"
+        "Convert Figma designs into high-quality, responsive web interfaces using React and Next.js",
+        "Build scalable and responsive user interfaces from Figma and Canva designs using Tailwind CSS",
+        "Develop interactive and user-friendly web applications with clean, maintainable code",
+        "Translate UI/UX designs into pixel-perfect, functional components",
+        "Ensure cross-browser compatibility and optimize application performance",
+        "Collaborate with designers to deliver consistent and brand-aligned user interfaces"
       ]
     },
     {
       id: 2,
       icon: <TfiPencilAlt className='text-2xl' />,
       title: "Web Developer",
-      description: "Services with more than 1 year of experience.",
+      description: "Services with more than 2 year of experience.",
       tasks: [
-        "Develop dynamic and scalable websites using PHP and MySQL",
-        "Design websites with high performance and SEO optimization",
-        "Create job portal app for announcing new jobs for seekers",
-        "Design and mockups of products for companies",
-        "Edit and maintain Laravel projects"
+        "Develop dynamic and scalable web applications using PHP, Laravel, and MySQL",
+        "Design website layouts and product mockups aligned with business needs",
+        "Create job portal applications for publishing and managing job listings",
+        "Maintain and enhance existing Laravel projects",
+        "Optimize application performance and improve response time",
+        "Improve database queries and backend logic for faster load times"
       ]
     },
     {
       id: 3,
       icon: <FiFigma className='text-2xl' />,
       title: "UI/UX Designer",
-      description: "Services with 1 year of experience.",
+      description: "Services with 3 years of experience.",
       tasks: [
         "Utilizing Figma's comprehensive design features to craft pixel-perfect UI designs",
         "Experience in previewing and testing designs to ensure optimal presentation",
@@ -76,13 +82,13 @@ const Services = () => {
               <FaLongArrowAltRight className="services__button-icon text-xl gap-3" />
             </span>
             <div
-              className={closeModel === service.id ? "services__model services__model-show" : "services__model"}
+              className={openModalId === service.id ? "services__model services__model-show" : "services__model"}
             >
               <div className="services__model-content">
                 <div className="close__model">
                   <IoMdClose
                     className="uil uil-times button__close-icon"
-                    onClick={() => openModel(0)}
+                    onClick={closeModel}
                   />
                 </div>
                 <h3 className="services__model-title">{service.title}</h3>
