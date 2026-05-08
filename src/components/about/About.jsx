@@ -1,7 +1,7 @@
 import React from 'react'
 import "./about.css";
 import AboutImg from "../../assets/ahmd-img.jpeg"
-import Cv from "../../assets/AhmedGawish.pdf";
+import Cv from "../../assets/Ahmed Gaawish.pdf";
 import Info from "./Info";
 import { PiFilePdfBold } from "react-icons/pi";
 
