@@ -186,7 +186,7 @@ export const allProjects = [
     description: "Freelance Project",
     technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next - Supabase - EmailJs)",
     image: alqoba,
-    url: "https://alqopa-alzahabia-test.vercel.app/",
+    url: "https://alqopa-alzahabia.vercel.app/ar",
     linkText: "Demo",
     idea: "Showcase company services (web apps, digital marketing, motion graphics, mobile apps), pricing plans, team section, customer reviews, Zati app download, and contact form.",
     role: "Responsible for frontend development, Supabase integration, SEO optimization, responsive design and with dashboard for managing content.",
