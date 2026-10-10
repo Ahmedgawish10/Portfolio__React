@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer " id="footer">
       <div className="footer__container container">
         <h1 className="footer__title">
-          <a href="#"> Gawish</a>
+          <a href="#home"> Gawish</a>
         </h1>
         <ul className="footer__list">
           <li>
@@ -49,6 +49,7 @@ const Footer = () => {
             href="https://www.facebook.com/ahmedali.gawish.5/"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-facebook"></i>
           </a>
@@ -57,6 +58,7 @@ const Footer = () => {
             href="https://www.instagram.com/"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-instagram"></i>
           </a>
@@ -65,6 +67,7 @@ const Footer = () => {
             href="https://www.twitter.com/"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-twitter"></i>
           </a>

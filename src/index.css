@@ -15,3 +15,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-text-fill-color: inherit;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark textarea:-webkit-autofill,
+.dark textarea:-webkit-autofill:hover,
+.dark textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%) !important;
+  /* Chrome ignores gradient on autofill; paint the matching orange instead */
+  -webkit-box-shadow: 0 0 0 1000px #FFB800 inset !important;
+  box-shadow: 0 0 0 1000px #FFB800 inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}

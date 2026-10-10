@@ -60,7 +60,7 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-web relative">
                   <a href={project.url} target="_blank" rel="noreferrer">
-                    <img src={project.img} alt={project.title} className="rounded-t-xl absolute" />
+                    <img src={project.image} alt={project.title} className="rounded-t-xl absolute" />
                   </a>
                   <div className="absolute top-2 right-2 z-10 group">
                     <button
@@ -215,7 +215,7 @@ const Portfolio = () => {
               <div className="box" key={index}>
                 <div className="box__img-cert ">
                   <img
-                    src={certificate.img}
+                    src={certificate.image}
                     alt={certificate.title}
                     className={`cursor-pointer rounded-t-xl absolute ${index === 1 ? "h-full w-full" : ""} `}
                     onClick={() => openCertificateModal(index)}
@@ -239,7 +239,7 @@ const Portfolio = () => {
                     <IoClose className="w-6 h-6" />
                   </div>
                   <div className="box__img-grad flex justify-center z-[-10px] items-center">
-                    <img src={certificate.img} className={`  md:h-[90%] w-[60%] `} alt={certificate.title} />
+                    <img src={certificate.image} className={`  md:h-[90%] w-[60%] `} alt={certificate.title} />
 
                   </div>
                 </div>

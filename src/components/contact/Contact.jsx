@@ -6,7 +6,6 @@ import { SlSocialLinkedin } from "react-icons/sl";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", msg: "" });
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,8 +34,8 @@ const Contact = () => {
       toast.loading("Sending your message...", {
         duration: 2000, style: {
           borderRadius: '10px',
-          background: mode == "dark" ? "#ffb800" : "",
-          color: mode == "dark" ? "#fff" : "",
+          background: mode === "dark" ? "#ffb800" : "",
+          color: mode === "dark" ? "#fff" : "",
         }
       });
 
@@ -57,8 +56,8 @@ const Contact = () => {
           duration: 5000,
           style: {
             borderRadius: '10px',
-            background: mode == "dark" ? "#0a1c41" : "",
-            color: mode == "dark" ? "#fff" : "#000",
+            background: mode === "dark" ? "#0a1c41" : "",
+            color: mode === "dark" ? "#fff" : "#000",
           }
         });
         setFormData({ name: "", email: "", msg: "" });
@@ -66,19 +65,18 @@ const Contact = () => {
         toast.error("Error sending email. Please try again.", {
           style: {
             borderRadius: '10px',
-            background: mode == "dark" ? "#ffb800" : "",
-            color: mode == "dark" ? "#fff" : "",
+            background: mode === "dark" ? "#ffb800" : "",
+            color: mode === "dark" ? "#fff" : "",
           }
         });
       }
     } else {
-      setErrors(newErrors);
       if (newErrors.msg === "Message must be at least 20 characters" && !newErrors.name) {
         toast.error("Please provide more details about your project.", {
           style: {
             borderRadius: '10px',
-            background: mode == "dark" ? "#ffb800" : "",
-            color: mode == "dark" ? "#fff" : "",
+            background: mode === "dark" ? "#ffb800" : "",
+            color: mode === "dark" ? "#fff" : "",
           }
         });
         return;
@@ -86,8 +84,8 @@ const Contact = () => {
       toast.error("Please fill in all required fields.", {
         style: {
           borderRadius: '10px',
-          background: mode == "dark" ? "#ffb800" : "",
-          color: mode == "dark" ? "#fff" : "",
+          background: mode === "dark" ? "#ffb800" : "",
+          color: mode === "dark" ? "#fff" : "",
         }
       });
     }
@@ -120,7 +118,7 @@ const Contact = () => {
                 <i className="bx bxl-whatsapp contact__card-icon"></i>
                 <h3 className="contact__card-title">Whatsapp</h3>
               </a>
-              <p className="contact__card-data">010-648-805-94</p>
+              <p className="contact__card-data tracking-widest">01064880594</p>
               <a href="https://wa.me/+0201064880594" className="contact__card-button" target="_blank" rel="noreferrer">
                 Write me <i className="uil uil-arrow-right icon"></i>
               </a>

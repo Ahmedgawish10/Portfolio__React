@@ -17,27 +17,27 @@ import ProjectFreelance4 from "../../assets/dubizzle-freelance.png"
 import ProjectFreelance5 from "../../assets/dr-samkari.png"
 import ProjectFreelance6 from "../../assets/dr-samkari-dashboard.png"
 import alqoba from "../../assets/alqoba.png"
-
+import aljwartours from "../../assets/aljwartours.png"
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
 export const webProjects = [
   {
-    img: ProjectFreelance3,
-    title: "Al Bayan for Reseach",
-    description: "Project Freelance ",
-    technologies: "HTML - Sass - JS - BootStrap - PHP - Laravel",
-    url: "https://albayanres.com/",
-    contributor: "true",
+    id: 3,
+    title: "Al Jwar Tours",
+    description: "Freelance Project",
+    technologies: "HTML - CSS - JS - Tailwind CSS - Next.js - PHP - Laravel",
+    image: aljwartours,
+    url: "https://aljwartours.com/en",
     linkText: "Demo",
-    idea: "Academic consultancy helping researchers and graduate students with theses and scientific research services.",
-    role: "Responsible for making the application fast, enhancing performance and UI, responsive design, and adding new features in the backend.",
-    country: "Palestine"
+    idea: "A multilingual tourism website where users can explore destinations, book flights and hotels, arrange airport transfers, and discover holiday packages. Includes an admin dashboard to manage website content and bookings.",
+    role: "Full-stack development: built the frontend using Next.js and Tailwind CSS, and developed the backend APIs using Laravel.",
+    country: "Egypt"
   },
   {
-    img: ProjectFreelance5,
+    image: ProjectFreelance5,
     title: "Dr Samkari",
     description: "Project Freelance",
-    technologies: "HTML - CSS - JS - Tailwind - Nextjs - payment Meps",
+    technologies: "HTML - CSS - JS - Tailwind CSS - Nextjs - payment Meps",
     url: "https://www.drsamkari.com/",
     linkText: "Demo",
     dashboardUrl: "https://www.drsamkari.com/dashboard",
@@ -46,7 +46,19 @@ export const webProjects = [
     country: "Jordan"
   },
   {
-    img: alqoba,
+    image: ProjectFreelance3,
+    title: "Al Bayan for Reseach",
+    description: "Project Freelance ",
+    technologies: "HTML - Sass - JS - BootStrap - Ajax - PHP - Laravel Blade - MySQL",
+    url: "https://albayanres.com/",
+    contributor: "true",
+    linkText: "Demo",
+    idea: "Academic consultancy helping researchers and graduate students with theses and scientific research services.",
+    role: "Responsible for making the application fast, enhancing performance and UI, responsive design, and adding new features in the backend.",
+    country: "Palestine"
+  },
+  {
+    image: alqoba,
     title: "Al Qoba Al Zahabia",
     description: "Freelance Project",
     technologies: "HTML - CSS - JS - Tailwind - Nextjs - i18next - Supabase - EmailJs",
@@ -57,7 +69,7 @@ export const webProjects = [
     country: "Dubai"
   },
   {
-    img: jopPortal,
+    image: jopPortal,
     title: "Job Portal App",
     description: "Graduation Project at - I T I",
     technologies: "HTML - Sass - JS - BootStrap - PHP - MySQL",
@@ -67,20 +79,20 @@ export const webProjects = [
     role: "Responsible for frontend and backend (PHP, MySQL), responsive design.",
     country: "Egypt"
   }, {
-    img: Eljewar,
+    image: Eljewar,
     title: "Travel Agency App",
     description: "Freelance Project",
-    technologies: "HTML - CSS - JS - Tailwind - Next.js - i18next",
+    technologies: "HTML - CSS - JS - Tailwind CSS - Next.js - i18next",
     url: "https://aljewartours.vercel.app/",
     linkText: "Demo",
     idea: "Al-jewar for Tourism & Travels — explore travel destinations and experiences. Multilingual site with Arabic and English support.",
     role: "Implemented frontend features, responsive layouts, Arabic/English localization using i18next, and EmailJS integration.",
     country: "Egypt"
   }, {
-    img: Courses,
+    image: Courses,
     title: "Courses Tech App",
     description: "Training Project",
-    technologies: "HTML - CSS - JS - Tailwind - Next.js - Strapi - Stripe - ClerkAuth - Cloudinary",
+    technologies: "HTML - CSS - JS - Tailwind CSS - Next.js - Strapi - Stripe - ClerkAuth - Cloudinary",
     url: "https://fullstack-courses-app-aj95.vercel.app/",
     linkText: "Demo",
     idea: "Website for learning courses. Features: browse courses, enroll and pay, user auth, and CMS-managed content.",
@@ -94,7 +106,7 @@ export const reactProjects = [
     id: 1,
     title: "Dashboard Abrand",
     description: "Freelance Project ",
-    technologies: "(HTML - Css - Tailwind - Js - MUI- Reactjs- Firebase)",
+    technologies: "(HTML - Css - Tailwind CSS - Js - MUI- Reactjs- Firebase)",
     image: dashboard,
     url: "https://dashboard-ahmedgawish.vercel.app/",
     linkText: "Demo",
@@ -106,7 +118,7 @@ export const reactProjects = [
     id: 2,
     title: "E-commerce ABrand ",
     description: "Freelance Project",
-    technologies: "(HTML - CSS- TypeScript - Tailwind - MUI -React - Firebase - Stripe) ",
+    technologies: "(HTML - CSS- TypeScript - Tailwind CSS - MUI -React - Firebase - Stripe) ",
     image: Abrand,
     url: "https://ecommerce-react-firebase-five.vercel.app/",
     linkText: "Demo",
@@ -139,27 +151,36 @@ export const reactProjects = [
   }
 ]
 
-export const myCertificates = [
-  {
-    id: 1,
-    img: Image6,
-    title: "Summer Training Certificate at I T I",
-    description: "Fundamentals Web Development",
-
-  }, {
-    id: 2,
-    img: Image7,
-    title: "Web Developer Certificate at I T I",
-    description: "Fullstack PHP Web Developer",
-  }
-]
-
 export const allProjects = [
+  {
+    id: 3,
+    title: "Al Jwar Tours",
+    description: "Freelance Project",
+    technologies: "HTML - CSS - JS - Tailwind CSS - Next.js - PHP - Laravel",
+    image: aljwartours,
+    url: "https://aljwartours.com/en",
+    linkText: "Demo",
+    idea: "A multilingual tourism website where users can explore destinations, book flights and hotels, arrange airport transfers, and discover holiday packages. Includes an admin dashboard to manage website content and bookings.",
+    role: "Full-stack development: built the frontend using Next.js and Tailwind CSS, and developed the backend APIs using Laravel.",
+    country: "Egypt"
+  },
+  {
+    id: 2,
+    title: "Dr Samkari",
+    description: "Project Freelance",
+    technologies: "(HTML - CSS- JS - Tailwind CSS - Nextjs - payment Meps)",
+    image: ProjectFreelance5,
+    url: "https://www.drsamkari.com/",
+    linkText: "Demo",
+    idea: "Medical practice website for Dr. Zaid Samkari offering healthcare services, consultations, and appointment booking. Covers cosmetic and non-surgical procedures.",
+    role: "Responsible for frontend development, with dashboard for managing content, SEO optimization, smooth animations, and integrating appointment booking and Meps payment.",
+    country: "Jordan"
+  },
   {
     id: 1,
     title: "Al Bayan for Reseach",
-    description: "Project Freelance ",
-    technologies: "(HTML - Sass - JS - BootStrap - PHP - Laravel)",
+    description: "Freelance Project",
+    technologies: "(HTML - Sass - JS - BootStrap - Ajax - PHP - Laravel Blade - MySQL)",
     image: ProjectFreelance3,
     url: "https://albayanres.com/",
     contributor: "true",
@@ -169,22 +190,10 @@ export const allProjects = [
     country: "Palestine"
   },
   {
-    id: 2,
-    title: "Dr Samkari",
-    description: "Project Freelance",
-    technologies: "(HTML - CSS- JS - Tailwind - Nextjs - payment Meps)",
-    image: ProjectFreelance5,
-    url: "https://www.drsamkari.com/",
-    linkText: "Demo",
-    idea: "Medical practice website for Dr. Zaid Samkari offering healthcare services, consultations, and appointment booking. Covers cosmetic and non-surgical procedures.",
-    role: "Responsible for frontend development, with dashboard for managing content, SEO optimization, smooth animations, and integrating appointment booking and Meps payment.",
-    country: "Jordan"
-  },
-  {
     id: 17,
     title: "Al Qoba Al Zahabia",
     description: "Freelance Project",
-    technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next - Supabase - EmailJs)",
+    technologies: "(HTML - CSS- JS - Tailwind CSS - Nextjs - i18next - Supabase - EmailJs)",
     image: alqoba,
     url: "https://alqopa-alzahabia.vercel.app/ar",
     linkText: "Demo",
@@ -193,10 +202,10 @@ export const allProjects = [
     country: "Dubai"
   },
   {
-    id:3,
+    id: 3,
     title: "Travel Agency App",
     description: "Freelance Project",
-    technologies: "(HTML - CSS- JS - Tailwind - Nextjs - i18next- EmailJs)",
+    technologies: "(HTML - CSS- JS - Tailwind CSS - Nextjs - i18next- EmailJs)",
     image: Eljewar,
     url: "https://aljewartours.vercel.app/",
     linkText: "Demo",
@@ -208,7 +217,7 @@ export const allProjects = [
     id: 4,
     title: "Dr Samkari - Dashboard",
     description: " Freelance Project",
-    technologies: "(HTML - CSS- JS - tailwind - shadcn ui - Nextjs )",
+    technologies: "(HTML - CSS- JS - tailwind CSS - shadcn ui - Nextjs )",
     image: ProjectFreelance6,
     url: "#",
     private: <RiGitRepositoryPrivateLine />,
@@ -221,7 +230,7 @@ export const allProjects = [
     id: 5,
     title: "E-commerce ABrand ",
     description: "Freelance Project",
-    technologies: "(HTML - CSS- TypeScript - Tailwind - React - React Mui - Firebase - Stripe)",
+    technologies: "(HTML - CSS- TypeScript - Tailwind CSS - React - React Mui - Firebase - Stripe)",
     image: Abrand,
     url: "https://ecommerce-react-firebase-five.vercel.app/",
     linkText: "Demo",
@@ -233,7 +242,7 @@ export const allProjects = [
     id: 6,
     title: "Dashboard Abrand",
     description: "Freelance Project ",
-    technologies: "(HTML - Css - Tailwind - Js - MUI - Reactjs- Firebase)",
+    technologies: "(HTML - Css - Tailwind CSS - Js - MUI - Reactjs- Firebase)",
     image: dashboard,
     url: "https://dashboard-ahmedgawish.vercel.app/",
     linkText: "Demo",
@@ -245,7 +254,7 @@ export const allProjects = [
     id: 7,
     title: "Courses Tech App",
     description: "Training Project",
-    technologies: "(HTML - CSS- JS - Tailwind - Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary)",
+    technologies: "(HTML - CSS- JS - Tailwind CSS - Nextjs - Strapi(CMS) - Stripe - ClerkAuth - Cloudinary)",
     image: Courses,
     url: "https://fullstack-courses-app-aj95.vercel.app/",
     linkText: "Demo",
@@ -283,7 +292,7 @@ export const allProjects = [
     id: 10,
     title: "Dubbizle Mulitvendor",
     description: "Freelance Project",
-    technologies: "(HTML - CSS - Tailwind- Js - Firebase- Nextjs - Localization)",
+    technologies: "(HTML - CSS - Tailwind CSS - Js - Firebase- Nextjs - Localization)",
     image: ProjectFreelance4,
     url: "https://dubizzle-freelance-project.vercel.app/",
     linkText: "Demo",
@@ -367,6 +376,48 @@ export const allProjects = [
     country: "Egypt"
   },
 ];
+
+export const myCertificates = [
+{
+id: 1,
+image: Image6,
+title: "Summer Training Certificate at ITI",
+description: "Fundamentals of Web Development",
+details:
+"Learned the fundamentals of web development, including HTML, CSS, JavaScript, jQuery, and responsive web design.",
+technologies: [
+"HTML",
+"CSS",
+"JavaScript",
+"jQuery",
+"Bootstrap",
+],
+},
+{
+id: 2,
+image: Image7,
+title: "Full-Stack PHP Web Development Certificate at ITI",
+description: "Full-Stack PHP Web Development",
+details:
+"Covered frontend and backend development, database management, server-side programming, version control, and development environments. Also gained experience with Linux, Docker, and other tools used in web development.",
+technologies: [
+"HTML",
+"CSS",
+"JavaScript",
+"jQuery",
+"Bootstrap",
+"PHP",
+"MySQL",
+"Laravel",
+"WordPress",
+"Node.js",
+"Git",
+"Linux",
+"Docker",
+],
+},
+];
+
 
 
 
